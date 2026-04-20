@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
+import './CartPage.css'
 
 type product = {
   "id": number;
@@ -26,21 +28,33 @@ export default function CartPage() {
   return (
     <>
       <title>Cart</title>
+      <NavBar />
 
-      <h1>Cart Items</h1>
+      <h1 className="cartName-Text">Cart Items</h1>
+      
+      <div className="CartProperty">
 
-      <div className="CartItem">
-        {cartItems.map((item) => (
-          <div key={item.id}>
-            <h2>{item.title}</h2>
-            <p>Price: ${item.price}</p>
-            <p>Category: {item.category}</p>
-            <p>Brand: {item.brand}</p>
-            <p>Rating: {item.rating}</p>
-            <button> Place Your Order</button>
-          </div>
-        ))}
+        <div className="CartItems">
+          {cartItems.map((item, index) => (
+            <div key={item.id} className="CartItem">
+              <p>{item.title}</p>
+              <p>Price: ${item.price}</p>
+              <p>Category: {item.category}</p>
+              <p>Brand: {item.brand}</p>
+              <p>Rating: {item.rating}</p>
+              <button className="CartItem-delete-Button"> delete </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="Payment">
+          <h2>Payment Summary</h2>
+        </div>
+
       </div>
+
+      
+
     </>
   )
 }

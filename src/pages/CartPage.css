@@ -1,5 +1,35 @@
+.CartProperty {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.CartItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 5px ;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  margin-right: 10px;
+}
+
 .CartItem{
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  border: 1px solid black;
+  margin : 5px 5px 5px 5px;
+}
+
+.CartItem-delete-Button{
+  cursor: pointer;
+  border-radius: 5px;
+  border:solid;
+  border-color: black;
+  border-width: 1px;
+  margin-bottom: 5px;
+}
+
+.cartName-Text{
+  margin-top: 100px;
 }

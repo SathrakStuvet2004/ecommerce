@@ -9,7 +9,9 @@ export default function NavBar() {
     <div className="NavBar">
 
       <div className="homeIcon">
-        <FontAwesomeIcon icon={faHouse} />
+        <Link to="/">
+          <FontAwesomeIcon icon={faHouse} />
+        </Link>
         <p>Home</p>
       </div>
 
@@ -22,16 +24,20 @@ export default function NavBar() {
           <FontAwesomeIcon icon={faCartShopping} />
           <span className="badge">3</span>
         </Link>
-         <p>Cart</p>
+        <p>Cart</p>
       </div>
 
       <div className="OrdersIcon">
+        <Link to="/Orders">
         <FontAwesomeIcon icon={faBox} />
+        </Link>
         <p>Orders</p>
       </div>
 
       <div className="userIcon">
+        <Link to="/User">
         <FontAwesomeIcon icon={faUser} />
+        </Link>
         <p>User</p>
       </div>
 
