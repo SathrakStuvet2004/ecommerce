@@ -2,6 +2,7 @@
   "products": [
     {
       "id": "1",
+      "img": "https://picsum.photos/id/101/300/300",
       "title": "Wireless Mouse",
       "price": 499,
       "category": "Electronics",
@@ -11,6 +12,7 @@
     },
     {
       "id": "2",
+      "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
       "price": 1499,
       "category": "Electronics",
@@ -20,6 +22,7 @@
     },
     {
       "id": "3",
+      "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
       "price": 299,
       "category": "Fashion",
@@ -29,6 +32,7 @@
     },
     {
       "id": "4",
+      "img": "https://picsum.photos/id/104/300/300",
       "title": "Women's Kurti",
       "price": 799,
       "category": "Fashion",
@@ -38,6 +42,7 @@
     },
     {
       "id": "5",
+      "img": "https://picsum.photos/id/105/300/300",
       "title": "Smartphone",
       "price": 15999,
       "category": "Electronics",
@@ -47,6 +52,7 @@
     },
     {
       "id": "6",
+      "img": "https://picsum.photos/id/106/300/300",
       "title": "Laptop",
       "price": 55999,
       "category": "Electronics",
@@ -56,6 +62,7 @@
     },
     {
       "id": "7",
+      "img": "https://picsum.photos/id/107/300/300",
       "title": "Running Shoes",
       "price": 1999,
       "category": "Footwear",
@@ -65,6 +72,7 @@
     },
     {
       "id": "8",
+      "img": "https://picsum.photos/id/108/300/300",
       "title": "Backpack",
       "price": 899,
       "category": "Accessories",
@@ -74,6 +82,7 @@
     },
     {
       "id": "9",
+      "img": "https://picsum.photos/id/109/300/300",
       "title": "Wrist Watch",
       "price": 2499,
       "category": "Accessories",
@@ -83,6 +92,7 @@
     },
     {
       "id": "10",
+      "img": "https://picsum.photos/id/110/300/300",
       "title": "Gaming Keyboard",
       "price": 1299,
       "category": "Electronics",
@@ -92,6 +102,7 @@
     },
     {
       "id": "11",
+      "img": "https://picsum.photos/id/111/300/300",
       "title": "LED Monitor",
       "price": 8999,
       "category": "Electronics",
@@ -101,6 +112,7 @@
     },
     {
       "id": "12",
+      "img": "https://picsum.photos/id/112/300/300",
       "title": "Power Bank",
       "price": 999,
       "category": "Electronics",
@@ -110,6 +122,7 @@
     },
     {
       "id": "13",
+      "img": "https://picsum.photos/id/113/300/300",
       "title": "Sunglasses",
       "price": 699,
       "category": "Accessories",
@@ -119,6 +132,7 @@
     },
     {
       "id": "14",
+      "img": "https://picsum.photos/id/114/300/300",
       "title": "Office Chair",
       "price": 4599,
       "category": "Furniture",
@@ -128,6 +142,7 @@
     },
     {
       "id": "15",
+      "img": "https://picsum.photos/id/115/300/300",
       "title": "Study Table",
       "price": 3499,
       "category": "Furniture",
@@ -137,6 +152,7 @@
     },
     {
       "id": "16",
+      "img": "https://picsum.photos/id/116/300/300",
       "title": "Water Bottle",
       "price": 299,
       "category": "Home",
@@ -146,6 +162,7 @@
     },
     {
       "id": "17",
+      "img": "https://picsum.photos/id/117/300/300",
       "title": "Electric Kettle",
       "price": 1299,
       "category": "Home Appliances",
@@ -155,6 +172,7 @@
     },
     {
       "id": "18",
+      "img": "https://picsum.photos/id/118/300/300",
       "title": "Mixer Grinder",
       "price": 2999,
       "category": "Home Appliances",
@@ -164,6 +182,7 @@
     },
     {
       "id": "19",
+      "img": "https://picsum.photos/id/119/300/300",
       "title": "Ceiling Fan",
       "price": 2499,
       "category": "Home Appliances",
@@ -173,6 +192,7 @@
     },
     {
       "id": "20",
+      "img": "https://picsum.photos/id/120/300/300",
       "title": "Air Conditioner",
       "price": 32999,
       "category": "Home Appliances",
@@ -182,6 +202,7 @@
     },
     {
       "id": "21",
+      "img": "https://picsum.photos/id/121/300/300",
       "title": "Refrigerator",
       "price": 28999,
       "category": "Home Appliances",
@@ -191,6 +212,7 @@
     },
     {
       "id": "22",
+      "img": "https://picsum.photos/id/122/300/300",
       "title": "Washing Machine",
       "price": 19999,
       "category": "Home Appliances",
@@ -200,6 +222,7 @@
     },
     {
       "id": "23",
+      "img": "https://picsum.photos/id/123/300/300",
       "title": "Tablet",
       "price": 12999,
       "category": "Electronics",
@@ -209,6 +232,7 @@
     },
     {
       "id": "24",
+      "img": "https://picsum.photos/id/124/300/300",
       "title": "Smart TV",
       "price": 25999,
       "category": "Electronics",
@@ -218,6 +242,7 @@
     },
     {
       "id": "25",
+      "img": "https://picsum.photos/id/125/300/300",
       "title": "Earbuds",
       "price": 1999,
       "category": "Electronics",
@@ -227,6 +252,7 @@
     },
     {
       "id": "26",
+      "img": "https://picsum.photos/id/126/300/300",
       "title": "Formal Shoes",
       "price": 2499,
       "category": "Footwear",
@@ -236,6 +262,7 @@
     },
     {
       "id": "27",
+      "img": "https://picsum.photos/id/127/300/300",
       "title": "Casual Shirt",
       "price": 799,
       "category": "Fashion",
@@ -245,6 +272,7 @@
     },
     {
       "id": "28",
+      "img": "https://picsum.photos/id/128/300/300",
       "title": "Jeans",
       "price": 1499,
       "category": "Fashion",
@@ -254,6 +282,7 @@
     },
     {
       "id": "29",
+      "img": "https://picsum.photos/id/129/300/300",
       "title": "Handbag",
       "price": 1999,
       "category": "Accessories",
@@ -263,6 +292,7 @@
     },
     {
       "id": "30",
+      "img": "https://picsum.photos/id/130/300/300",
       "title": "Perfume",
       "price": 999,
       "category": "Beauty",
@@ -272,6 +302,7 @@
     },
     {
       "id": "31",
+      "img": "https://picsum.photos/id/131/300/300",
       "title": "Face Wash",
       "price": 249,
       "category": "Beauty",
@@ -281,6 +312,7 @@
     },
     {
       "id": "32",
+      "img": "https://picsum.photos/id/132/300/300",
       "title": "Hair Dryer",
       "price": 1499,
       "category": "Beauty",
@@ -290,6 +322,7 @@
     },
     {
       "id": "33",
+      "img": "https://picsum.photos/id/133/300/300",
       "title": "Gaming Mouse",
       "price": 999,
       "category": "Electronics",
@@ -299,6 +332,7 @@
     },
     {
       "id": "34",
+      "img": "https://picsum.photos/id/134/300/300",
       "title": "USB Cable",
       "price": 199,
       "category": "Electronics",
@@ -308,6 +342,7 @@
     },
     {
       "id": "35",
+      "img": "https://picsum.photos/id/135/300/300",
       "title": "Charger Adapter",
       "price": 499,
       "category": "Electronics",
@@ -317,6 +352,7 @@
     },
     {
       "id": "36",
+      "img": "https://picsum.photos/id/136/300/300",
       "title": "Notebook",
       "price": 99,
       "category": "Stationery",
@@ -326,6 +362,7 @@
     },
     {
       "id": "37",
+      "img": "https://picsum.photos/id/137/300/300",
       "title": "Pen Set",
       "price": 149,
       "category": "Stationery",
@@ -335,6 +372,7 @@
     },
     {
       "id": "38",
+      "img": "https://picsum.photos/id/138/300/300",
       "title": "Desk Lamp",
       "price": 799,
       "category": "Home",
@@ -344,6 +382,7 @@
     },
     {
       "id": "39",
+      "img": "https://picsum.photos/id/139/300/300",
       "title": "Wall Clock",
       "price": 599,
       "category": "Home",
@@ -353,6 +392,7 @@
     },
     {
       "id": "40",
+      "img": "https://picsum.photos/id/140/300/300",
       "title": "Bedsheet",
       "price": 999,
       "category": "Home",
@@ -362,6 +402,7 @@
     },
     {
       "id": "41",
+      "img": "https://picsum.photos/id/141/300/300",
       "title": "Pillow",
       "price": 399,
       "category": "Home",
@@ -371,6 +412,7 @@
     },
     {
       "id": "42",
+      "img": "https://picsum.photos/id/142/300/300",
       "title": "Curtains",
       "price": 1299,
       "category": "Home",
@@ -380,6 +422,7 @@
     },
     {
       "id": "43",
+      "img": "https://picsum.photos/id/143/300/300",
       "title": "Dining Set",
       "price": 4999,
       "category": "Furniture",
@@ -389,6 +432,7 @@
     },
     {
       "id": "44",
+      "img": "https://picsum.photos/id/144/300/300",
       "title": "Sofa",
       "price": 15999,
       "category": "Furniture",
@@ -398,6 +442,7 @@
     },
     {
       "id": "45",
+      "img": "https://picsum.photos/id/145/300/300",
       "title": "Cup Set",
       "price": 599,
       "category": "Home",
@@ -407,6 +452,7 @@
     },
     {
       "id": "46",
+      "img": "https://picsum.photos/id/146/300/300",
       "title": "Toaster",
       "price": 1499,
       "category": "Home Appliances",
@@ -416,6 +462,7 @@
     },
     {
       "id": "47",
+      "img": "https://picsum.photos/id/147/300/300",
       "title": "Iron Box",
       "price": 999,
       "category": "Home Appliances",
@@ -425,6 +472,7 @@
     },
     {
       "id": "48",
+      "img": "https://picsum.photos/id/148/300/300",
       "title": "Vacuum Cleaner",
       "price": 6999,
       "category": "Home Appliances",
@@ -434,6 +482,7 @@
     },
     {
       "id": "49",
+      "img": "https://picsum.photos/id/149/300/300",
       "title": "Gym Dumbbells",
       "price": 1999,
       "category": "Fitness",
@@ -443,6 +492,7 @@
     },
     {
       "id": "50",
+      "img": "https://picsum.photos/id/150/300/300",
       "title": "Yoga Mat",
       "price": 799,
       "category": "Fitness",
@@ -452,6 +502,7 @@
     },
     {
       "id": "51",
+      "img": "https://picsum.photos/id/151/300/300",
       "title": "Wireless Earphones",
       "price": 1299,
       "category": "Electronics",
@@ -461,6 +512,7 @@
     },
     {
       "id": "52",
+      "img": "https://picsum.photos/id/152/300/300",
       "title": "Smart Watch",
       "price": 2499,
       "category": "Electronics",
@@ -471,61 +523,24 @@
   ],
   "cart": [
     {
-      "id": "1",
+      "id": "03IcUeLxoN4",
+      "img": "https://picsum.photos/id/101/300/300",
       "title": "Wireless Mouse",
       "price": 499,
       "category": "Electronics",
       "brand": "Logitech",
       "rating": 4.5,
-      "stock": 120,
-      "quantity": 1
+      "stock": 120
     },
     {
-      "id": "2",
+      "id": "8jvyylrVSA4",
+      "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
       "price": 1499,
       "category": "Electronics",
       "brand": "Boat",
       "rating": 4.3,
-      "stock": 80,
-      "quantity": 2
-    },
-    {
-      "id": "3",
-      "title": "Smart Watch",
-      "price": 2499,
-      "category": "Electronics",
-      "brand": "Noise",
-      "rating": 4.4,
-      "stock": 70,
-      "quantity": 1
-    },
-    {
-      "id": "h6vTBnXLmmo",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200
-    },
-    {
-      "id": "-ninf12F4z8",
-      "title": "Washing Machine",
-      "price": 19999,
-      "category": "Home Appliances",
-      "brand": "Bosch",
-      "rating": 4.6,
-      "stock": 18
-    },
-    {
-      "id": "v-D20gnCZ_0",
-      "title": "Tablet",
-      "price": 12999,
-      "category": "Electronics",
-      "brand": "Lenovo",
-      "rating": 4.3,
-      "stock": 55
+      "stock": 80
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

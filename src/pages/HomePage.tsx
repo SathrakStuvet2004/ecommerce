@@ -36,6 +36,7 @@ import NavBar from "../components/NavBar";
 
 type product = {
   "id": number;
+  "img": string;
   "title": string;
   "price": number;
   "category": string;
@@ -62,6 +63,7 @@ export default function HomePage() {
     homePageData()
   }, [])
   console.log(products);
+
   function addToCart(product: product) {
     fetch("http://localhost:3000/cart", {
       method: "POST",
@@ -72,19 +74,25 @@ export default function HomePage() {
     });
   }
 
-
   return (
     <>
-     <NavBar />
+      <NavBar />
       <div className="productsList" >
         {products.map((product) =>
           <div className="product" key={product.id} >
-            <div className="aaa">Name:  {product.title}</div>
-            <div className="aaa">Brand:  {product.brand}</div>
-            <div className="aaa">Category:  {product.category}</div>
-            <div className="aaa">price:  {product.price}</div>
-            <div className="aaa">Rating:  {product.rating}</div>
-            <div className="aaa">Stock:  {product.stock}</div>
+            <div className="productImage"><img src={product.img} alt={product.title} /></div>
+
+            <div className="productInfo">
+              <div className="aaa">Name:  {product.title}</div>
+              <div className="aaa">Brand:  {product.brand}</div>
+              <div className="aaa">Category:  {product.category}</div>
+              <div className="price">
+                <div className="aaa">price:  {product.price}</div>
+                <div className="aaa">Rating:  {product.rating}</div>
+                <div className="aaa">Stock:  {product.stock}</div>
+              </div>
+
+            </div>
             <button className="cartButton" onClick={() => addToCart(product)}>Add to cart</button>
           </div>
         )}

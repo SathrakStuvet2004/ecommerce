@@ -10,6 +10,7 @@ type product = {
   "brand": string;
   "rating": number;
   "stock": number;
+  "img": string;
 }
 
 export default function CartPage() {
@@ -31,21 +32,30 @@ export default function CartPage() {
       <NavBar />
 
       <h1 className="cartName-Text">Cart Items</h1>
-      
+
       <div className="CartProperty">
 
         <div className="CartItems">
-          {cartItems.map((item, index) => (
+          {cartItems.map((item) => (
             <div key={item.id} className="CartItem">
-              <p>{item.title}</p>
-              <p>Price: ${item.price}</p>
-              <p>Category: {item.category}</p>
-              <p>Brand: {item.brand}</p>
-              <p>Rating: {item.rating}</p>
-              <button className="CartItem-delete-Button"> delete </button>
+              <div className="CartItem-image">
+                <img src={item.img} alt={item.title} />
+              </div>
+              <div className="cart-info">
+                <p>{item.title}</p>
+                <p>Price: ${item.price}</p>
+
+                <p>Category: {item.category}</p>
+                <p>Brand: {item.brand}</p>
+                <p>Rating: {item.rating}</p>
+                <div>
+                  <button className="CartItem-delete-Button"> delete </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
+        
 
         <div className="Payment">
           <h2>Payment Summary</h2>
@@ -53,7 +63,7 @@ export default function CartPage() {
 
       </div>
 
-      
+
 
     </>
   )
