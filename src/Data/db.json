@@ -1,0 +1,472 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120
+    },
+    {
+      "id": 2,
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80
+    },
+    {
+      "id": 3,
+      "title": "Men's T-Shirt",
+      "price": 299,
+      "category": "Fashion",
+      "brand": "H&M",
+      "rating": 4.1,
+      "stock": 200
+    },
+    {
+      "id": 4,
+      "title": "Women's Kurti",
+      "price": 799,
+      "category": "Fashion",
+      "brand": "Biba",
+      "rating": 4.4,
+      "stock": 150
+    },
+    {
+      "id": 5,
+      "title": "Smartphone",
+      "price": 15999,
+      "category": "Electronics",
+      "brand": "Samsung",
+      "rating": 4.6,
+      "stock": 60
+    },
+    {
+      "id": 6,
+      "title": "Laptop",
+      "price": 55999,
+      "category": "Electronics",
+      "brand": "HP",
+      "rating": 4.7,
+      "stock": 40
+    },
+    {
+      "id": 7,
+      "title": "Running Shoes",
+      "price": 1999,
+      "category": "Footwear",
+      "brand": "Nike",
+      "rating": 4.5,
+      "stock": 90
+    },
+    {
+      "id": 8,
+      "title": "Backpack",
+      "price": 899,
+      "category": "Accessories",
+      "brand": "Skybags",
+      "rating": 4.2,
+      "stock": 110
+    },
+    {
+      "id": 9,
+      "title": "Wrist Watch",
+      "price": 2499,
+      "category": "Accessories",
+      "brand": "Fossil",
+      "rating": 4.6,
+      "stock": 70
+    },
+    {
+      "id": 10,
+      "title": "Gaming Keyboard",
+      "price": 1299,
+      "category": "Electronics",
+      "brand": "Redragon",
+      "rating": 4.4,
+      "stock": 95
+    },
+    {
+      "id": 11,
+      "title": "LED Monitor",
+      "price": 8999,
+      "category": "Electronics",
+      "brand": "Dell",
+      "rating": 4.5,
+      "stock": 50
+    },
+    {
+      "id": 12,
+      "title": "Power Bank",
+      "price": 999,
+      "category": "Electronics",
+      "brand": "Mi",
+      "rating": 4.3,
+      "stock": 140
+    },
+    {
+      "id": 13,
+      "title": "Sunglasses",
+      "price": 699,
+      "category": "Accessories",
+      "brand": "RayBan",
+      "rating": 4.4,
+      "stock": 130
+    },
+    {
+      "id": 14,
+      "title": "Office Chair",
+      "price": 4599,
+      "category": "Furniture",
+      "brand": "GreenSoul",
+      "rating": 4.5,
+      "stock": 30
+    },
+    {
+      "id": 15,
+      "title": "Study Table",
+      "price": 3499,
+      "category": "Furniture",
+      "brand": "Ikea",
+      "rating": 4.2,
+      "stock": 25
+    },
+    {
+      "id": 16,
+      "title": "Water Bottle",
+      "price": 299,
+      "category": "Home",
+      "brand": "Milton",
+      "rating": 4.1,
+      "stock": 200
+    },
+    {
+      "id": 17,
+      "title": "Electric Kettle",
+      "price": 1299,
+      "category": "Home Appliances",
+      "brand": "Prestige",
+      "rating": 4.3,
+      "stock": 85
+    },
+    {
+      "id": 18,
+      "title": "Mixer Grinder",
+      "price": 2999,
+      "category": "Home Appliances",
+      "brand": "Philips",
+      "rating": 4.4,
+      "stock": 60
+    },
+    {
+      "id": 19,
+      "title": "Ceiling Fan",
+      "price": 2499,
+      "category": "Home Appliances",
+      "brand": "Usha",
+      "rating": 4.2,
+      "stock": 70
+    },
+    {
+      "id": 20,
+      "title": "Air Conditioner",
+      "price": 32999,
+      "category": "Home Appliances",
+      "brand": "LG",
+      "rating": 4.6,
+      "stock": 20
+    },
+    {
+      "id": 21,
+      "title": "Refrigerator",
+      "price": 28999,
+      "category": "Home Appliances",
+      "brand": "Whirlpool",
+      "rating": 4.5,
+      "stock": 25
+    },
+    {
+      "id": 22,
+      "title": "Washing Machine",
+      "price": 19999,
+      "category": "Home Appliances",
+      "brand": "Bosch",
+      "rating": 4.6,
+      "stock": 18
+    },
+    {
+      "id": 23,
+      "title": "Tablet",
+      "price": 12999,
+      "category": "Electronics",
+      "brand": "Lenovo",
+      "rating": 4.3,
+      "stock": 55
+    },
+    {
+      "id": 24,
+      "title": "Smart TV",
+      "price": 25999,
+      "category": "Electronics",
+      "brand": "Sony",
+      "rating": 4.7,
+      "stock": 22
+    },
+    {
+      "id": 25,
+      "title": "Earbuds",
+      "price": 1999,
+      "category": "Electronics",
+      "brand": "Realme",
+      "rating": 4.4,
+      "stock": 120
+    },
+    {
+      "id": 26,
+      "title": "Formal Shoes",
+      "price": 2499,
+      "category": "Footwear",
+      "brand": "Bata",
+      "rating": 4.2,
+      "stock": 90
+    },
+    {
+      "id": 27,
+      "title": "Casual Shirt",
+      "price": 799,
+      "category": "Fashion",
+      "brand": "Zara",
+      "rating": 4.3,
+      "stock": 110
+    },
+    {
+      "id": 28,
+      "title": "Jeans",
+      "price": 1499,
+      "category": "Fashion",
+      "brand": "Levis",
+      "rating": 4.5,
+      "stock": 100
+    },
+    {
+      "id": 29,
+      "title": "Handbag",
+      "price": 1999,
+      "category": "Accessories",
+      "brand": "Caprese",
+      "rating": 4.4,
+      "stock": 75
+    },
+    {
+      "id": 30,
+      "title": "Perfume",
+      "price": 999,
+      "category": "Beauty",
+      "brand": "Fogg",
+      "rating": 4.2,
+      "stock": 130
+    },
+    {
+      "id": 31,
+      "title": "Face Wash",
+      "price": 249,
+      "category": "Beauty",
+      "brand": "Nivea",
+      "rating": 4.1,
+      "stock": 180
+    },
+    {
+      "id": 32,
+      "title": "Hair Dryer",
+      "price": 1499,
+      "category": "Beauty",
+      "brand": "Philips",
+      "rating": 4.3,
+      "stock": 60
+    },
+    {
+      "id": 33,
+      "title": "Gaming Mouse",
+      "price": 999,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 85
+    },
+    {
+      "id": 34,
+      "title": "USB Cable",
+      "price": 199,
+      "category": "Electronics",
+      "brand": "Anker",
+      "rating": 4.2,
+      "stock": 200
+    },
+    {
+      "id": 35,
+      "title": "Charger Adapter",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Samsung",
+      "rating": 4.3,
+      "stock": 150
+    },
+    {
+      "id": 36,
+      "title": "Notebook",
+      "price": 99,
+      "category": "Stationery",
+      "brand": "Classmate",
+      "rating": 4.5,
+      "stock": 300
+    },
+    {
+      "id": 37,
+      "title": "Pen Set",
+      "price": 149,
+      "category": "Stationery",
+      "brand": "Reynolds",
+      "rating": 4.2,
+      "stock": 250
+    },
+    {
+      "id": 38,
+      "title": "Desk Lamp",
+      "price": 799,
+      "category": "Home",
+      "brand": "Wipro",
+      "rating": 4.4,
+      "stock": 95
+    },
+    {
+      "id": 39,
+      "title": "Wall Clock",
+      "price": 599,
+      "category": "Home",
+      "brand": "Ajanta",
+      "rating": 4.3,
+      "stock": 120
+    },
+    {
+      "id": 40,
+      "title": "Bedsheet",
+      "price": 999,
+      "category": "Home",
+      "brand": "Bombay Dyeing",
+      "rating": 4.2,
+      "stock": 80
+    },
+    {
+      "id": 41,
+      "title": "Pillow",
+      "price": 399,
+      "category": "Home",
+      "brand": "Sleepyhead",
+      "rating": 4.3,
+      "stock": 150
+    },
+    {
+      "id": 42,
+      "title": "Curtains",
+      "price": 1299,
+      "category": "Home",
+      "brand": "Home Centre",
+      "rating": 4.4,
+      "stock": 60
+    },
+    {
+      "id": 43,
+      "title": "Dining Set",
+      "price": 4999,
+      "category": "Furniture",
+      "brand": "Ikea",
+      "rating": 4.5,
+      "stock": 20
+    },
+    {
+      "id": 44,
+      "title": "Sofa",
+      "price": 15999,
+      "category": "Furniture",
+      "brand": "Urban Ladder",
+      "rating": 4.6,
+      "stock": 15
+    },
+    {
+      "id": 45,
+      "title": "Cup Set",
+      "price": 599,
+      "category": "Home",
+      "brand": "Cello",
+      "rating": 4.2,
+      "stock": 100
+    },
+    {
+      "id": 46,
+      "title": "Toaster",
+      "price": 1499,
+      "category": "Home Appliances",
+      "brand": "Morphy Richards",
+      "rating": 4.3,
+      "stock": 50
+    },
+    {
+      "id": 47,
+      "title": "Iron Box",
+      "price": 999,
+      "category": "Home Appliances",
+      "brand": "Bajaj",
+      "rating": 4.4,
+      "stock": 75
+    },
+    {
+      "id": 48,
+      "title": "Vacuum Cleaner",
+      "price": 6999,
+      "category": "Home Appliances",
+      "brand": "Eureka Forbes",
+      "rating": 4.5,
+      "stock": 30
+    },
+    {
+      "id": 49,
+      "title": "Gym Dumbbells",
+      "price": 1999,
+      "category": "Fitness",
+      "brand": "Kore",
+      "rating": 4.4,
+      "stock": 90
+    },
+    {
+      "id": 50,
+      "title": "Yoga Mat",
+      "price": 799,
+      "category": "Fitness",
+      "brand": "Boldfit",
+      "rating": 4.3,
+      "stock": 120
+    },
+    {
+      "id": 51,
+      "title": "Wireless Earphones",
+      "price": 1299,
+      "category": "Electronics",
+      "brand": "Realme",
+      "rating": 4.2,
+      "stock": 95
+    },
+    {
+      "id": 52,
+      "title": "Smart Watch",
+      "price": 2499,
+      "category": "Electronics",
+      "brand": "Noise",
+      "rating": 4.4,
+      "stock": 70
+    }
+  ]
+}

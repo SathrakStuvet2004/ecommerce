@@ -1,0 +1,50 @@
+.NavBar {
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;                /* full width */
+  background-color: #333;     /* dark gray */
+  color: white;
+
+  display: flex;              /* flexible layout */
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 20px;         /* inner spacing */
+  position: fixed;
+}
+
+.cart {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.searchBar {
+  border-radius: 9px;
+  width: 250px;
+  height: 30px;
+  border: solid;
+  border-width: 1px;
+}
+
+.homeIcon {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.userIcon {
+  margin-right: 20px;
+  cursor: pointer;
+}
