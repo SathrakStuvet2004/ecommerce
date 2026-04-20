@@ -66,7 +66,7 @@ export default function HomePage() {
 
   return (
     <>
-      <NavBar />
+     <NavBar />
       <div className="productsList" >
         {products.map((product) =>
           <div className="product" key={product.id} >

@@ -4,7 +4,9 @@
   /* 4 equal columns */
   gap: 3px;
   /* space between items */
-  margin-top: 60px;
+  margin: 92px 0 0 0;
+  padding: 0;
+  width: 100%;
 }
 
 .product {
@@ -22,6 +24,11 @@
   border:solid;
   border-color: black;
   border-width: 2px;
+}
+
+cartButton:hover {
+  background-color: black;
+  color: white ;
 }
 
 .aaa{
