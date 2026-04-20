@@ -26,7 +26,7 @@
   border-width: 2px;
 }
 
-cartButton:hover {
+.cartButton:hover {
   background-color: black;
   color: white ;
 }

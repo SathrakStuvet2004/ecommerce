@@ -14,9 +14,11 @@
   position: fixed;
 }
 
-.cart {
+.cartIcon {
   position: relative;
   display: inline-block;
+  text-decoration: none;  /* remove underline */
+  color: white;         /* keep normal color */
   cursor: pointer;
 }
 

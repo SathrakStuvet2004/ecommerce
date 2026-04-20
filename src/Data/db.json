@@ -468,5 +468,36 @@
       "rating": 4.4,
       "stock": 70
     }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "quantity": 1
+    },{
+      "id": 2,
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "quantity": 2
+    },{
+      "id": 3,
+      "title": "Smart Watch",
+      "price": 2499,
+      "category": "Electronics",
+      "brand": "Noise",
+      "rating": 4.4,
+      "stock": 70,
+      "quantity": 1
+
+    }
   ]
 }
