@@ -62,6 +62,16 @@ export default function HomePage() {
     homePageData()
   }, [])
   console.log(products);
+  function addToCart(product: product) {
+    fetch("http://localhost:3000/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(product)
+    });
+  }
+
 
   return (
     <>
@@ -75,7 +85,7 @@ export default function HomePage() {
             <div className="aaa">price:  {product.price}</div>
             <div className="aaa">Rating:  {product.rating}</div>
             <div className="aaa">Stock:  {product.stock}</div>
-            <button className="cartButton">Add to cart</button>
+            <button className="cartButton" onClick={() => addToCart(product)}>Add to cart</button>
           </div>
         )}
       </div>

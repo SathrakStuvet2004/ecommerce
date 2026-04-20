@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Wireless Mouse",
       "price": 499,
       "category": "Electronics",
@@ -10,7 +10,7 @@
       "stock": 120
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Bluetooth Headphones",
       "price": 1499,
       "category": "Electronics",
@@ -19,7 +19,7 @@
       "stock": 80
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Men's T-Shirt",
       "price": 299,
       "category": "Fashion",
@@ -28,7 +28,7 @@
       "stock": 200
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Women's Kurti",
       "price": 799,
       "category": "Fashion",
@@ -37,7 +37,7 @@
       "stock": 150
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Smartphone",
       "price": 15999,
       "category": "Electronics",
@@ -46,7 +46,7 @@
       "stock": 60
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Laptop",
       "price": 55999,
       "category": "Electronics",
@@ -55,7 +55,7 @@
       "stock": 40
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Running Shoes",
       "price": 1999,
       "category": "Footwear",
@@ -64,7 +64,7 @@
       "stock": 90
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Backpack",
       "price": 899,
       "category": "Accessories",
@@ -73,7 +73,7 @@
       "stock": 110
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Wrist Watch",
       "price": 2499,
       "category": "Accessories",
@@ -82,7 +82,7 @@
       "stock": 70
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Gaming Keyboard",
       "price": 1299,
       "category": "Electronics",
@@ -91,7 +91,7 @@
       "stock": 95
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "LED Monitor",
       "price": 8999,
       "category": "Electronics",
@@ -100,7 +100,7 @@
       "stock": 50
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Power Bank",
       "price": 999,
       "category": "Electronics",
@@ -109,7 +109,7 @@
       "stock": 140
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Sunglasses",
       "price": 699,
       "category": "Accessories",
@@ -118,7 +118,7 @@
       "stock": 130
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Office Chair",
       "price": 4599,
       "category": "Furniture",
@@ -127,7 +127,7 @@
       "stock": 30
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Study Table",
       "price": 3499,
       "category": "Furniture",
@@ -136,7 +136,7 @@
       "stock": 25
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Water Bottle",
       "price": 299,
       "category": "Home",
@@ -145,7 +145,7 @@
       "stock": 200
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Electric Kettle",
       "price": 1299,
       "category": "Home Appliances",
@@ -154,7 +154,7 @@
       "stock": 85
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Mixer Grinder",
       "price": 2999,
       "category": "Home Appliances",
@@ -163,7 +163,7 @@
       "stock": 60
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Ceiling Fan",
       "price": 2499,
       "category": "Home Appliances",
@@ -172,7 +172,7 @@
       "stock": 70
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Air Conditioner",
       "price": 32999,
       "category": "Home Appliances",
@@ -181,7 +181,7 @@
       "stock": 20
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Refrigerator",
       "price": 28999,
       "category": "Home Appliances",
@@ -190,7 +190,7 @@
       "stock": 25
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Washing Machine",
       "price": 19999,
       "category": "Home Appliances",
@@ -199,7 +199,7 @@
       "stock": 18
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Tablet",
       "price": 12999,
       "category": "Electronics",
@@ -208,7 +208,7 @@
       "stock": 55
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Smart TV",
       "price": 25999,
       "category": "Electronics",
@@ -217,7 +217,7 @@
       "stock": 22
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Earbuds",
       "price": 1999,
       "category": "Electronics",
@@ -226,7 +226,7 @@
       "stock": 120
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "Formal Shoes",
       "price": 2499,
       "category": "Footwear",
@@ -235,7 +235,7 @@
       "stock": 90
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "Casual Shirt",
       "price": 799,
       "category": "Fashion",
@@ -244,7 +244,7 @@
       "stock": 110
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "Jeans",
       "price": 1499,
       "category": "Fashion",
@@ -253,7 +253,7 @@
       "stock": 100
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Handbag",
       "price": 1999,
       "category": "Accessories",
@@ -262,7 +262,7 @@
       "stock": 75
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Perfume",
       "price": 999,
       "category": "Beauty",
@@ -271,7 +271,7 @@
       "stock": 130
     },
     {
-      "id": 31,
+      "id": "31",
       "title": "Face Wash",
       "price": 249,
       "category": "Beauty",
@@ -280,7 +280,7 @@
       "stock": 180
     },
     {
-      "id": 32,
+      "id": "32",
       "title": "Hair Dryer",
       "price": 1499,
       "category": "Beauty",
@@ -289,7 +289,7 @@
       "stock": 60
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "Gaming Mouse",
       "price": 999,
       "category": "Electronics",
@@ -298,7 +298,7 @@
       "stock": 85
     },
     {
-      "id": 34,
+      "id": "34",
       "title": "USB Cable",
       "price": 199,
       "category": "Electronics",
@@ -307,7 +307,7 @@
       "stock": 200
     },
     {
-      "id": 35,
+      "id": "35",
       "title": "Charger Adapter",
       "price": 499,
       "category": "Electronics",
@@ -316,7 +316,7 @@
       "stock": 150
     },
     {
-      "id": 36,
+      "id": "36",
       "title": "Notebook",
       "price": 99,
       "category": "Stationery",
@@ -325,7 +325,7 @@
       "stock": 300
     },
     {
-      "id": 37,
+      "id": "37",
       "title": "Pen Set",
       "price": 149,
       "category": "Stationery",
@@ -334,7 +334,7 @@
       "stock": 250
     },
     {
-      "id": 38,
+      "id": "38",
       "title": "Desk Lamp",
       "price": 799,
       "category": "Home",
@@ -343,7 +343,7 @@
       "stock": 95
     },
     {
-      "id": 39,
+      "id": "39",
       "title": "Wall Clock",
       "price": 599,
       "category": "Home",
@@ -352,7 +352,7 @@
       "stock": 120
     },
     {
-      "id": 40,
+      "id": "40",
       "title": "Bedsheet",
       "price": 999,
       "category": "Home",
@@ -361,7 +361,7 @@
       "stock": 80
     },
     {
-      "id": 41,
+      "id": "41",
       "title": "Pillow",
       "price": 399,
       "category": "Home",
@@ -370,7 +370,7 @@
       "stock": 150
     },
     {
-      "id": 42,
+      "id": "42",
       "title": "Curtains",
       "price": 1299,
       "category": "Home",
@@ -379,7 +379,7 @@
       "stock": 60
     },
     {
-      "id": 43,
+      "id": "43",
       "title": "Dining Set",
       "price": 4999,
       "category": "Furniture",
@@ -388,7 +388,7 @@
       "stock": 20
     },
     {
-      "id": 44,
+      "id": "44",
       "title": "Sofa",
       "price": 15999,
       "category": "Furniture",
@@ -397,7 +397,7 @@
       "stock": 15
     },
     {
-      "id": 45,
+      "id": "45",
       "title": "Cup Set",
       "price": 599,
       "category": "Home",
@@ -406,7 +406,7 @@
       "stock": 100
     },
     {
-      "id": 46,
+      "id": "46",
       "title": "Toaster",
       "price": 1499,
       "category": "Home Appliances",
@@ -415,7 +415,7 @@
       "stock": 50
     },
     {
-      "id": 47,
+      "id": "47",
       "title": "Iron Box",
       "price": 999,
       "category": "Home Appliances",
@@ -424,7 +424,7 @@
       "stock": 75
     },
     {
-      "id": 48,
+      "id": "48",
       "title": "Vacuum Cleaner",
       "price": 6999,
       "category": "Home Appliances",
@@ -433,7 +433,7 @@
       "stock": 30
     },
     {
-      "id": 49,
+      "id": "49",
       "title": "Gym Dumbbells",
       "price": 1999,
       "category": "Fitness",
@@ -442,7 +442,7 @@
       "stock": 90
     },
     {
-      "id": 50,
+      "id": "50",
       "title": "Yoga Mat",
       "price": 799,
       "category": "Fitness",
@@ -451,7 +451,7 @@
       "stock": 120
     },
     {
-      "id": 51,
+      "id": "51",
       "title": "Wireless Earphones",
       "price": 1299,
       "category": "Electronics",
@@ -460,7 +460,7 @@
       "stock": 95
     },
     {
-      "id": 52,
+      "id": "52",
       "title": "Smart Watch",
       "price": 2499,
       "category": "Electronics",
@@ -471,7 +471,7 @@
   ],
   "cart": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Wireless Mouse",
       "price": 499,
       "category": "Electronics",
@@ -479,8 +479,9 @@
       "rating": 4.5,
       "stock": 120,
       "quantity": 1
-    },{
-      "id": 2,
+    },
+    {
+      "id": "2",
       "title": "Bluetooth Headphones",
       "price": 1499,
       "category": "Electronics",
@@ -488,8 +489,9 @@
       "rating": 4.3,
       "stock": 80,
       "quantity": 2
-    },{
-      "id": 3,
+    },
+    {
+      "id": "3",
       "title": "Smart Watch",
       "price": 2499,
       "category": "Electronics",
@@ -497,6 +499,34 @@
       "rating": 4.4,
       "stock": 70,
       "quantity": 1
+    },
+    {
+      "id": "h6vTBnXLmmo",
+      "title": "Men's T-Shirt",
+      "price": 299,
+      "category": "Fashion",
+      "brand": "H&M",
+      "rating": 4.1,
+      "stock": 200
+    },
+    {
+      "id": "-ninf12F4z8",
+      "title": "Washing Machine",
+      "price": 19999,
+      "category": "Home Appliances",
+      "brand": "Bosch",
+      "rating": 4.6,
+      "stock": 18
+    },
+    {
+      "id": "v-D20gnCZ_0",
+      "title": "Tablet",
+      "price": 12999,
+      "category": "Electronics",
+      "brand": "Lenovo",
+      "rating": 4.3,
+      "stock": 55
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
