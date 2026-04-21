@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
+import PaymentSummary from "./PaymentSummary";
 import './CartPage.css'
 
 type product = {
@@ -55,16 +56,12 @@ export default function CartPage() {
             </div>
           ))}
         </div>
-        
 
         <div className="Payment">
-          <h2>Payment Summary</h2>
+          <PaymentSummary />
         </div>
 
       </div>
-
-
-
     </>
   )
 }

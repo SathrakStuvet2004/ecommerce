@@ -1,12 +1,11 @@
 .CartProperty {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-right: 290px;
 }
 
 .CartItems {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   text-align: center;
   background-color: lightgray;
@@ -14,8 +13,7 @@
   border-color: black;
   border-width: 2px;
   border-style: solid;
-  margin-right: 70px;
-  
+  margin-right: 10px;
 }
 
 .CartItem{
@@ -31,7 +29,13 @@
   border-width: 1px;
   margin-bottom: 5px;
   margin-top: 15px;
-  
+  font-family:'italic';
+  font-size: medium;
+}
+
+.CartItem-delete-Button:hover {
+  background-color: black;
+  color: white ;
 }
 
 .cartName-Text{

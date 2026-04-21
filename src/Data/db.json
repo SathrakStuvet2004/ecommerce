@@ -42,7 +42,7 @@
     },
     {
       "id": "5",
-      "img": "https://picsum.photos/id/105/300/300",
+      "img": "https://picsum.photos/id/153/300/300",
       "title": "Smartphone",
       "price": 15999,
       "category": "Electronics",
@@ -372,7 +372,7 @@
     },
     {
       "id": "38",
-      "img": "https://picsum.photos/id/138/300/300",
+      "img": "https://picsum.photos/id/156/300/300",
       "title": "Desk Lamp",
       "price": 799,
       "category": "Home",
@@ -472,7 +472,7 @@
     },
     {
       "id": "48",
-      "img": "https://picsum.photos/id/148/300/300",
+      "img": "https://picsum.photos/id/155/300/300",
       "title": "Vacuum Cleaner",
       "price": 6999,
       "category": "Home Appliances",
@@ -492,7 +492,7 @@
     },
     {
       "id": "50",
-      "img": "https://picsum.photos/id/150/300/300",
+      "img": "https://picsum.photos/id/154/300/300",
       "title": "Yoga Mat",
       "price": 799,
       "category": "Fitness",
