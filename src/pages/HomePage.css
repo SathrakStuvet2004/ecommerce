@@ -4,39 +4,38 @@
   /* 4 equal columns */
   gap: 3px;
   /* space between items */
-  margin: 92px 0 0 0;
+  margin: 92px 0 10px 0;
   padding: 0;
   width: 100%;
+  padding: 20px;
 }
 
 .product {
   border: 1px solid #ccc;
   padding: 10px;
-  background-color: lightgray;
   border-radius: 5px;
-  color: black;
   display: block;
+  color: white;
+  padding: 10px;
+  background-color: #0d111d;
 }
 
-.cartButton{
-  cursor: pointer;
+
+.cartButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
   border-radius: 5px;
-  border:solid;
-  border-color: black;
-  border-width: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .cartButton:hover {
-  background-color: black;
-  color: white ;
+  background-color: #2563eb;
 }
 
 .aaa{
   display: grid;
-  grid-template-rows: repeat(4,6px); 
+  grid-template-rows: repeat(4,6px); ;
 }
 
 .price{

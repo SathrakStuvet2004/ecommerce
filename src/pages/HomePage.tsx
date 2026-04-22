@@ -1,8 +1,7 @@
 //npx json-server --watch db.json
-
-import { useEffect, useState } from "react"
 import './HomePage.css'
 import NavBar from "../components/NavBar";
+import { useProducts } from "../hooks/hook";
 
 // type Product = {
 //   id: number;
@@ -34,51 +33,67 @@ import NavBar from "../components/NavBar";
 //   );
 // }
 
-type product = {
-  "id": number;
-  "img": string;
-  "title": string;
-  "price": number;
-  "category": string;
-  "brand": string;
-  "rating": number;
-  "stock": number;
-}
+// type product = {
+//   "id": number;
+//   "img": string;
+//   "title": string;
+//   "price": number;
+//   "category": string;
+//   "brand": string;
+//   "rating": number;
+//   "stock": number;
+// }
 
 export default function HomePage() {
-  const [products, setProducts] = useState<product[]>([]);
+  //const [products, setProducts] = useState<product[]>([]);
 
   // fetch("http://localhost:3000/products")
   //   .then((response) => response.json())
   //   .then((data: product[]) => setProducts(data));
   // console.log(products);
 
-  async function homePageData() {
-    const response = await fetch("http://localhost:3000/products");
-    const result = await response.json();
-    setProducts(result);
-  }
 
-  useEffect(() => {
-    homePageData()
-  }, [])
-  console.log(products);
+  // async function homePageData() {
+  //   const response = await fetch("http://localhost:3000/products");
+  //   const result = await response.json();
+  //   setProducts(result);
+  // }
 
-  function addToCart(product: product) {
-    fetch("http://localhost:3000/cart", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(product)
-    });
+  // useEffect(() => {
+  //   homePageData()
+  // }, [])
+  // console.log(products);
+
+
+  /*function homePageData(){
+    async function fetchData() {
+      const response = await fetch("http://localhost:3000/products");
+      const result = await response.json();
+      setProducts(result);
+    }     
+    fetchData();
   }
+    */
+
+  const { data } = useProducts()
+  console.log(data, "tanstack")
+
+  // function addToCart(product: product) {
+  //   fetch("http://localhost:3000/cart", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify(product)
+  //   });
+  // 
+
 
   return (
     <>
       <NavBar />
       <div className="productsList" >
-        {products.map((product) =>
+        {data?.map((product: any) =>
           <div className="product" key={product.id} >
             <div className="productImage"><img src={product.img} alt={product.title} /></div>
 
@@ -93,7 +108,7 @@ export default function HomePage() {
               </div>
 
             </div>
-            <button className="cartButton" onClick={() => addToCart(product)}>Add to cart</button>
+            <button className="cartButton">Add to cart</button>
           </div>
         )}
       </div>

@@ -541,6 +541,66 @@
       "brand": "Boat",
       "rating": 4.3,
       "stock": 80
+    },
+    {
+      "id": "SPZ4ne0qiTg",
+      "img": "https://picsum.photos/id/114/300/300",
+      "title": "Office Chair",
+      "price": 4599,
+      "category": "Furniture",
+      "brand": "GreenSoul",
+      "rating": 4.5,
+      "stock": 30
+    },
+    {
+      "id": "sbI1mJ7gg6E",
+      "img": "https://picsum.photos/id/122/300/300",
+      "title": "Washing Machine",
+      "price": 19999,
+      "category": "Home Appliances",
+      "brand": "Bosch",
+      "rating": 4.6,
+      "stock": 18
+    },
+    {
+      "id": "MSIbEYdZMlg",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120
+    },
+    {
+      "id": "wR0jdQGCUZs",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80
+    },
+    {
+      "id": "fmUVqsyAMBI",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80
+    },
+    {
+      "id": "nKKOaHcqueM",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

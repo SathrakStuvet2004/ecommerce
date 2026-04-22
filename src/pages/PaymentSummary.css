@@ -4,6 +4,9 @@
    border-width: 2px;
  display: grid;
  padding: 20px;
+  background-color: #1c263e;    /* dark gray */
+  color: white;
+  border-radius: 5px ;  
 }
 
 .checkoutButton{
@@ -18,9 +21,18 @@
   padding: 10px 20px;
   font-size: 16px;
   font-family: 'italic';
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
 }
 
 .checkoutButton:hover {
-  background-color: black;
+  background-color: #2563eb;
   color: white ;
+}
+
+.PaymentSummary-text{
+  color: rgb(223, 210, 210);
 }
