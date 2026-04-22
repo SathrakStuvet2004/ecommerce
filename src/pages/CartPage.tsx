@@ -1,31 +1,25 @@
-import { useEffect, useState } from "react";
+import { useCart } from "../hooks/hook";
+import { useDeleteCartItem } from "../hooks/hook";
 import NavBar from "../components/NavBar";
 import PaymentSummary from "./PaymentSummary";
 import './CartPage.css'
-
-type product = {
-  "id": number;
-  "title": string;
-  "price": number;
-  "category": string;
-  "brand": string;
-  "rating": number;
-  "stock": number;
-  "img": string;
-}
-
+  
 export default function CartPage() {
 
-  const [cartItems, setCartItems] = useState<product[]>([]);
+  // const [cartItems, setCartItems] = useState<product[]>([]);
 
-  async function cartPageData() {
-    const response = await fetch("http://localhost:3000/cart");
-    const result = await response.json();
-    setCartItems(result);
-  }
-  useEffect(() => {
-    cartPageData()
-  }, [])
+  // async function cartPageData() {
+  //   const response = await fetch("http://localhost:3000/cart");
+  //   const result = await response.json();
+  //   setCartItems(result);
+  // }
+  // useEffect(() => {
+  //   cartPageData()
+  // }, [])
+
+  const { data: cartItems } = useCart();
+
+  const { mutate: deleteCartItem } = useDeleteCartItem();
 
   return (
     <>
@@ -37,7 +31,7 @@ export default function CartPage() {
       <div className="CartProperty">
 
         <div className="CartItems">
-          {cartItems.map((item) => (
+          {cartItems?.map((item: any) => (
             <div key={item.id} className="CartItem">
               <div className="CartItem-image">
                 <img src={item.img} alt={item.title} />
@@ -50,7 +44,9 @@ export default function CartPage() {
                 <p>Brand: {item.brand}</p>
                 <p>Rating: {item.rating}</p>
                 <div>
-                  <button className="CartItem-delete-Button"> delete </button>
+                  <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
+                    delete
+                   </button>
                 </div>
               </div>
             </div>

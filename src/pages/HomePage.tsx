@@ -1,7 +1,7 @@
 //npx json-server --watch db.json
 import './HomePage.css'
 import NavBar from "../components/NavBar";
-import { useProducts } from "../hooks/hook";
+import { useProducts, useAddToCart } from "../hooks/hook";
 
 // type Product = {
 //   id: number;
@@ -88,7 +88,7 @@ export default function HomePage() {
   //   });
   // 
 
-
+  const { mutate: addToCart } = useAddToCart();
   return (
     <>
       <NavBar />
@@ -108,7 +108,7 @@ export default function HomePage() {
               </div>
 
             </div>
-            <button className="cartButton">Add to cart</button>
+            <button className="cartButton" onClick={()=> addToCart(product)} >Add to cart</button>
           </div>
         )}
       </div>
