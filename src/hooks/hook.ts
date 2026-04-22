@@ -32,7 +32,7 @@ export const useProducts = () => {
 
 export const useCart = () => {
   return useQuery({
-    queryKey: ["cart"],
+    queryKey: ["Getcart"],
     queryFn: () => fetcher("/cart"),
     staleTime: 1000 * 60 * 5,
     refetchOnMount: false,
@@ -50,16 +50,12 @@ export const useAddToCart = () => {
         body: JSON.stringify(newProduct),
       }),
 
-    onSuccess: () => {
-      // refresh cart data automatically
-      queryClient.invalidateQueries({ queryKey: ["cart"], });
-    },
-    // onSuccess: (newItem) => {
-    //   queryClient.setQueryData(["cart"], (oldData: any = []) => [
-    //     ...oldData,
-    //     newItem
-    //   ]);
-    // }
+    onSuccess: (newItem) => {
+      queryClient.setQueryData(["Getcart"], (oldData: any = []) => [
+        ...oldData,
+        newItem
+      ]);
+    }
 
   });
 };
@@ -75,7 +71,7 @@ export const useDeleteCartItem = () => {
 
     onSuccess: () => {
       // refresh cart after delete
-      queryClient.invalidateQueries({ queryKey: ["cart"] });
+      queryClient.invalidateQueries({ queryKey: ["Getcart"] });
     },
   });
 };

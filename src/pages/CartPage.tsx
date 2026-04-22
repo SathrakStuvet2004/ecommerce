@@ -31,26 +31,32 @@ export default function CartPage() {
       <div className="CartProperty">
 
         <div className="CartItems">
-          {cartItems?.map((item: any) => (
-            <div key={item.id} className="CartItem">
-              <div className="CartItem-image">
-                <img src={item.img} alt={item.title} />
-              </div>
-              <div className="cart-info">
-                <p>{item.title}</p>
-                <p>Price: ${item.price}</p>
+          {cartItems && cartItems.length > 0 ? (
+            cartItems.map((item: any) => (
+              <div key={item.id} className="CartItem">
+                <div className="CartItem-image">
+                  <img src={item.img} alt={item.title} />
+                </div>
+                <div className="cart-info">
+                  <p>{item.title}</p>
+                  <p>Price: ${item.price}</p>
 
-                <p>Category: {item.category}</p>
-                <p>Brand: {item.brand}</p>
-                <p>Rating: {item.rating}</p>
-                <div>
-                  <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
-                    delete
-                   </button>
+                  <p>Category: {item.category}</p>
+                  <p>Brand: {item.brand}</p>
+                  <p>Rating: {item.rating}</p>
+                  <div>
+                    <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
+                      delete
+                     </button>
+                  </div>
                 </div>
               </div>
+            ))
+          ) : (
+            <div className="empty-cart">
+              <p>The cart is empty Please add products.</p>
             </div>
-          ))}
+          )}
         </div>
 
         <div className="Payment">

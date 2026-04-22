@@ -54,3 +54,12 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
 }
+
+.empty-cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    font-family: italic;
+  color: rgb(223, 210, 210);
+}

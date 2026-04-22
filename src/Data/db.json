@@ -521,6 +521,27 @@
       "stock": 70
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "vXKKvcCS8rM",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80
+    },
+    {
+      "id": "ux6eOILNjAg",
+      "img": "https://picsum.photos/id/103/300/300",
+      "title": "Men's T-Shirt",
+      "price": 299,
+      "category": "Fashion",
+      "brand": "H&M",
+      "rating": 4.1,
+      "stock": 200
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

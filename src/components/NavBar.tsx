@@ -11,8 +11,8 @@ export default function NavBar() {
       <div className="homeIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
           <FontAwesomeIcon icon={faHouse} />
+           <p>Home</p>
         </Link>
-        <p>Home</p>
       </div>
 
       <div>
@@ -23,22 +23,22 @@ export default function NavBar() {
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/Cart">
           <FontAwesomeIcon icon={faCartShopping} />
           <span className="badge">3</span>
+          <p>Cart</p>
         </Link>
-        <p>Cart</p>
       </div>
 
       <div className="OrdersIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/Orders">
         <FontAwesomeIcon icon={faBox} />
-        </Link>
         <p>Orders</p>
+        </Link>
       </div>
 
       <div className="userIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }}  to="/User">
         <FontAwesomeIcon icon={faUser} />
-        </Link>
         <p>User</p>
+        </Link>
       </div>
 
     </div>
