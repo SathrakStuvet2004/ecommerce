@@ -92,6 +92,9 @@ export const useAddOrder = () => {
     mutationFn: (newProduct: any) =>
       fetcher("/Orders", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(newProduct),
       }),
 

@@ -49,10 +49,6 @@ export default function CartPage() {
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
-
-                    <button className="CartItem-delete-Button" onClick={() => addOrder(item)}>
-                      Buy Now
-                    </button>
                   </div>
                 </div>
               </div>
@@ -62,6 +58,24 @@ export default function CartPage() {
               <p>The cart is empty Please add products.</p>
             </div>
           )}
+        </div>
+
+        <div className="CartDetails">
+
+          <h2 className="CartDetails-Text">Cart Details</h2>
+          <div className="CartDetails-info">
+            <div>
+              <p>Total Items: {cartItems?.length}</p>
+            </div>
+            <div>
+              <p>Total Price: ${cartItems?.reduce((sum: number, item: any) => sum + item.price, 0).toFixed(2)}</p>
+            </div>
+            {cartItems && cartItems.length > 0 && (
+              <button className="BuyNowButton" onClick={() =>  addOrder({ items: cartItems })}>
+                Buy All
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </>

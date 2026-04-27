@@ -75,8 +75,7 @@ export default function HomePage() {
   }
     */
 
-  const { data } = useProducts()
-  console.log(data, "tanstack")
+  const { data } = useProducts();
 
   // function addToCart(product: product) {
   //   fetch("http://localhost:3000/cart", {
