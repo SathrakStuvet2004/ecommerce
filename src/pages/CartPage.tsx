@@ -29,7 +29,7 @@ export default function CartPage() {
 
       <h1 className="cartName-Text">Cart Items</h1>
 
-      <div className="CartProperty">
+      <div className="CartContainer">
 
         <div className="CartItems">
           {cartItems && cartItems.length > 0 ? (

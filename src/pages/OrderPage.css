@@ -1,0 +1,83 @@
+.OrdersTitle {
+  margin-top: 100px;
+  font-family: italic;
+  color: rgb(223, 210, 210);
+  margin-left: 5px;
+}
+
+.OrderPage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  background-color: #1c263e;
+  border-radius: 5px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 35px;
+}
+
+.OrdersContainer {
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.OrdersDetailsTitle{
+  font-family: italic;
+  color: rgb(223, 210, 210);
+  padding: 15px;
+  font-size: 20px;
+}
+
+.OrderItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.OrderItem {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  margin: 7px 5px 5px 5px;
+}
+
+.paymentInfo{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color: wheat;
+  margin: 7px 5px 5px 5px;
+}
+.paymentSummeryTitle{
+  font-family: italic;
+  color: rgb(223, 210, 210);
+  padding: 15px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.checkoutButton{
+  cursor: pointer;
+  border-radius: 5px;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-family: 'italic';
+  font-size: medium;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.checkoutButton:hover {
+  background-color: #2563eb;
+  color: white;
+}
