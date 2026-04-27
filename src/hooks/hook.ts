@@ -1,4 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import API from "../../global";
 
 export const fetcher = async (url: string, options = {}) => {
   const res = await fetch("http://localhost:3000" + url, {
@@ -79,6 +80,10 @@ export const useOrders = () => {
   return useQuery({
     queryKey: ["GetOrders"],
     queryFn: () => fetcher("/Orders"),
+    
+    select: (data) =>
+      data.Orders.flatMap((order: any) => order.items),
+
     staleTime: 1000 * 60 * 5,
     refetchOnMount: false,
     refetchOnWindowFocus: false
@@ -122,3 +127,15 @@ export const useDeleteOrderItem = () => {
     },
   });
 };
+
+export const getFromMockApi=async ()=>{
+  const apiEndpoint= API
+ try{
+  const data= await fetch(apiEndpoint).then((response) => response.json())
+  console.log(data, "mockapi")
+  return data;
+ }
+ catch(err){
+  console.error
+ }
+}

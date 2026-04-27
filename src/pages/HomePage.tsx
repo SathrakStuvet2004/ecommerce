@@ -1,7 +1,7 @@
 //npx json-server --watch db.json
 import './HomePage.css'
 import NavBar from "../components/NavBar";
-import { useProducts, useAddToCart } from "../hooks/hook";
+import { useProducts, useAddToCart, getFromMockApi } from "../hooks/hook";
 
 // type Product = {
 //   id: number;
@@ -88,9 +88,12 @@ export default function HomePage() {
   // 
 
   const { mutate: addToCart } = useAddToCart();
+  const getData=getFromMockApi()
+  console.log(getData, "mockapi data in home page")
   return (
     <>
       <NavBar />
+      <title>Home</title>
       <div className="productsList" >
         {data?.map((product: any) =>
           <div className="product" key={product.id} >

@@ -22,6 +22,8 @@ export default function CartPage() {
 
   const { mutate: addOrder } = useAddOrder();
 
+  console.log({...cartItems})
+
   return (
     <>
       <title>Cart</title>
@@ -71,7 +73,7 @@ export default function CartPage() {
               <p>Total Price: ${cartItems?.reduce((sum: number, item: any) => sum + item.price, 0).toFixed(2)}</p>
             </div>
             {cartItems && cartItems.length > 0 && (
-              <button className="BuyNowButton" onClick={() =>  addOrder({ items: cartItems })}>
+              <button className="BuyNowButton" onClick={() =>  addOrder({...cartItems})}>
                 Buy All
               </button>
             )}
