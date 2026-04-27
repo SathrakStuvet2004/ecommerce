@@ -27,7 +27,6 @@ export const useProducts = () => {
     refetchOnMount: false,
     refetchOnWindowFocus: false
   });
-
 };
 
 export const useCart = () => {
@@ -73,5 +72,34 @@ export const useDeleteCartItem = () => {
       // refresh cart after delete
       queryClient.invalidateQueries({ queryKey: ["Getcart"] });
     },
+  });
+};
+
+export const useOrders = () => {
+  return useQuery({
+    queryKey: ["GetOrders"],
+    queryFn: () => fetcher("/Orders"),
+    staleTime: 1000 * 60 * 5,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false
+  });
+};
+
+export const useBuyNow = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (newProduct: any) =>
+      fetcher("/Orders", {
+        method: "POST",
+        body: JSON.stringify(newProduct),
+      }),
+
+    onSuccess: (newItem) => {
+      queryClient.setQueryData(["GetOrders"], (oldData: any = []) => [
+        ...oldData,
+        newItem
+      ]);
+    }
   });
 };
