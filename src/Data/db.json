@@ -523,16 +523,6 @@
   ],
   "cart": [
     {
-      "id": "QqwH7O5jMOM",
-      "img": "https://picsum.photos/id/101/300/300",
-      "title": "Wireless Mouse",
-      "price": 499,
-      "category": "Electronics",
-      "brand": "Logitech",
-      "rating": 4.5,
-      "stock": 120
-    },
-    {
       "id": "pwaWBFNk1UA",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
@@ -605,7 +595,7 @@
       "stock": 120
     },
     {
-      "id": "Ng8p6bGMvRg",
+      "id": "l-JLN7kd378",
       "img": "https://picsum.photos/id/115/300/300",
       "title": "Study Table",
       "price": 3499,
@@ -613,16 +603,6 @@
       "brand": "Ikea",
       "rating": 4.2,
       "stock": 25
-    },
-    {
-      "id": "7OnZoXWI6Nk",
-      "img": "https://picsum.photos/id/116/300/300",
-      "title": "Water Bottle",
-      "price": 299,
-      "category": "Home",
-      "brand": "Milton",
-      "rating": 4.1,
-      "stock": 200
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,8 +1,8 @@
-import { useBuyNow, useCart } from "../hooks/hook";
+import { useAddOrder, useCart } from "../hooks/hook";
 import { useDeleteCartItem } from "../hooks/hook";
 import NavBar from "../components/NavBar";
 import './CartPage.css'
-  
+
 export default function CartPage() {
 
   // const [cartItems, setCartItems] = useState<product[]>([]);
@@ -20,7 +20,7 @@ export default function CartPage() {
 
   const { mutate: deleteCartItem } = useDeleteCartItem();
 
-  const { mutate: buyNow } = useBuyNow();
+  const { mutate: addOrder } = useAddOrder();
 
   return (
     <>
@@ -48,11 +48,11 @@ export default function CartPage() {
                   <div>
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
-                     </button>
+                    </button>
 
-                     <button className="CartItem-delete-Button" onClick={() => buyNow(item)}>
+                    <button className="CartItem-delete-Button" onClick={() => addOrder(item)}>
                       Buy Now
-                     </button>
+                    </button>
                   </div>
                 </div>
               </div>

@@ -85,7 +85,7 @@ export const useOrders = () => {
   });
 };
 
-export const useBuyNow = () => {
+export const useAddOrder = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -101,5 +101,21 @@ export const useBuyNow = () => {
         newItem
       ]);
     }
+  });
+};
+
+export const useDeleteOrderItem = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (id: number) =>
+      fetcher(`/Orders/${id}`, {
+        method: "DELETE",
+      }),
+
+    onSuccess: () => {
+      // refresh orders after delete
+      queryClient.invalidateQueries({ queryKey: ["GetOrders"] });
+    },
   });
 };
