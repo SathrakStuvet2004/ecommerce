@@ -588,6 +588,12 @@
       "id": "lUy1V4Owx7o"
     }
   ],
-  "user":[],
+  "users": [
+    {
+      "email": "sathrakstuvet51@gmail.com",
+      "password": "12345678",
+      "id": "tTEGqQanrbo"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

@@ -16,10 +16,28 @@ export const fetcher = async (url: string, options = {}) => {
   return res.json();
 };
 
-// hooks/useProducts.js
+//add new user to users
+export const useAddUser = () => {
+  const queryClient = useQueryClient();
 
+  return useMutation({
+    mutationFn: (newUser: any) =>
+      fetcher("/users", {
+        method: "POST",
+        body: JSON.stringify(newUser),
+      }),
 
+    onSuccess: (newItem) => {
+      queryClient.setQueryData(["users"], (oldData: any = []) => [
+        ...oldData,
+        newItem
+      ]);
+    }
 
+  });
+};
+
+//fetch products for home page
 export const useProducts = () => {
   return useQuery({
     queryKey: ["products"],
@@ -29,7 +47,7 @@ export const useProducts = () => {
     refetchOnWindowFocus: false
   });
 };
-
+//fetch cart items for cart page
 export const useCart = () => {
   return useQuery({
     queryKey: ["Getcart"],
@@ -39,7 +57,7 @@ export const useCart = () => {
     refetchOnWindowFocus: false,
   });
 };
-
+//send new product to cart
 export const useAddToCart = () => {
   const queryClient = useQueryClient();
 
@@ -59,7 +77,7 @@ export const useAddToCart = () => {
 
   });
 };
-
+//remove product from cart
 export const useDeleteCartItem = () => {
   const queryClient = useQueryClient();
 
@@ -75,7 +93,7 @@ export const useDeleteCartItem = () => {
     },
   });
 };
-
+//fetch orders for order page
 export const useOrders = () => {
   return useQuery({
     queryKey: ["GetOrders"],
@@ -89,7 +107,7 @@ export const useOrders = () => {
     refetchOnWindowFocus: false
   });
 };
-
+//send new order to orders
 export const useAddOrder = () => {
   const queryClient = useQueryClient();
 
@@ -111,7 +129,7 @@ export const useAddOrder = () => {
     }
   });
 };
-
+//remove product from orders
 export const useDeleteOrderItem = () => {
   const queryClient = useQueryClient();
 
@@ -127,7 +145,7 @@ export const useDeleteOrderItem = () => {
     },
   });
 };
-
+//fetch data from mock api
 export const getFromMockApi=async ()=>{
   const apiEndpoint= API
  try{

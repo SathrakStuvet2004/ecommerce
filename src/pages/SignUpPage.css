@@ -43,3 +43,15 @@
   background-color: #2563eb;
   color: black;
 }
+
+.LoginText {
+  color: wheat;
+  font-family: italic;
+  margin-top: 15px;
+}
+
+.LoginLink {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
