@@ -11,6 +11,8 @@ import { useGetUser } from './hooks/hook'
 
 function App() {
   const { data: user = [] } = useGetUser();
+  //const currentUser = user.find((data: any) => data.email === JSON.parse(localStorage.getItem("currentUser") || '{}').email );
+  
   return (
     <Routes>
       <Route path='/' element={<SignUpPage />} />
