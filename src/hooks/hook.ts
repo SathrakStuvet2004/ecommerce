@@ -36,6 +36,16 @@ export const useAddUser = () => {
 
   });
 };
+//fetch users for login page
+export const useGetUser = () => {
+  return useQuery({
+    queryKey: ["user"],
+    queryFn: () => fetcher("/users"),
+    staleTime: 1000 * 60 * 5,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false
+  });
+};
 
 //fetch products for home page
 export const useProducts = () => {
@@ -60,7 +70,7 @@ export const useCart = () => {
 //send new product to cart
 export const useAddToCart = () => {
   const queryClient = useQueryClient();
-
+  
   return useMutation({
     mutationFn: (newProduct: any) =>
       fetcher("/cart", {
@@ -98,10 +108,6 @@ export const useOrders = () => {
   return useQuery({
     queryKey: ["GetOrders"],
     queryFn: () => fetcher("/Orders"),
-    
-    select: (data) =>
-      data.Orders.flatMap((order: any) => order.items),
-
     staleTime: 1000 * 60 * 5,
     refetchOnMount: false,
     refetchOnWindowFocus: false

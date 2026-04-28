@@ -1,6 +1,8 @@
+import { useGetUser } from '../hooks/hook'
 import './SignUpPage.css'
 
 export default function LogInPage() {
+ 
   return (
     <div className="LogInPage">
       <title>Login</title>

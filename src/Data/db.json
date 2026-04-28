@@ -523,16 +523,6 @@
   ],
   "cart": [
     {
-      "id": "OE6wEZndUxg",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80
-    },
-    {
       "id": "H5fwBo2jKfw",
       "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
@@ -541,21 +531,51 @@
       "brand": "H&M",
       "rating": 4.1,
       "stock": 200
+    },
+    {
+      "id": "lyw9PIo1bm4",
+      "img": "https://picsum.photos/id/114/300/300",
+      "title": "Office Chair",
+      "price": 4599,
+      "category": "Furniture",
+      "brand": "GreenSoul",
+      "rating": 4.5,
+      "stock": 30
+    },
+    {
+      "id": "iDcYsXrJv8M",
+      "img": "https://picsum.photos/id/114/300/300",
+      "title": "Office Chair",
+      "price": 4599,
+      "category": "Furniture",
+      "brand": "GreenSoul",
+      "rating": 4.5,
+      "stock": 30
+    },
+    {
+      "id": "9_yZELi6evs",
+      "img": "https://picsum.photos/id/116/300/300",
+      "title": "Water Bottle",
+      "price": 299,
+      "category": "Home",
+      "brand": "Milton",
+      "rating": 4.1,
+      "stock": 200
+    },
+    {
+      "id": "k-bb0ECYhOU",
+      "img": "https://picsum.photos/id/128/300/300",
+      "title": "Jeans",
+      "price": 1499,
+      "category": "Fashion",
+      "brand": "Levis",
+      "rating": 4.5,
+      "stock": 100
     }
   ],
   "Orders": [
     {
-      "id": "0mP_lv0XkPE",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80
-    },
-    {
-      "id": "ywh9_p07SBI",
+      "id": "Kg5jB8rUyNk",
       "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
       "price": 299,
@@ -565,117 +585,86 @@
       "stock": 200
     },
     {
-      "0": {
-        "id": "mCxJgzbny2s",
-        "img": "https://picsum.photos/id/102/300/300",
-        "title": "Bluetooth Headphones",
-        "price": 1499,
-        "category": "Electronics",
-        "brand": "Boat",
-        "rating": 4.3,
-        "stock": 80
-      },
-      "id": "lUy1V4Owx7o"
+      "id": "PgQ9buXVh8o",
+      "img": "https://picsum.photos/id/114/300/300",
+      "title": "Office Chair",
+      "price": 4599,
+      "category": "Furniture",
+      "brand": "GreenSoul",
+      "rating": 4.5,
+      "stock": 30
     },
     {
-      "0": {
-        "id": "OE6wEZndUxg",
-        "img": "https://picsum.photos/id/102/300/300",
-        "title": "Bluetooth Headphones",
-        "price": 1499,
-        "category": "Electronics",
-        "brand": "Boat",
-        "rating": 4.3,
-        "stock": 80
-      },
-      "1": {
-        "id": "H5fwBo2jKfw",
-        "img": "https://picsum.photos/id/103/300/300",
-        "title": "Men's T-Shirt",
-        "price": 299,
-        "category": "Fashion",
-        "brand": "H&M",
-        "rating": 4.1,
-        "stock": 200
-      },
-      "id": "5yYT89ls-Xw"
+      "id": "e6pbFhUscqc",
+      "img": "https://picsum.photos/id/116/300/300",
+      "title": "Water Bottle",
+      "price": 299,
+      "category": "Home",
+      "brand": "Milton",
+      "rating": 4.1,
+      "stock": 200
+    },
+    {
+      "id": "pPL-Z98-VTU",
+      "img": "https://picsum.photos/id/128/300/300",
+      "title": "Jeans",
+      "price": 1499,
+      "category": "Fashion",
+      "brand": "Levis",
+      "rating": 4.5,
+      "stock": 100
     }
   ],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",
-      "password": "12345678",
-      "id": "tTEGqQanrbo"
+      "password": "123456789",
+      "id": "XoiMkiFneFM"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "UjvEYmAg48I"
+      "email": "stanly7@gmail.com",
+      "password": "123456789",
+      "id": "pTm9WkqWPHU"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "nJCstDMT8yk"
+      "email": "franklin1@gmail.com",
+      "password": "123456789",
+      "id": "4EY24uZyGws"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "kQkZ7C_WYl8"
+      "email": "mathew1@gmail.com",
+      "password": "123456789",
+      "id": "2NeXA59s3kM"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "MtqD0QScu4U"
+      "email": "andrew1@gmail.com",
+      "password": "123456789",
+      "id": "_joIQKYcofQ"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "KC6ysAulmLw"
+      "email": "jeffrin1@gmail.com",
+      "password": "123456789",
+      "id": "EpSTujkHoqs"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "P2PDRzYJ28A"
+      "email": "jein1@gmail.com",
+      "password": "123456789",
+      "id": "MmyHKSHwqQ0"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "Sy-bfVKkc9Y"
+      "email": "jeslin1@gmail.com",
+      "password": "123456789",
+      "id": "E0I3oMQriZg"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "CPg1Ahl8VrQ"
+      "email": "giftson1@gmail.com",
+      "password": "123456789",
+      "id": "X-f0rOva51Q"
     },
     {
-      "email": "",
-      "password": "1234567890",
-      "id": "maw9WbNvTq0"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "3mr1AFEixJY"
-    },
-    {
-      "email": "",
-      "password": "1234567890",
-      "id": "HZBpZ2ZiS_c"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "gpQKyZFoGR0"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "9oueiCn0n2I"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "NlnwpMz5-W8"
+      "email": "santhosh1@gmail.com",
+      "password": "123456789",
+      "id": "Sf5PLL6ttZg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

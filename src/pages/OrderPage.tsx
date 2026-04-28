@@ -9,11 +9,12 @@ export default function OrderPage() {
   const { data: orders } = useOrders();
   const {mutate: deleteOrderItem} = useDeleteOrderItem();
 
+
   return (
     <>
       <title>Orders</title>
       <NavBar />
-      
+
       <div className="OrdersTitle">
         <h1>Orders</h1>
       </div>
