@@ -6,9 +6,11 @@ import CartPage from './pages/CartPage'
 import OrderPage from './pages/OrderPage'
 import SignUpPage from './pages/SignUpPage'
 import LogInPage from './pages/LogInPage'
+import { useGetUser } from './hooks/hook'
 
 
 function App() {
+  const { data: user = [] } = useGetUser();
   return (
     <Routes>
       <Route path='/' element={<SignUpPage />} />
