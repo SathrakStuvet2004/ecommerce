@@ -1,4 +1,4 @@
-.SignUpPage {
+.SignUpPage, .LogInPage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
   background-color: #1c263e;
 }
 
-.SignUpText {
+.SignUpText, .LogInText {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -15,7 +15,7 @@
   font-family: italic;
 }
 
-.SignUpForm {
+.SignUpForm, .LogInForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@
   width: 250px;
 }
 
-.SignUpButton {
+.SignUpButton, .LoginButton {
   background-color: #3b82f6;
   color: white;
   border: none;
@@ -40,6 +40,10 @@
 }
 
 .SignUpButton:hover {
+  background-color: #2563eb;
+  color: black;
+}
+.LoginButton:hover {
   background-color: #2563eb;
   color: black;
 }

@@ -13,9 +13,11 @@ export default function OrderPage() {
     <>
       <title>Orders</title>
       <NavBar />
+      
       <div className="OrdersTitle">
         <h1>Orders</h1>
       </div>
+
       <div className="OrderPage">
         <div className="OrdersContainer">
 

@@ -523,7 +523,7 @@
   ],
   "cart": [
     {
-      "id": "0mP_lv0XkPE",
+      "id": "OE6wEZndUxg",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
       "price": 1499,
@@ -533,7 +533,7 @@
       "stock": 80
     },
     {
-      "id": "ywh9_p07SBI",
+      "id": "H5fwBo2jKfw",
       "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
       "price": 299,
@@ -541,16 +541,6 @@
       "brand": "H&M",
       "rating": 4.1,
       "stock": 200
-    },
-    {
-      "id": "mCxJgzbny2s",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80
     }
   ],
   "Orders": [
@@ -586,6 +576,29 @@
         "stock": 80
       },
       "id": "lUy1V4Owx7o"
+    },
+    {
+      "0": {
+        "id": "OE6wEZndUxg",
+        "img": "https://picsum.photos/id/102/300/300",
+        "title": "Bluetooth Headphones",
+        "price": 1499,
+        "category": "Electronics",
+        "brand": "Boat",
+        "rating": 4.3,
+        "stock": 80
+      },
+      "1": {
+        "id": "H5fwBo2jKfw",
+        "img": "https://picsum.photos/id/103/300/300",
+        "title": "Men's T-Shirt",
+        "price": 299,
+        "category": "Fashion",
+        "brand": "H&M",
+        "rating": 4.1,
+        "stock": 200
+      },
+      "id": "5yYT89ls-Xw"
     }
   ],
   "users": [
@@ -593,6 +606,76 @@
       "email": "sathrakstuvet51@gmail.com",
       "password": "12345678",
       "id": "tTEGqQanrbo"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "UjvEYmAg48I"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "nJCstDMT8yk"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "kQkZ7C_WYl8"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "MtqD0QScu4U"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "KC6ysAulmLw"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "P2PDRzYJ28A"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "Sy-bfVKkc9Y"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "CPg1Ahl8VrQ"
+    },
+    {
+      "email": "",
+      "password": "1234567890",
+      "id": "maw9WbNvTq0"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "3mr1AFEixJY"
+    },
+    {
+      "email": "",
+      "password": "1234567890",
+      "id": "HZBpZ2ZiS_c"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "gpQKyZFoGR0"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "9oueiCn0n2I"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "NlnwpMz5-W8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
