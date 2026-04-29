@@ -53,7 +53,9 @@ export default function CartPage() {
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
-                    <button className="CartItem-buy-Button" onClick={() => addOrder(item)}>
+                    <button className="CartItem-buy-Button" onClick={() =>{addOrder(item);
+                        deleteCartItem(item.id)
+                    } }>
                       Buy Now
                     </button>     
                   </div>
@@ -79,7 +81,8 @@ export default function CartPage() {
             </div>
             {cartItems && cartItems.length > 0 && (
               <button className="BuyNowButton" onClick={() => {
-                cartItems.forEach((item: any) => addOrder(item))
+                cartItems.forEach((item: any) => addOrder(item));
+                cartItems.forEach((item: any) => deleteCartItem(item.id));
               }}>
                 Buy All
               </button>

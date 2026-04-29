@@ -58,7 +58,7 @@ export default function OrderPage() {
               <p>Total Items: {orders?.length}</p>
               <p>Total Price: ${orders?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
               <div>
-                <button className="checkoutButton">Place your order</button>
+                <button className="placeOrderButton checkoutButton">Place your order</button>
               </div>
             </div>
           </div>

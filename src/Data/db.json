@@ -521,51 +521,40 @@
       "stock": 70
     }
   ],
-  "cart": [
-    {
-      "id": "H5fwBo2jKfw",
-      "img": "https://picsum.photos/id/103/300/300",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200
-    },
-    {
-      "id": "lyw9PIo1bm4",
-      "img": "https://picsum.photos/id/114/300/300",
-      "title": "Office Chair",
-      "price": 4599,
-      "category": "Furniture",
-      "brand": "GreenSoul",
-      "rating": 4.5,
-      "stock": 30
-    },
-    {
-      "id": "iDcYsXrJv8M",
-      "img": "https://picsum.photos/id/114/300/300",
-      "title": "Office Chair",
-      "price": 4599,
-      "category": "Furniture",
-      "brand": "GreenSoul",
-      "rating": 4.5,
-      "stock": 30
-    },
-    {
-      "id": "9_yZELi6evs",
-      "img": "https://picsum.photos/id/116/300/300",
-      "title": "Water Bottle",
-      "price": 299,
-      "category": "Home",
-      "brand": "Milton",
-      "rating": 4.1,
-      "stock": 200
-    }
-  ],
+  "cart": [],
   "Orders": [
     {
-      "id": "Kg5jB8rUyNk",
+      "id": "dwRWkN0EuJI",
+      "img": "https://picsum.photos/id/104/300/300",
+      "title": "Women's Kurti",
+      "price": 799,
+      "category": "Fashion",
+      "brand": "Biba",
+      "rating": 4.4,
+      "stock": 150
+    },
+    {
+      "id": "zmFn1e-PwZ4",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80
+    },
+    {
+      "id": "8AUtSHOZL-4",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120
+    },
+    {
+      "id": "lZTWAM2kBgE",
       "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
       "price": 299,
@@ -573,38 +562,9 @@
       "brand": "H&M",
       "rating": 4.1,
       "stock": 200
-    },
-    {
-      "id": "PgQ9buXVh8o",
-      "img": "https://picsum.photos/id/114/300/300",
-      "title": "Office Chair",
-      "price": 4599,
-      "category": "Furniture",
-      "brand": "GreenSoul",
-      "rating": 4.5,
-      "stock": 30
-    },
-    {
-      "id": "e6pbFhUscqc",
-      "img": "https://picsum.photos/id/116/300/300",
-      "title": "Water Bottle",
-      "price": 299,
-      "category": "Home",
-      "brand": "Milton",
-      "rating": 4.1,
-      "stock": 200
-    },
-    {
-      "id": "pPL-Z98-VTU",
-      "img": "https://picsum.photos/id/128/300/300",
-      "title": "Jeans",
-      "price": 1499,
-      "category": "Fashion",
-      "brand": "Levis",
-      "rating": 4.5,
-      "stock": 100
     }
   ],
+  "YourOrders": [],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",
