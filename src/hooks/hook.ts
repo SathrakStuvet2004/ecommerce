@@ -173,7 +173,16 @@ export const useAddYourOrder = () => {
     }
   });
 };
-
+//fetch yourOrders
+export const useGetYourOrders = () => {
+  return useQuery({
+    queryKey: ["GetYourOrders"],
+    queryFn: () => fetcher("/YourOrders"),
+    staleTime: 1000 * 60 * 5,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false
+  });
+};
 //fetch data from mock api
 export const getFromMockApi=async ()=>{
   const apiEndpoint= API
