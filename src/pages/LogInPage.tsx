@@ -1,10 +1,12 @@
 import { useGetUser } from '../hooks/hook'
 import { useState } from 'react'
+import { useNavigate } from 'react-router';
 import './SignUpPage.css'
 
 export default function LogInPage() {
 
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
 
   const { data: user = [] } = useGetUser();
@@ -25,6 +27,10 @@ export default function LogInPage() {
     console.log(currentUser)
 
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+    setEmail("");
+    setPassword("");
+    navigate("/Home");
   }
 
   return (

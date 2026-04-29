@@ -2,6 +2,7 @@ import { useAddOrder, useCart } from "../hooks/hook";
 import { useDeleteCartItem } from "../hooks/hook";
 import NavBar from "../components/NavBar";
 import './CartPage.css'
+import { useSelector } from "react-redux";
 
 export default function CartPage() {
 
@@ -21,6 +22,9 @@ export default function CartPage() {
   const { mutate: deleteCartItem } = useDeleteCartItem();
 
   const { mutate: addOrder } = useAddOrder();
+
+  const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
+  console.log(isLoggedin)   
 
   return (
     <>

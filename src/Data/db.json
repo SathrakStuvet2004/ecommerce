@@ -561,16 +561,6 @@
       "brand": "Milton",
       "rating": 4.1,
       "stock": 200
-    },
-    {
-      "id": "k-bb0ECYhOU",
-      "img": "https://picsum.photos/id/128/300/300",
-      "title": "Jeans",
-      "price": 1499,
-      "category": "Fashion",
-      "brand": "Levis",
-      "rating": 4.5,
-      "stock": 100
     }
   ],
   "Orders": [
@@ -621,7 +611,7 @@
       "password": "123456789",
       "id": "XoiMkiFneFM"
     },
-    {   
+    {
       "email": "stanly7@gmail.com",
       "password": "123456789",
       "id": "pTm9WkqWPHU"

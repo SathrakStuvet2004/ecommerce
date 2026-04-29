@@ -7,12 +7,24 @@ import OrderPage from './pages/OrderPage'
 import SignUpPage from './pages/SignUpPage'
 import LogInPage from './pages/LogInPage'
 import { useGetUser } from './hooks/hook'
+import { checkUser } from './UserSlice'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
 
 function App() {
   const { data: user = [] } = useGetUser();
-  //const currentUser = user.find((data: any) => data.email === JSON.parse(localStorage.getItem("currentUser") || '{}').email );
-  
+
+
+  const dispatch = useDispatch();
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || '{}');
+
+  useEffect(() => {
+    
+    const isLoggedIn = user.find((data: any) => data.email === currentUser.email && data.password === currentUser.password);
+    dispatch(checkUser(!!isLoggedIn));
+  }, [currentUser, dispatch]);
+
   return (
     <Routes>
       <Route path='/' element={<SignUpPage />} />
