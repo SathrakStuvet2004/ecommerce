@@ -24,7 +24,7 @@ export default function CartPage() {
   const { mutate: addOrder } = useAddOrder();
 
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
-  console.log(isLoggedin)   
+  console.log(isLoggedin) 
 
   return (
     <>
@@ -49,10 +49,13 @@ export default function CartPage() {
                   <p>Category: {item.category}</p>
                   <p>Brand: {item.brand}</p>
                   <p>Rating: {item.rating}</p>
-                  <div>
+                  <div className="Buttons"  >
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
+                    <button className="CartItem-buy-Button" onClick={() => addOrder(item)}>
+                      Buy Now
+                    </button>     
                   </div>
                 </div>
               </div>

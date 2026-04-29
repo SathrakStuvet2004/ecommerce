@@ -29,7 +29,8 @@
   color: wheat;
 }
 
-.CartItem-delete-Button{
+
+.CartItem-delete-Button, .CartItem-buy-Button{
   cursor: pointer;
   border-radius: 5px;
   border:solid;
@@ -48,7 +49,7 @@
   border-color: antiquewhite;
 }
 
-.CartItem-delete-Button:hover {
+.CartItem-delete-Button:hover, .CartItem-buy-Button:hover {
   background-color: #2563eb;
   color: white ;
 }

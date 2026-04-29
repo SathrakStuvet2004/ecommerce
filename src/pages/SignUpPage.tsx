@@ -11,6 +11,11 @@ export default function SignUpPage() {
 
   function handelSubmit(e:any){
     e.preventDefault();
+    
+    if (!email || !password) {
+      alert("Please fill in all fields");
+      return;
+    }
     const newUser = {
       email,
       password
