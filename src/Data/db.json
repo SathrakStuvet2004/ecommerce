@@ -522,29 +522,10 @@
     }
   ],
   "cart": [],
-  "Orders": [
+  "Orders": [],
+  "YourOrders": [
     {
-      "id": "dwRWkN0EuJI",
-      "img": "https://picsum.photos/id/104/300/300",
-      "title": "Women's Kurti",
-      "price": 799,
-      "category": "Fashion",
-      "brand": "Biba",
-      "rating": 4.4,
-      "stock": 150
-    },
-    {
-      "id": "zmFn1e-PwZ4",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80
-    },
-    {
-      "id": "8AUtSHOZL-4",
+      "id": "o_MJ-wguiLw",
       "img": "https://picsum.photos/id/101/300/300",
       "title": "Wireless Mouse",
       "price": 499,
@@ -552,19 +533,8 @@
       "brand": "Logitech",
       "rating": 4.5,
       "stock": 120
-    },
-    {
-      "id": "lZTWAM2kBgE",
-      "img": "https://picsum.photos/id/103/300/300",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200
     }
   ],
-  "YourOrders": [],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",

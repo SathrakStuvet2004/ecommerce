@@ -10,6 +10,7 @@ import { useGetUser } from './hooks/hook'
 import { checkUser } from './UserSlice'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
+import UserPage from './pages/UserPage'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Route path='/Home' element={<HomePage />} />
       <Route path='/Cart' element={<CartPage />} />
       <Route path='/Orders' element={<OrderPage />} />
+      <Route path='/User' element={<UserPage />} />
     </Routes>
   )
 }

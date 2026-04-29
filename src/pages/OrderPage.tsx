@@ -1,5 +1,5 @@
 import { useOrders } from "../hooks/hook";
-import { useDeleteOrderItem } from "../hooks/hook";
+import { useDeleteOrderItem, useAddYourOrder } from "../hooks/hook";
 import NavBar from "../components/NavBar";
 
 import './OrderPage.css'
@@ -8,6 +8,7 @@ export default function OrderPage() {
 
   const { data: orders } = useOrders();
   const {mutate: deleteOrderItem} = useDeleteOrderItem();
+  const {mutate: addYourOrder} = useAddYourOrder();
 
 
   return (
@@ -58,7 +59,10 @@ export default function OrderPage() {
               <p>Total Items: {orders?.length}</p>
               <p>Total Price: ${orders?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
               <div>
-                <button className="placeOrderButton checkoutButton">Place your order</button>
+                <button className="placeOrderButton checkoutButton"onClick={()=>{
+                  orders?.forEach((order: any) => addYourOrder(order));
+                  orders?.forEach((order: any) => deleteOrderItem(order.id));
+                }}>Place your order</button>
               </div>
             </div>
           </div>

@@ -151,6 +151,29 @@ export const useDeleteOrderItem = () => {
     },
   });
 };
+//post data to yourorders
+export const useAddYourOrder = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (newProduct: any) =>
+      fetcher("/YourOrders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }),
+
+    onSuccess: (newItem) => {
+      queryClient.setQueryData(["YourOrders"], (oldData: any = []) => [
+        ...oldData,
+        newItem
+      ]);
+    }
+  });
+};
+
 //fetch data from mock api
 export const getFromMockApi=async ()=>{
   const apiEndpoint= API
