@@ -1,13 +1,61 @@
-.userName {
-  margin-top: 110px;
-  margin-left: 15px;
-  font-family: italic;
+.userInfo {
+  padding-top: 100px;
+  margin-left: 25px;
   color: white;
 }
 
 .yourOrderInfo {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #1c263e;
+  column-gap: 15px;
+  padding-bottom: 10px;
+}
+.products{
+  border: 2px solid black;
+  border-radius: 9px;
+  color: wheat;
   background-color: #1c263e;
   
+}
+.productsInfo {
+  border: 5px;
+}
+
+.orderDetails {
+  color: wheat;
+}
+.empty-orders{
+  font-family: italic;
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 85px;
+}
+.orderCalculation {
+  padding-left: 50px;
+  color: white;
+}
+
+.userInformationText {
+  color: wheat;
+  margin-top: 50px;
+}
+
+.userInformation {
+  padding-left: 50px;
+  color: white;
+}
+
+.logoutButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #2563eb;
+  color: black;
 }

@@ -1,12 +1,12 @@
-.CartContainer{
+.CartContainer {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .CartProperty {
   display: grid;
-  grid-template-columns: repeat( 1fr);
+  grid-template-columns: repeat(1fr);
 }
 
 .CartItems {
@@ -15,14 +15,14 @@
   gap: 20px;
   text-align: center;
   background-color: #1c263e;
-  border-radius: 5px ;
+  border-radius: 5px;
   border-color: black;
   border-width: 2px;
   border-style: solid;
   margin-top: 5px;
 }
 
-.CartItem{
+.CartItem {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
@@ -30,15 +30,16 @@
 }
 
 
-.CartItem-delete-Button, .CartItem-buy-Button{
+.CartItem-delete-Button,
+.CartItem-buy-Button {
   cursor: pointer;
   border-radius: 5px;
-  border:solid;
+  border: solid;
   border-color: black;
   border-width: 1px;
   margin-bottom: 5px;
   margin-top: 15px;
-  font-family:'italic';
+  font-family: 'italic';
   font-size: medium;
   background-color: #3b82f6;
   color: white;
@@ -49,46 +50,47 @@
   border-color: antiquewhite;
 }
 
-.CartItem-delete-Button:hover, .CartItem-buy-Button:hover {
+.CartItem-delete-Button:hover,
+.CartItem-buy-Button:hover {
   background-color: #2563eb;
-  color: white ;
+  color: white;
 }
 
-.cartName-Text{
+.cartName-Text {
   margin-top: 100px;
   font-family: italic;
   color: rgb(223, 210, 210);
 }
 
-.cart-info{
+.cart-info {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.empty-cart{
+.empty-cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    font-family: italic;
-  color: rgb(223, 210, 210);
-}
-
-.CartDetails-Text{
   font-family: italic;
   color: rgb(223, 210, 210);
 }
 
-.CartDetails-info{
-border: 2px solid black;
-border-radius: 9px;
-color: wheat;
-margin-left: 90px;
-padding-left: 7px;
-background-color: #1c263e;
+.CartDetails-Text {
+  font-family: italic;
+  color: rgb(223, 210, 210);
 }
 
-.BuyNowButton{
+.CartDetails-info {
+  border: 2px solid black;
+  border-radius: 9px;
+  color: wheat;
+  margin-left: 90px;
+  padding-left: 7px;
+  background-color: #1c263e;
+}
+
+.BuyNowButton {
   cursor: pointer;
   border-radius: 5px;
   border: solid;
@@ -103,7 +105,8 @@ background-color: #1c263e;
   padding: 6px 10px;
   border-radius: 5px;
 }
+
 .BuyNowButton:hover {
   background-color: #2563eb;
-  color:white ;
+  color: white;
 }

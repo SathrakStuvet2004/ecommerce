@@ -1,28 +1,34 @@
 import { useState } from 'react'
 import './SignUpPage.css'
 import { useAddUser } from '../hooks/hook';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 export default function SignUpPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
 
-  const {mutate: addUser} = useAddUser();
+  const { mutate: addUser } = useAddUser();
+  const navigate = useNavigate();
 
-  function handelSubmit(e:any){
+  function handelSubmit(e: any) {
     e.preventDefault();
-    
-    if (!email || !password) {
+
+    if (!email || !password || !name) {
       alert("Please fill in all fields");
       return;
     }
     const newUser = {
       email,
-      password
+      password,
+      name
     }
     addUser(newUser);
     setEmail('');
     setPassword('');
+    setName('');
+    localStorage.setItem("currentUser", JSON.stringify(newUser));
+     navigate("/Home");
   }
 
   return (
@@ -33,11 +39,18 @@ export default function SignUpPage() {
 
       <form className="SignUpForm" onSubmit={handelSubmit}>
         <div>
+          <input placeholder='Enter your name' 
+          className='userNameInput'
+          value={name}
+          onChange={(e)=>setName(e.target.value)}/>
+        </div>
+        <div>
           <input type="email"
             placeholder="Enter your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="EmailInput" /></div>
+            className="EmailInput" />
+        </div>
         <div>
           <input type="password"
             placeholder="Enter your Password"
@@ -53,7 +66,7 @@ export default function SignUpPage() {
       </form>
 
       <div>
-        <p className="LoginText">Already have an account? <Link to="/Login" className="LoginLink">Login</Link></p>  
+        <p className="LoginText">Already have an account? <Link to="/Login" className="LoginLink">Login</Link></p>
       </div>
     </div>
   )

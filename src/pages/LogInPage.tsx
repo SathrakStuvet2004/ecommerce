@@ -5,8 +5,9 @@ import './SignUpPage.css'
 
 export default function LogInPage() {
 
-  const [email, setEmail] = useState("");
   const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const { data: user = [] } = useGetUser();
@@ -23,13 +24,17 @@ export default function LogInPage() {
       alert("Invalid password");
       return;
     }
-
+    if(currentUser.name !== name){
+      alert("Invalid user name")
+      return;
+    }
     console.log(currentUser)
 
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
     setEmail("");
     setPassword("");
+    setName("")
     navigate("/Home");
   }
 
@@ -41,9 +46,10 @@ export default function LogInPage() {
       </div>
       <form className="LogInForm" onSubmit={logIn}>
         <div>
-          <input 
+          <input type='name'
             placeholder='Enter your Name'
-            className='userName'
+            className='userNameInput'
+            onChange={(e)=>setName(e.target.value)}
           />
         </div>
         <div>
