@@ -3,6 +3,7 @@ import './HomePage.css'
 import NavBar from "../components/NavBar";
 import { useProducts, useAddToCart } from "../hooks/hook";
 
+
 // type Product = {
 //   id: number;
 //   title: string;
@@ -43,6 +44,7 @@ import { useProducts, useAddToCart } from "../hooks/hook";
 //   "rating": number;
 //   "stock": number;
 // }
+const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
 export default function HomePage() {
   //const [products, setProducts] = useState<product[]>([]);
@@ -63,8 +65,6 @@ export default function HomePage() {
   //   homePageData()
   // }, [])
   // console.log(products);
-
-
   /*function homePageData(){
     async function fetchData() {
       const response = await fetch("http://localhost:3000/products");
@@ -74,9 +74,6 @@ export default function HomePage() {
     fetchData();
   }
     */
-
-  const { data } = useProducts();
-
   // function addToCart(product: product) {
   //   fetch("http://localhost:3000/cart", {
   //     method: "POST",
@@ -87,9 +84,12 @@ export default function HomePage() {
   //   });
   // 
 
-  const { mutate: addToCart } = useAddToCart();
   // const getData=getFromMockApi()
   // console.log(getData, "mockapi data in home page")
+
+  const { data } = useProducts();
+  const { mutate: addToCart } = useAddToCart();
+  
   return (
     <>
       <NavBar />
@@ -110,7 +110,7 @@ export default function HomePage() {
               </div>
 
             </div>
-            <button className="cartButton" onClick={()=> addToCart(product)} >Add to cart</button>
+            <button className="cartButton" onClick={() => addToCart({...product, email: currentUser.email})} >Add to cart</button>
           </div>
         )}
       </div>

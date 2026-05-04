@@ -1,0 +1,13 @@
+.userName {
+  margin-top: 110px;
+  margin-left: 15px;
+  font-family: italic;
+  color: white;
+}
+
+.yourOrderInfo {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  background-color: #1c263e;
+  
+}
