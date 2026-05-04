@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useGetYourOrders } from "../hooks/hook"
 import './UserPage.css'
+import { useNavigate } from "react-router";
 
 export default function UserPage() {
   const { data: YourOrders } = useGetYourOrders()
@@ -10,6 +11,13 @@ export default function UserPage() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
   const YourOrderData = YourOrders?.filter((order: any) => order.email === currentUser.email)
+
+  const navigate= useNavigate();
+
+  function logout(){
+    localStorage.clear();
+    navigate("/login")
+  }
 
   return (
     <div className="userPage">
@@ -53,7 +61,7 @@ export default function UserPage() {
           <div className="userInformation">
             <p>User Name : {currentUser.name}</p>
             <p>User Mail Id : {currentUser.email}</p>
-            <button className="logoutButton">Log out</button>
+            <button className="logoutButton" onClick={logout}>Log out</button>
           </div>
         </div>
       </div>
