@@ -41,6 +41,12 @@ export default function LogInPage() {
       </div>
       <form className="LogInForm" onSubmit={logIn}>
         <div>
+          <input 
+            placeholder='Enter your Name'
+            className='userName'
+          />
+        </div>
+        <div>
           <input type="email"
             placeholder="Enter your Email"
             className="EmailInput"

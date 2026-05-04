@@ -521,12 +521,79 @@
       "stock": 70
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "aNLazHbires",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "sathrakstuvet51@gmail.com"
+    }
+  ],
   "Orders": [],
-  "YourOrders": [],
+  "YourOrders": [
+    {
+      "id": "Bc1lQMy0oCw",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "mathew1@gmail.com"
+    },
+    {
+      "id": "OaV3iuoTTc8",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "TzgmDjhjBlo",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "7c-51Gb4y0I",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "sathrakstuvet51@gmail.com"
+    }
+  ],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",
+      "password": "123456789",
+      "id": "XoiMkiFneFM"
+    },
+    {
+      "email": "sathrakstuvet52@gmail.com",
+      "password": "123456789",
+      "id": "XoiMkiFneFM"
+    },
+    {
+      "email": "sathrakstuvet53@gmail.com",
       "password": "123456789",
       "id": "XoiMkiFneFM"
     },

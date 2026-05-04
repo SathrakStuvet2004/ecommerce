@@ -19,6 +19,10 @@ export default function CartPage() {
 
   const { data: cartItems } = useCart();
 
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+
+  const cartData = cartItems?.filter((cart:any) => cart.email === currentUser.email)
+  
   const { mutate: deleteCartItem } = useDeleteCartItem();
 
   const { mutate: addOrder } = useAddOrder();
@@ -37,7 +41,7 @@ export default function CartPage() {
 
         <div className="CartItems">
           {cartItems && cartItems.length > 0 ? (
-            cartItems.map((item: any) => (
+            cartData.map((item: any) => (
               <div key={item.id} className="CartItem">
                 <div className="CartItem-image">
                   <img src={item.img} alt={item.title} />
@@ -53,7 +57,7 @@ export default function CartPage() {
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
-                    <button className="CartItem-buy-Button" onClick={() =>{addOrder(item);
+                    <button className="CartItem-buy-Button" onClick={() =>{addOrder({...item,});
                         deleteCartItem(item.id)
                     } }>
                       place your order
@@ -74,10 +78,10 @@ export default function CartPage() {
           <h2 className="CartDetails-Text">Cart Details</h2>
           <div className="CartDetails-info">
             <div>
-              <p>Total Items: {cartItems?.length}</p>
+              <p>Total Items: {cartData?.length}</p>
             </div>
             <div>
-              <p>Total Price: ${cartItems?.reduce((sum: number, item: any) => sum + item.price, 0).toFixed(2)}</p>
+              <p>Total Price: ${cartData?.reduce((sum: number, item: any) => sum + item.price, 0).toFixed(2)}</p>
             </div>
             {cartItems && cartItems.length > 0 && (
               <button className="BuyNowButton" onClick={() => {
