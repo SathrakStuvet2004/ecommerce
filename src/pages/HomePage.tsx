@@ -2,6 +2,7 @@
 import './HomePage.css'
 import NavBar from "../components/NavBar";
 import { useProducts, useAddToCart } from "../hooks/hook";
+import { useSelector } from 'react-redux';
 
 
 // type Product = {
@@ -86,10 +87,11 @@ export default function HomePage() {
 
   // const getData=getFromMockApi()
   // console.log(getData, "mockapi data in home page")
+const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
 
   const { data } = useProducts();
   const { mutate: addToCart } = useAddToCart();
-  
+
   return (
     <>
       <NavBar />
@@ -108,9 +110,14 @@ export default function HomePage() {
                 <div className="aaa">Rating:  {product.rating}</div>
                 <div className="aaa">Stock:  {product.stock}</div>
               </div>
-
             </div>
-            <button className="cartButton" onClick={() => addToCart({...product, email: currentUser.email})} >Add to cart</button>
+            {
+              isLoggedin ? (
+                <button className="cartButton" onClick={() => addToCart({ ...product, email: currentUser.email })} >Add to cart</button>
+              ) : (
+                <button className='cartButton'>Login for Add to Cart</button>
+              )
+            }
           </div>
         )}
       </div>

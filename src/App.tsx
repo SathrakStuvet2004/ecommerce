@@ -16,7 +16,6 @@ import UserPage from './pages/UserPage'
 function App() {
   const { data: user = [] } = useGetUser();
 
-
   const dispatch = useDispatch();
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || '{}');
 

@@ -21,14 +21,14 @@ export default function CartPage() {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
-  const cartData = cartItems?.filter((cart:any) => cart.email === currentUser.email)
-  
+  const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
+
   const { mutate: deleteCartItem } = useDeleteCartItem();
 
   const { mutate: addOrder } = useAddOrder();
 
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
-  console.log(isLoggedin) 
+  console.log(isLoggedin)
 
   return (
     <>
@@ -57,11 +57,12 @@ export default function CartPage() {
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
-                    <button className="CartItem-buy-Button" onClick={() =>{addOrder({...item,});
-                        deleteCartItem(item.id)
-                    } }>
+                    <button className="CartItem-buy-Button" onClick={() => {
+                      addOrder({ ...item, });
+                      deleteCartItem(item.id)
+                    }}>
                       place your order
-                    </button>     
+                    </button>
                   </div>
                 </div>
               </div>

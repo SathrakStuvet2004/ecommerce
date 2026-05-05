@@ -1,6 +1,7 @@
 import { useGetUser } from '../hooks/hook'
 import { useState } from 'react'
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import './SignUpPage.css'
 
 export default function LogInPage() {
@@ -12,9 +13,9 @@ export default function LogInPage() {
 
   const { data: user = [] } = useGetUser();
 
-  function logIn(e:any) {
+  function logIn(e: any) {
     e.preventDefault();
-    const currentUser = user.find((data: any) => data.email === email );
+    const currentUser = user.find((data: any) => data.email === email);
 
     if (!currentUser) {
       alert("Invalid email");
@@ -24,7 +25,7 @@ export default function LogInPage() {
       alert("Invalid password");
       return;
     }
-    if(currentUser.name !== name){
+    if (currentUser.name !== name) {
       alert("Invalid user name")
       return;
     }
@@ -49,7 +50,7 @@ export default function LogInPage() {
           <input type='name'
             placeholder='Enter your Name'
             className='userNameInput'
-            onChange={(e)=>setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div>
@@ -66,9 +67,15 @@ export default function LogInPage() {
         </div>
         <div>
           <button className='LoginButton' type="submit">
-            Login   
+            Login
           </button>
         </div>
+        <Link
+          style={{ color: "inherit", textDecoration: "none" }}
+          to="/Home"
+          className='demo'>
+          <p>click here for demo</p>
+        </Link>
       </form>
     </div>
   )
