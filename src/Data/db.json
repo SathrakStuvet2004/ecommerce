@@ -522,44 +522,10 @@
     }
   ],
   "cart": [],
-  "Orders": [
-    {
-      "id": "vf5ipXgdL9Q",
-      "img": "https://picsum.photos/id/103/300/300",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200,
-      "email": "test@gmail.com"
-    }
-  ],
+  "Orders": [],
   "YourOrders": [
     {
-      "id": "ErdeSkC6nUA",
-      "img": "https://picsum.photos/id/103/300/300",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "35hicCq50ME",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "test@gmail.com"
-    },
-    {
-      "id": "Xgc6x7s3EjA",
+      "id": "_iVlTsu9lEY",
       "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
       "price": 299,
@@ -570,40 +536,7 @@
       "email": "test@gmail.com"
     },
     {
-      "id": "fh9Tm4RtjHY",
-      "img": "https://picsum.photos/id/107/300/300",
-      "title": "Running Shoes",
-      "price": 1999,
-      "category": "Footwear",
-      "brand": "Nike",
-      "rating": 4.5,
-      "stock": 90,
-      "email": "test@gmail.com"
-    },
-    {
-      "id": "FYajAkqTza8",
-      "img": "https://picsum.photos/id/108/300/300",
-      "title": "Backpack",
-      "price": 899,
-      "category": "Accessories",
-      "brand": "Skybags",
-      "rating": 4.2,
-      "stock": 110,
-      "email": "test@gmail.com"
-    },
-    {
-      "id": "EVXpoXq58B8",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "NcaJl_Zt0aA",
+      "id": "MuIxjANVKvY",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
       "price": 1499,

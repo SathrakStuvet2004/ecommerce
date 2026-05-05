@@ -1,10 +1,11 @@
 import NavBar from "../components/NavBar"
-import { useGetYourOrders } from "../hooks/hook"
+import { useGetYourOrders, useDeleteYourOrderItem } from "../hooks/hook"
 import './UserPage.css'
 import { useNavigate } from "react-router";
 
 export default function UserPage() {
   const { data: YourOrders } = useGetYourOrders()
+  const { mutate: deleteYourOrderItem } = useDeleteYourOrderItem();
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
@@ -15,6 +16,11 @@ export default function UserPage() {
   function logout() {
     localStorage.clear();
     navigate("/login")
+  }
+
+  function clearOrders(){
+    YourOrderData?.forEach((orders:any)=>deleteYourOrderItem(orders.id))
+     
   }
 
   return (
@@ -48,6 +54,9 @@ export default function UserPage() {
             <div className="orderCalculation">
               <p>Your Total Orders: {YourOrderData?.length}</p>
               <p>Total cost :${YourOrderData?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
+
+              <button className="orderHistoryButton"
+              onClick={clearOrders}>clear order history</button>
             </div>
           </div>
 

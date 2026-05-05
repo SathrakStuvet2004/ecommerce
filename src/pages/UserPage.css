@@ -77,16 +77,21 @@
   color: white;
 }
 
-.logoutButton {
+.logoutButton, .orderHistoryButton {
   background-color: #3b82f6;
   color: white;
   border: none;
   padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 9px;
 }
 
 .logoutButton:hover {
   background-color: #2563eb;
+  color: black;
+}
+.orderHistoryButton:hover{
+   background-color: #2563eb;
   color: black;
 }

@@ -183,6 +183,22 @@ export const useGetYourOrders = () => {
     refetchOnWindowFocus: false
   });
 };
+//delete your order data
+export const useDeleteYourOrderItem = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (id: number) =>
+      fetcher(`/YourOrders/${id}`, {
+        method: "DELETE",
+      }),
+
+    onSuccess: () => {
+      // refresh orders after delete
+      queryClient.invalidateQueries({ queryKey: ["GetYourOrders"] });
+    },
+  });
+};
 //fetch data from mock api
 export const getFromMockApi=async ()=>{
   const apiEndpoint= API

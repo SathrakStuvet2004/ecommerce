@@ -10,7 +10,7 @@ export default function OrderPage() {
   const { mutate: deleteOrderItem } = useDeleteOrderItem();
   const { mutate: addYourOrder } = useAddYourOrder();
 
-  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");  
 
   const OrderData = orders?.filter((order: any) => order.email === currentUser.email)
   console.log(OrderData, "Order")
