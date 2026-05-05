@@ -522,22 +522,10 @@
     }
   ],
   "cart": [],
-  "Orders": [
-    {
-      "id": "WJ5ZmrwFDpM",
-      "img": "https://picsum.photos/id/101/300/300",
-      "title": "Wireless Mouse",
-      "price": 499,
-      "category": "Electronics",
-      "brand": "Logitech",
-      "rating": 4.5,
-      "stock": 120,
-      "email": "sathrakstuvet51@gmail.com"
-    }
-  ],
+  "Orders": [],
   "YourOrders": [
     {
-      "id": "_iVlTsu9lEY",
+      "id": "npt49F-aIWs",
       "img": "https://picsum.photos/id/103/300/300",
       "title": "Men's T-Shirt",
       "price": 299,
@@ -545,10 +533,10 @@
       "brand": "H&M",
       "rating": 4.1,
       "stock": 200,
-      "email": "test@gmail.com"
+      "email": "sathrakstuvet51@gmail.com"
     },
     {
-      "id": "MuIxjANVKvY",
+      "id": "2GkkRHmT8Jc",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
       "price": 1499,
@@ -556,7 +544,7 @@
       "brand": "Boat",
       "rating": 4.3,
       "stock": 80,
-      "email": "test@gmail.com"
+      "email": "sathrakstuvet51@gmail.com"
     }
   ],
   "users": [
@@ -643,6 +631,12 @@
       "password": "1234567890",
       "name": "test",
       "id": "QUCONoU_Fs8"
+    },
+    {
+      "email": "sathrakstuvet51@gmail.com",
+      "password": "1234567890",
+      "name": "sathrak",
+      "id": "AtGwCtnAYEE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

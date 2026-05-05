@@ -70,7 +70,7 @@ export default function OrderPage() {
                 <button className="placeOrderButton checkoutButton" onClick={() => {
                   orders?.forEach((order: any) => addYourOrder(order));
                   orders?.forEach((order: any) => deleteOrderItem(order.id));
-                }}>buy now</button>
+                }}>buy All</button>
               </div>
             </div>
           </div>

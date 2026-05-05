@@ -3,6 +3,7 @@ import './HomePage.css'
 import NavBar from "../components/NavBar";
 import { useProducts, useAddToCart } from "../hooks/hook";
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 
 // type Product = {
@@ -90,7 +91,14 @@ export default function HomePage() {
 const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
 
   const { data } = useProducts();
+
   const { mutate: addToCart } = useAddToCart();
+
+  const navigate = useNavigate()
+
+  function navLogin(){
+    navigate("/login")
+  }
 
   return (
     <>
@@ -115,7 +123,7 @@ const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
               isLoggedin ? (
                 <button className="cartButton" onClick={() => addToCart({ ...product, email: currentUser.email })} >Add to cart</button>
               ) : (
-                <button className='cartButton'>Login for Add to Cart</button>
+                <button className='cartButton' onClick={navLogin}>Login for Add to Cart</button>
               )
             }
           </div>

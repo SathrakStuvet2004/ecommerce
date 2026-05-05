@@ -17,10 +17,10 @@ function App() {
   const { data: user = [] } = useGetUser();
 
   const dispatch = useDispatch();
+  
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || '{}');
 
   useEffect(() => {
-    
     const isLoggedIn = user.find((data: any) => data.email === currentUser.email && data.password === currentUser.password);
     dispatch(checkUser(!!isLoggedIn));
   }, [currentUser, dispatch]);
@@ -34,7 +34,7 @@ function App() {
       <Route path='/Orders' element={<OrderPage />} />
       <Route path='/User' element={<UserPage />} />
     </Routes>
-  )
+  )  
 }
 
 export default App
