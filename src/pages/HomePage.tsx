@@ -97,7 +97,7 @@ const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
   const navigate = useNavigate()
 
   function navLogin(){
-    navigate("/login")
+    navigate("/signup")
   }
 
   return (
@@ -123,7 +123,7 @@ const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
               isLoggedin ? (
                 <button className="cartButton" onClick={() => addToCart({ ...product, email: currentUser.email })} >Add to cart</button>
               ) : (
-                <button className='cartButton' onClick={navLogin}>Login for Add to Cart</button>
+                <button className='cartButton' onClick={navLogin}>SignIn for Add to Cart</button>
               )
             }
           </div>

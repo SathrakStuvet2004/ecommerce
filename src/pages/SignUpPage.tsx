@@ -28,7 +28,7 @@ export default function SignUpPage() {
     setPassword('');
     setName('');
     localStorage.setItem("currentUser", JSON.stringify(newUser));
-     navigate("/Home");
+    navigate("/");
   }
 
   return (
@@ -39,10 +39,10 @@ export default function SignUpPage() {
 
       <form className="SignUpForm" onSubmit={handelSubmit}>
         <div>
-          <input placeholder='Enter your name' 
-          className='userNameInput'
-          value={name}
-          onChange={(e)=>setName(e.target.value)}/>
+          <input placeholder='Enter your name'
+            className='userNameInput'
+            value={name}
+            onChange={(e) => setName(e.target.value)} />
         </div>
         <div>
           <input type="email"

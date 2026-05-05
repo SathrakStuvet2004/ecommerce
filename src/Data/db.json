@@ -521,7 +521,19 @@
       "stock": 70
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "Lm5QXaMJJaA",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
+    }
+  ],
   "Orders": [],
   "YourOrders": [
     {

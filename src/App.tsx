@@ -27,9 +27,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<SignUpPage />} />
+       <Route path='/' element={<HomePage />} />
+      <Route path='/signup' element={<SignUpPage />} />
       <Route path='/Login' element={<LogInPage />} />
-      <Route path='/Home' element={<HomePage />} />
       <Route path='/Cart' element={<CartPage />} />
       <Route path='/Orders' element={<OrderPage />} />
       <Route path='/User' element={<UserPage />} />

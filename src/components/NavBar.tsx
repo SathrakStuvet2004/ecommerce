@@ -20,7 +20,7 @@ export default function NavBar() {
     <div className="NavBar">
 
       <div className="homeIcon">
-        <Link style={{ color: "inherit", textDecoration: "none" }} to="/Home">
+        <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
           <FontAwesomeIcon icon={faHouse} />
            <p>Home</p>
         </Link>

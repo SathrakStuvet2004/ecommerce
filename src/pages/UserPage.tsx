@@ -15,7 +15,7 @@ export default function UserPage() {
 
   function logout() {
     localStorage.clear();
-    navigate("/login")
+    navigate("/")
   }
 
   function clearOrders(){
