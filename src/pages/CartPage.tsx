@@ -40,7 +40,7 @@ export default function CartPage() {
       <div className="CartContainer">
 
         <div className="CartItems">
-          {cartItems && cartItems.length > 0 ? (
+          {cartData && cartData.length > 0 ? (
             cartData.map((item: any) => (
               <div key={item.id} className="CartItem">
                 <div className="CartItem-image">

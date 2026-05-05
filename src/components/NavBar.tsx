@@ -12,10 +12,7 @@ export default function NavBar() {
   const { data: cartItems } = useCart();
 
   const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
-
   
- 
-
   return (
     <div className="NavBar">
 
