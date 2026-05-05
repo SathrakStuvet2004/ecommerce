@@ -24,7 +24,7 @@
   border-radius: 5px;
 }
 
-.OrdersDetailsTitle{
+.OrdersDetailsTitle {
   font-family: italic;
   color: rgb(223, 210, 210);
   padding: 15px;
@@ -44,14 +44,20 @@
   margin: 7px 5px 5px 5px;
 }
 
-.paymentInfo{
+.empty-orders {
+  color: wheat;
+  font-family: italic;
+}
+
+.paymentInfo {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
   color: wheat;
   margin: 7px 5px 5px 5px;
 }
-.paymentSummeryTitle{
+
+.paymentSummeryTitle {
   font-family: italic;
   color: rgb(223, 210, 210);
   padding: 15px;
@@ -59,7 +65,7 @@
   text-align: left;
 }
 
-.checkoutButton{
+.checkoutButton {
   cursor: pointer;
   border-radius: 5px;
   border: solid;
