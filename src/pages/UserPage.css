@@ -7,40 +7,71 @@
 .yourOrderInfo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #1c263e;
+  background-color: #0f172a;
   column-gap: 15px;
   padding-bottom: 10px;
+  margin-top: 100px;
 }
-.products{
+
+.historyText {
+  padding-left: 15px;
+}
+
+.products {
   border: 2px solid black;
   border-radius: 9px;
   color: wheat;
   background-color: #1c263e;
-  
+  margin-top: 5px;
 }
+
 .productsInfo {
-  border: 5px;
+  border: 2px solid black;
+  border-radius: 9px;
+  background-color: #1c263e;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .orderDetails {
   color: wheat;
+  padding-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-.empty-orders{
+
+.empty-orders {
   font-family: italic;
   text-align: center;
   padding-top: 100px;
   padding-left: 85px;
 }
+
+.orderSummary {
+  border-bottom: 2px solid black;
+  background-color: #0f172a;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
 .orderCalculation {
   padding-left: 50px;
   color: white;
 }
 
-.userInformationText {
+.userInformations {
   color: wheat;
   margin-top: 50px;
+  border-bottom: 2px solid black;
+  background-color: #0f172a;
+  padding-left: 5px;
+  border-radius: 5px;
+  padding-top: 1px;
+  padding-bottom: 7px;
 }
-
+.userInformationText{
+  padding-left: 5px;
+}
 .userInformation {
   padding-left: 50px;
   color: white;

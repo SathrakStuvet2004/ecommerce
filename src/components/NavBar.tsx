@@ -5,6 +5,9 @@ import './NavBar.css'
 import { Link, } from "react-router-dom";
 
 export default function NavBar() {
+
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+
   return (
     <div className="NavBar">
 
@@ -37,7 +40,7 @@ export default function NavBar() {
       <div className="userIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }}  to="/User">
         <FontAwesomeIcon icon={faUser} />
-        <p>User</p>
+        <p>{currentUser.name}</p>
         </Link>
       </div>
 

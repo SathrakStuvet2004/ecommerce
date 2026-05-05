@@ -7,12 +7,12 @@ import './OrderPage.css'
 export default function OrderPage() {
 
   const { data: orders } = useOrders();
-  const {mutate: deleteOrderItem} = useDeleteOrderItem();
-  const {mutate: addYourOrder} = useAddYourOrder();
+  const { mutate: deleteOrderItem } = useDeleteOrderItem();
+  const { mutate: addYourOrder } = useAddYourOrder();
 
-   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
-  const OrderData = orders?.filter((order:any) => order.email === currentUser.email)
+  const OrderData = orders?.filter((order: any) => order.email === currentUser.email)
   console.log(OrderData, "Order")
 
   return (
@@ -44,6 +44,10 @@ export default function OrderPage() {
                     <button className="checkoutButton" onClick={() => deleteOrderItem(item.id)}>
                       Remove
                     </button>
+                    <button className="placeOrderButton checkoutButton"onClick={() => {
+                      addYourOrder({ ...item, });
+                      deleteOrderItem(item.id)
+                    }}>buy now</button>
                   </div>
                 </div>
               ))
@@ -58,17 +62,17 @@ export default function OrderPage() {
 
           <h3 className="paymentSummeryTitle">Payment Summary</h3>
 
-          <div className="paymentInfo"> 
+          <div className="paymentInfo">
             <div>
               <p>Total Items: {orders?.length}</p>
               <p>Total Price: ${orders?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
               <div>
-                <button className="placeOrderButton checkoutButton"onClick={()=>{
+                <button className="placeOrderButton checkoutButton" onClick={() => {
                   orders?.forEach((order: any) => addYourOrder(order));
                   orders?.forEach((order: any) => deleteOrderItem(order.id));
                 }}>buy now</button>
               </div>
-            </div>  
+            </div>
           </div>
 
         </div>

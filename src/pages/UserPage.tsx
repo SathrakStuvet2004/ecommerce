@@ -1,6 +1,4 @@
 import NavBar from "../components/NavBar"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useGetYourOrders } from "../hooks/hook"
 import './UserPage.css'
 import { useNavigate } from "react-router";
@@ -12,9 +10,9 @@ export default function UserPage() {
 
   const YourOrderData = YourOrders?.filter((order: any) => order.email === currentUser.email)
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
-  function logout(){
+  function logout() {
     localStorage.clear();
     navigate("/login")
   }
@@ -23,12 +21,9 @@ export default function UserPage() {
     <div className="userPage">
       <title>User</title>
       <NavBar />
-      <div className="userInfo">
-        <FontAwesomeIcon icon={faUser} />
-        <h3 className="userName">{currentUser.name}</h3>
-      </div>
       <div className="yourOrderInfo">
         <div className="products">
+          <h4 className="historyText">Your Order History :</h4>
           {<div className="OrderItems">
             {YourOrderData && YourOrderData.length > 0 ? (
               YourOrderData.map((item: any) => (
@@ -48,21 +43,23 @@ export default function UserPage() {
           </div>}
         </div>
         <div className="productsInfo">
-          <div>
+          <div className="orderSummary">
             <h3 className="orderDetails">your order details:</h3>
+            <div className="orderCalculation">
+              <p>Your Total Orders: {YourOrderData?.length}</p>
+              <p>Total cost :${YourOrderData?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
+            </div>
           </div>
-          <div className="orderCalculation">
-            <p>Your Total Orders: {YourOrderData?.length}</p>
-            <p>Total cost :${YourOrderData?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
+
+          <div className="userInformations">
+            <h3 className="userInformationText">User Information</h3>
+            <div className="userInformation">
+              <p>User Name : {currentUser.name}</p>
+              <p>User Mail Id : {currentUser.email}</p>
+              <button className="logoutButton" onClick={logout}>Log out</button>
+            </div>
           </div>
-          <div className="userInformationText">
-            <h3>User Information</h3>
-          </div>
-          <div className="userInformation">
-            <p>User Name : {currentUser.name}</p>
-            <p>User Mail Id : {currentUser.email}</p>
-            <button className="logoutButton" onClick={logout}>Log out</button>
-          </div>
+
         </div>
       </div>
     </div>
