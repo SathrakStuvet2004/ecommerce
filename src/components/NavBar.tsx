@@ -3,10 +3,18 @@ import { faHouse, faCartShopping, faUser, faBox } from "@fortawesome/free-solid-
 
 import './NavBar.css'
 import { Link, } from "react-router-dom";
+import { useCart } from "../hooks/hook";
 
 export default function NavBar() {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+
+  const { data: cartItems } = useCart();
+
+  const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
+
+  
+ 
 
   return (
     <div className="NavBar">
@@ -25,7 +33,7 @@ export default function NavBar() {
       <div className="cartIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/Cart">
           <FontAwesomeIcon icon={faCartShopping} />
-          <span className="badge">3</span>
+          <span className="badge">{cartData?.length}</span>
           <p>Cart</p>
         </Link>
       </div>
