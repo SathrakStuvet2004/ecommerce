@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #1c263e;
+  background-color: #425664;
 }
 
 .SignUpText, .LogInText {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
-  color: wheat;
+  color: white;
   font-family: italic;
 }
 
@@ -31,8 +31,8 @@
 }
 
 .SignUpButton, .LoginButton {
-  background-color: #3b82f6;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -40,25 +40,25 @@
 }
 
 .SignUpButton:hover {
-  background-color: #2563eb;
-  color: black;
+  background-color:#20384a;
+  color: white
 }
 .LoginButton:hover {
-  background-color: #2563eb;
-  color: black;
+  background-color: #20384a;
+  color: white
 }
 
 .LoginText {
-  color: wheat;
+  color: white;
   font-family: italic;
   margin-top: 15px;
 }
 
 .LoginLink {
-  color: #3b82f6;
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
 .demo{
-  color: white;
+  color: black
 }

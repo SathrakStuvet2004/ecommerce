@@ -523,28 +523,6 @@
   ],
   "cart": [
     {
-      "id": "5qV28rGz1Os",
-      "img": "https://picsum.photos/id/101/300/300",
-      "title": "Wireless Mouse",
-      "price": 499,
-      "category": "Electronics",
-      "brand": "Logitech",
-      "rating": 4.5,
-      "stock": 120,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "EpNBCu9aMfI",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
       "id": "dyq_jlhdydQ",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
@@ -554,50 +532,6 @@
       "rating": 4.3,
       "stock": 80,
       "email": "test@gmail.com"
-    },
-    {
-      "id": "3zT6gR_U4hs",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "yoWojH8W980",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "ahMpteKi6y4",
-      "img": "https://picsum.photos/id/110/300/300",
-      "title": "Gaming Keyboard",
-      "price": 1299,
-      "category": "Electronics",
-      "brand": "Redragon",
-      "rating": 4.4,
-      "stock": 95,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "VyzQwATbIVY",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
     }
   ],
   "Orders": [
@@ -622,9 +556,32 @@
       "rating": 4.1,
       "stock": 200,
       "email": "test@gmail.com"
+    },
+    {
+      "id": "uBGqlRzGQCo",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
     }
   ],
-  "YourOrders": [],
+  "YourOrders": [
+    {
+      "id": "NC08fi_F4Fw",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
+    }
+  ],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",

@@ -17,20 +17,21 @@
   display: block;
   color: white;
   padding: 10px;
-  background-color: #0d111d;
+  background-color: #425664;
 }
 
 
 .cartButton {
-  background-color: #3b82f6;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   padding: 6px 10px;
   border-radius: 5px;
 }
 
 .cartButton:hover {
-  background-color: #2563eb;
+  background-color: #20384a;
+  color: white;
 }
 
 .aaa{
