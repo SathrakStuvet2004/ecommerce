@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './SignUpPage.css'
 import { useAddUser } from '../hooks/hook';
-import { Link, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export default function SignUpPage() {
   const [email, setEmail] = useState('');
@@ -65,9 +65,9 @@ export default function SignUpPage() {
         </div>
       </form>
 
-      <div>
+      {/* <div>
         <p className="LoginText">Already have an account? <Link to="/Login" className="LoginLink">Login</Link></p>
-      </div>
+      </div> */}
     </div>
   )
 }

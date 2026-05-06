@@ -45,9 +45,11 @@ export default function LogInPage() {
   return (
     <div className="LogInPage">
       <title>Login</title>
+
       <div>
         <h1 className='LogInText'>Login Page</h1>
       </div>
+
       <form className="LogInForm" onSubmit={logIn}>
         <div>
           <input type='name'
@@ -75,7 +77,7 @@ export default function LogInPage() {
         </div>
       </form>
       <div>
-        <p className="LoginText">Do you have a account ? <Link to="/signup" className="LoginLink" >signup</Link></p>
+        <p className="LoginText">If you don't have a account ? <Link to="/signup" className="LoginLink" >sign up</Link></p>
       </div>
     </div>
   )

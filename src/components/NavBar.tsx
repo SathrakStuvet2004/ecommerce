@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faCartShopping, faUser, faBox } from "@fortawesome/free-solid-svg-icons";
-
 import './NavBar.css'
 import { Link, } from "react-router-dom";
 import { useCart } from "../hooks/hook";

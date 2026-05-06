@@ -104,15 +104,20 @@ export default function HomePage() {
     <>
       <NavBar />
       <title>Home</title>
+
       <div className="productsList" >
+
         {data?.map((product: any) =>
           <div className="product" key={product.id} >
-            <div className="productImage"><img src={product.img} alt={product.title} /></div>
+            <div className="productImage">
+              <img src={product.img} alt={product.title} />
+            </div>
 
             <div className="productInfo">
               <div className="aaa">Name:  {product.title}</div>
               <div className="aaa">Brand:  {product.brand}</div>
               <div className="aaa">Category:  {product.category}</div>
+
               <div className="price">
                 <div className="aaa">price:  {product.price}</div>
                 <div className="aaa">Rating:  {product.rating}</div>

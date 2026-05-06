@@ -42,10 +42,13 @@ export default function CartPage() {
         <div className="CartItems">
           {cartData && cartData.length > 0 ? (
             cartData.map((item: any) => (
+
               <div key={item.id} className="CartItem">
+
                 <div className="CartItem-image">
                   <img src={item.img} alt={item.title} />
                 </div>
+
                 <div className="cart-info">
                   <p>{item.title}</p>
                   <p>Price: ${item.price}</p>
@@ -53,10 +56,12 @@ export default function CartPage() {
                   <p>Category: {item.category}</p>
                   <p>Brand: {item.brand}</p>
                   <p>Rating: {item.rating}</p>
+
                   <div className="Buttons"  >
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
+
                     <button className="CartItem-buy-Button" onClick={() => {
                       addOrder({ ...item, });
                       deleteCartItem(item.id)
@@ -77,17 +82,20 @@ export default function CartPage() {
         <div className="CartDetails">
 
           <h2 className="CartDetails-Text">Cart Details</h2>
+
           <div className="CartDetails-info">
             <div>
               <p>Total Items: {cartData?.length}</p>
             </div>
+
             <div>
               <p>Total Price: ${cartData?.reduce((sum: number, item: any) => sum + item.price, 0).toFixed(2)}</p>
             </div>
-            {cartItems && cartItems.length > 0 && (
+
+            {cartData && cartData.length > 0 && (
               <button className="BuyNowButton" onClick={() => {
-                cartItems.forEach((item: any) => addOrder(item));
-                cartItems.forEach((item: any) => deleteCartItem(item.id));
+                cartData.forEach((item: any) => addOrder(item));
+                cartData.forEach((item: any) => deleteCartItem(item.id));
               }}>
                 place your orders
               </button>

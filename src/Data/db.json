@@ -523,19 +523,7 @@
   ],
   "cart": [],
   "Orders": [],
-  "YourOrders": [
-    {
-      "id": "0Y9Lso-sG_4",
-      "img": "https://picsum.photos/id/101/300/300",
-      "title": "Wireless Mouse",
-      "price": 499,
-      "category": "Electronics",
-      "brand": "Logitech",
-      "rating": 4.5,
-      "stock": 120,
-      "email": "test@gmail.com"
-    }
-  ],
+  "YourOrders": [],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",
