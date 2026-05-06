@@ -567,14 +567,37 @@
       "email": "sathrakstuvet51@gmail.com"
     },
     {
-      "id": "tkvs9eIeRmk",
-      "img": "https://picsum.photos/id/101/300/300",
-      "title": "Wireless Mouse",
-      "price": 499,
+      "id": "yoWojH8W980",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
       "category": "Electronics",
-      "brand": "Logitech",
-      "rating": 4.5,
-      "stock": 120
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "ahMpteKi6y4",
+      "img": "https://picsum.photos/id/110/300/300",
+      "title": "Gaming Keyboard",
+      "price": 1299,
+      "category": "Electronics",
+      "brand": "Redragon",
+      "rating": 4.4,
+      "stock": 95,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "VyzQwATbIVY",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
     }
   ],
   "Orders": [

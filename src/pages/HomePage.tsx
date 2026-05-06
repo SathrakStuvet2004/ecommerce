@@ -46,7 +46,7 @@ import { useNavigate } from 'react-router';
 //   "rating": number;
 //   "stock": number;
 // }
-const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+
 
 export default function HomePage() {
   //const [products, setProducts] = useState<product[]>([]);
@@ -89,6 +89,7 @@ export default function HomePage() {
   // const getData=getFromMockApi()
   // console.log(getData, "mockapi data in home page")
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
   const { data } = useProducts();
 
