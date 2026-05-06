@@ -1,7 +1,9 @@
 import { useGetUser } from '../hooks/hook'
 import { useState } from 'react'
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import './SignUpPage.css'
+import { useDispatch } from 'react-redux';
+import { checkUser } from '../UserSlice';
 
 export default function LogInPage() {
 
@@ -11,6 +13,7 @@ export default function LogInPage() {
   const [password, setPassword] = useState("");
 
   const { data: user = [] } = useGetUser();
+  const dispatch = useDispatch()
 
   function logIn(e: any) {
     e.preventDefault();
@@ -28,7 +31,7 @@ export default function LogInPage() {
       alert("Invalid user name")
       return;
     }
-    console.log(currentUser)
+    dispatch(checkUser(true))
 
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
@@ -36,6 +39,7 @@ export default function LogInPage() {
     setPassword("");
     setName("")
     navigate("/");
+
   }
 
   return (
@@ -70,6 +74,9 @@ export default function LogInPage() {
           </button>
         </div>
       </form>
+      <div>
+        <p className="LoginText">Do you have a account ? <Link to="/signup" className="LoginLink" >signup</Link></p>
+      </div>
     </div>
   )
 }

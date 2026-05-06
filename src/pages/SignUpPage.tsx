@@ -28,7 +28,7 @@ export default function SignUpPage() {
     setPassword('');
     setName('');
     localStorage.setItem("currentUser", JSON.stringify(newUser));
-    navigate("/");
+    navigate("/login");
   }
 
   return (

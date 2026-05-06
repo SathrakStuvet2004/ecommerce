@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import NavBar from "../components/NavBar"
 import { useGetYourOrders, useDeleteYourOrderItem } from "../hooks/hook"
 import './UserPage.css'
@@ -13,14 +14,15 @@ export default function UserPage() {
 
   const navigate = useNavigate();
 
+  const isLoggedin = useSelector((state: any) => state.user.isLogedIn)
+
   function logout() {
     localStorage.clear();
-    navigate("/")
+    navigate("/login")
   }
 
-  function clearOrders(){
-    YourOrderData?.forEach((orders:any)=>deleteYourOrderItem(orders.id))
-     
+  function clearOrders() {
+    YourOrderData?.forEach((orders: any) => deleteYourOrderItem(orders.id))
   }
 
   return (
@@ -56,7 +58,7 @@ export default function UserPage() {
               <p>Total cost :${YourOrderData?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
 
               <button className="orderHistoryButton"
-              onClick={clearOrders}>clear order history</button>
+                onClick={clearOrders}>clear order history</button>
             </div>
           </div>
 
@@ -65,10 +67,11 @@ export default function UserPage() {
             <div className="userInformation">
               <p>User Name : {currentUser.name}</p>
               <p>User Mail Id : {currentUser.email}</p>
-              <button className="logoutButton" onClick={logout}>Log out</button>
+              {isLoggedin ?
+                (<button className="logoutButton" onClick={logout}>Log out</button>)
+                : (<button className="signInButton">SignIn</button>)}
             </div>
           </div>
-
         </div>
       </div>
     </div>

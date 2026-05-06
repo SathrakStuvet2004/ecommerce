@@ -70,15 +70,19 @@
   padding-top: 1px;
   padding-bottom: 7px;
 }
-.userInformationText{
+
+.userInformationText {
   padding-left: 5px;
 }
+
 .userInformation {
   padding-left: 50px;
   color: white;
 }
 
-.logoutButton, .orderHistoryButton {
+.logoutButton,
+.orderHistoryButton,
+.signInButton {
   background-color: #3b82f6;
   color: white;
   border: none;
@@ -92,7 +96,13 @@
   background-color: #2563eb;
   color: black;
 }
-.orderHistoryButton:hover{
-   background-color: #2563eb;
+
+.orderHistoryButton:hover {
+  background-color: #2563eb;
+  color: black;
+}
+
+.signInButton:hover {
+  background-color: #2563eb;
   color: black;
 }

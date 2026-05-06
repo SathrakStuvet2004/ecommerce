@@ -88,7 +88,7 @@ export default function HomePage() {
 
   // const getData=getFromMockApi()
   // console.log(getData, "mockapi data in home page")
-const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
+  const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
 
   const { data } = useProducts();
 
@@ -96,8 +96,8 @@ const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
 
   const navigate = useNavigate()
 
-  function navLogin(){
-    navigate("/signup")
+  function navLogin() {
+    navigate("/login")
   }
 
   return (
@@ -123,7 +123,7 @@ const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
               isLoggedin ? (
                 <button className="cartButton" onClick={() => addToCart({ ...product, email: currentUser.email })} >Add to cart</button>
               ) : (
-                <button className='cartButton' onClick={navLogin}>SignIn for Add to Cart</button>
+                <button className='cartButton' onClick={navLogin}>Log In for Add to Cart</button>
               )
             }
           </div>
