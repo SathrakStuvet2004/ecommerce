@@ -521,8 +521,86 @@
       "stock": 70
     }
   ],
-  "cart": [],
-  "Orders": [],
+  "cart": [
+    {
+      "id": "5qV28rGz1Os",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "EpNBCu9aMfI",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "dyq_jlhdydQ",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "test@gmail.com"
+    },
+    {
+      "id": "3zT6gR_U4hs",
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "price": 1499,
+      "category": "Electronics",
+      "brand": "Boat",
+      "rating": 4.3,
+      "stock": 80,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "tkvs9eIeRmk",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120
+    }
+  ],
+  "Orders": [
+    {
+      "id": "zTduFlVQ2YU",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "test@gmail.com"
+    },
+    {
+      "id": "ttDDIOKzF08",
+      "img": "https://picsum.photos/id/103/300/300",
+      "title": "Men's T-Shirt",
+      "price": 299,
+      "category": "Fashion",
+      "brand": "H&M",
+      "rating": 4.1,
+      "stock": 200,
+      "email": "test@gmail.com"
+    }
+  ],
   "YourOrders": [],
   "users": [
     {
@@ -598,46 +676,10 @@
       "id": "Sf5PLL6ttZg"
     },
     {
-      "email": "asdfghjkl@gmail.com",
-      "password": "1234567890",
-      "name": "mumbai",
-      "id": "M9ujpG9q5Ss"
-    },
-    {
       "email": "test@gmail.com",
       "password": "1234567890",
       "name": "test",
       "id": "QUCONoU_Fs8"
-    },
-    {
-      "email": "sathrakstuvet51@gmail.com",
-      "password": "1234567890",
-      "name": "sathrak",
-      "id": "AtGwCtnAYEE"
-    },
-    {
-      "email": "test@gmail.com",
-      "password": "1234567890",
-      "name": "test",
-      "id": "g-uSdvDvgaI"
-    },
-    {
-      "email": "sathrakstuvet51@gmail.com",
-      "password": "123456789",
-      "name": "sathrak",
-      "id": "80CV2WWHY9s"
-    },
-    {
-      "email": "sathrakstuvet51@gmail.com",
-      "password": "123456789",
-      "name": "sathrak",
-      "id": "I-NM_fusmME"
-    },
-    {
-      "email": "sathrakstuvet51@gmail.com",
-      "password": "123456789",
-      "name": "sathrak",
-      "id": "5eqpMGBJcbk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

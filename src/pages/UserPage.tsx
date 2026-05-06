@@ -1,8 +1,9 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../components/NavBar"
 import { useGetYourOrders, useDeleteYourOrderItem } from "../hooks/hook"
 import './UserPage.css'
 import { useNavigate } from "react-router";
+import { checkUser } from "../UserSlice";
 
 export default function UserPage() {
   const { data: YourOrders } = useGetYourOrders()
@@ -14,15 +15,22 @@ export default function UserPage() {
 
   const navigate = useNavigate();
 
-  const isLoggedin = useSelector((state: any) => state.user.isLogedIn)
+  const dispatch = useDispatch();
 
-  function logout() {
-    localStorage.clear();
-    navigate("/login")
-  }
+  const isLoggedin = useSelector((state: any) => state.user.isLogedIn)
 
   function clearOrders() {
     YourOrderData?.forEach((orders: any) => deleteYourOrderItem(orders.id))
+  }
+
+  function logout() {
+    localStorage.clear();
+    dispatch(checkUser(false));
+    navigate("/login")
+  }
+
+  function signin(){
+    navigate("/login")
   }
 
   return (
@@ -54,7 +62,7 @@ export default function UserPage() {
                 </div>
               ))
             ) : (
-              <p className="empty-orders">No orders found.</p>
+              <p className="empty-orders">No orders History found.</p>
             )}
           </div>
           }
@@ -69,8 +77,9 @@ export default function UserPage() {
               <p>Your Total Orders: {YourOrderData?.length}</p>
               <p>Total cost :${YourOrderData?.reduce((sum: number, order: any) => sum + order.price, 0).toFixed(2)}</p>
 
-              {YourOrderData && <button className="orderHistoryButton"
-                onClick={clearOrders}>clear order history</button>}
+              {YourOrderData && YourOrderData.length > 0 && <button className="orderHistoryButton"
+                onClick={clearOrders}>clear order history
+              </button>}
 
             </div>
           </div>
@@ -85,7 +94,7 @@ export default function UserPage() {
 
               {isLoggedin ?
                 (<button className="logoutButton" onClick={logout}>Log out</button>)
-                : (<button className="signInButton" onClick={logout}>LogIn</button>)}
+                : (<button className="signInButton" onClick={signin}>LogIn</button>)}
             </div>
           </div>
         </div>
