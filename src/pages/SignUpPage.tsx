@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import './SignUpPage.css'
-import { useAddUser } from '../hooks/hook';
+import { useAddUser, useGetUser } from '../hooks/hook';
 import { useNavigate } from 'react-router';
 
+
+
 export default function SignUpPage() {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
 
+  const { data: user = [] } = useGetUser();
+
   const { mutate: addUser } = useAddUser();
+
   const navigate = useNavigate();
 
   function handelSubmit(e: any) {
@@ -18,17 +24,25 @@ export default function SignUpPage() {
       alert("Please fill in all fields");
       return;
     }
-    const newUser = {
-      email,
-      password,
-      name
+
+    const isUserExist = user.some((e: any) => e.email === email)
+
+    if (isUserExist) {
+      alert("User already Exist")
     }
-    addUser(newUser);
-    setEmail('');
-    setPassword('');
-    setName('');
-    localStorage.setItem("currentUser", JSON.stringify(newUser));
-    navigate("/login");
+    else {
+      const newUser = {
+        email,
+        password,
+        name
+      }
+      addUser(newUser);
+      setEmail('');
+      setPassword('');
+      setName('');
+      navigate("/login");
+    }
+
   }
 
   return (
