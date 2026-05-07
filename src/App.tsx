@@ -17,7 +17,7 @@ function App() {
   const { data: user = [] } = useGetUser();
 
   const dispatch = useDispatch();
-  
+
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || '{}');
 
   useEffect(() => {
@@ -27,14 +27,14 @@ function App() {
 
   return (
     <Routes>
-       <Route path='/' element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
       <Route path='/signup' element={<SignUpPage />} />
       <Route path='/Login' element={<LogInPage />} />
       <Route path='/Cart' element={<CartPage />} />
       <Route path='/Orders' element={<OrderPage />} />
       <Route path='/User' element={<UserPage />} />
     </Routes>
-  )  
+  )
 }
 
 export default App

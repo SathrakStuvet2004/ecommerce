@@ -532,6 +532,17 @@
       "rating": 4.3,
       "stock": 80,
       "email": "test@gmail.com"
+    },
+    {
+      "id": "gK5r6JO1L9U",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "sathrakstuvet51@gmail.com"
     }
   ],
   "Orders": [
