@@ -532,17 +532,6 @@
       "rating": 4.3,
       "stock": 80,
       "email": "test@gmail.com"
-    },
-    {
-      "id": "z4t77URJzfg",
-      "img": "https://picsum.photos/id/103/300/300",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200,
-      "email": "sathrakstuvet51@gmail.com"
     }
   ],
   "Orders": [
@@ -567,9 +556,11 @@
       "rating": 4.1,
       "stock": 200,
       "email": "test@gmail.com"
-    },
+    }
+  ],
+  "YourOrders": [
     {
-      "id": "uBGqlRzGQCo",
+      "id": "CZjwGiI9jB4",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
       "price": 1499,
@@ -578,9 +569,74 @@
       "rating": 4.3,
       "stock": 80,
       "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "8r2X1EAw7OQ",
+      "img": "https://picsum.photos/id/103/300/300",
+      "title": "Men's T-Shirt",
+      "price": 299,
+      "category": "Fashion",
+      "brand": "H&M",
+      "rating": 4.1,
+      "stock": 200,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "fQb4XMg-mUc",
+      "img": "https://picsum.photos/id/104/300/300",
+      "title": "Women's Kurti",
+      "price": 799,
+      "category": "Fashion",
+      "brand": "Biba",
+      "rating": 4.4,
+      "stock": 150,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "9HvyoTftWnY",
+      "img": "https://picsum.photos/id/106/300/300",
+      "title": "Laptop",
+      "price": 55999,
+      "category": "Electronics",
+      "brand": "HP",
+      "rating": 4.7,
+      "stock": 40,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "wE-rJvjQ14Y",
+      "img": "https://picsum.photos/id/107/300/300",
+      "title": "Running Shoes",
+      "price": 1999,
+      "category": "Footwear",
+      "brand": "Nike",
+      "rating": 4.5,
+      "stock": 90,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "S-U-ct2Ym48",
+      "img": "https://picsum.photos/id/101/300/300",
+      "title": "Wireless Mouse",
+      "price": 499,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "rating": 4.5,
+      "stock": 120,
+      "email": "sathrakstuvet51@gmail.com"
+    },
+    {
+      "id": "HC-7pwVzRl4",
+      "img": "https://picsum.photos/id/108/300/300",
+      "title": "Backpack",
+      "price": 899,
+      "category": "Accessories",
+      "brand": "Skybags",
+      "rating": 4.2,
+      "stock": 110,
+      "email": "sathrakstuvet51@gmail.com"
     }
   ],
-  "YourOrders": [],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",

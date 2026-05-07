@@ -1,89 +1,312 @@
-.OrdersTitle {
-  margin-top: 100px;
-  font-family: italic;
-  color: #425664;
-  margin-left: 5px;
-}
-
-.OrderPage {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  text-align: center;
-  background-color: #425664;
-  border-radius: 5px;
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-  margin-top: 35px;
-}
+/* =========================
+   ORDERS PAGE LAYOUT
+========================= */
 
 .OrdersContainer {
-  margin-top: 10px;
-  border: 2px solid white;
-  border-radius: 5px;
-}
-
-.OrdersDetailsTitle {
-  font-family: italic;
-  color: white;
-  padding: 15px;
-  font-size: 20px;
-}
-
-.OrderItems {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: 3fr 1fr;
+
+  gap: 20px;
+
+  padding: 90px 20px 20px 20px;
+
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #050816, #0B1F3A, #102A43);
 }
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.OrdersName-Text {
+  color: white;
+
+  font-size: 32px;
+  font-weight: 600;
+
+  margin-top: 110px;
+
+  display: flex;
+}
+
+/* =========================
+   ORDER ITEMS GRID
+========================= */
+
+
+  .OrderItems {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+
+  gap: 18px;
+
+  align-items: start;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   SINGLE ORDER CARD
+========================= */
 
 .OrderItem {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: #0F172A;
+
+  border: 1px solid #1D4ED8;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
   color: white;
-  margin: 7px 5px 5px 5px;
+
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  overflow: hidden;
 }
 
-.empty-orders {
-  color: white;
-  font-family: italic;
+/* Hover */
+.OrderItem:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.4);
 }
 
-.paymentInfo {
-  border: 1px solid white;
-  border-radius: 5px;
+/* =========================
+   IMAGE
+========================= */
+
+.OrderItem img {
+  width: 100%;
+
+  height: 160px;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 10px;
+
+  background-color: #1E293B;
+
   padding: 10px;
-  color: white;
-  margin: 7px 5px 5px 5px;
+
+  box-sizing: border-box;
 }
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.Order-info {
+  display: grid;
+
+  gap: 8px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.ButtonGroup {
+  display: grid;
+
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+/* =========================
+   COMMON BUTTON STYLE
+========================= */
+
+.orderItem-delete-Button,
+.orderItem-BuyNow-Button,
+.buyAllButton {
+  flex: 1;
+
+  cursor: pointer;
+
+  border: none;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: white;
+
+  transition: all 0.3s ease;
+
+  background:
+    linear-gradient(135deg, #2563EB, #1D4ED8);
+
+  box-shadow:
+    0px 0px 10px rgba(37, 99, 135, 0.25);
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.orderItem-delete-Button:hover,
+.orderItem-BuyNow-Button:hover,
+.buyAllButton:hover {
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(135deg, #3B82F6, #2563EB);
+
+  box-shadow:
+    0px 0px 6px rgba(59, 130, 216, 0.25);
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.orderItem-delete-Button {
+  background:
+    linear-gradient(135deg, #334155, #1E293B);
+}
+
+/* Hover */
+.orderItem-delete-Button:hover {
+  background:
+    linear-gradient(135deg, #475569, #334155);
+}
+
+/* =========================
+   PAYMENT SUMMARY
+========================= */
+
+.PaymentSummary {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+
+  top: 90px;
+
+  height: fit-content;
+}
+
+/* =========================
+   PAYMENT TITLE
+========================= */
 
 .paymentSummeryTitle {
-  font-family: italic;
-  color: white;
-  padding: 15px;
-  font-size: 20px;
-  text-align: left;
+  color: #00E5FF;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
 }
 
-.checkoutButton {
-  cursor: pointer;
-  border-radius: 5px;
-  border: solid;
-  border-color: black;
-  border-width: 1px;
-  margin-bottom: 5px;
-  margin-top: 15px;
-  font-family: 'italic';
-  font-size: medium;
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 5px;
-  margin-right: 10px;
+/* =========================
+   PAYMENT INFO
+========================= */
+
+.paymentInfo {
+  
+
+  max-height: calc(100vh - 120px);
+
+  overflow-y: auto;
+
+  background-color: #0F172A;
+
+  border: 1px solid #1D4ED8;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  color: white;
+
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.2);
 }
 
-.checkoutButton:hover {
-  background-color: #20384a;
+/* Scrollbar */
+.paymentInfo::-webkit-scrollbar {
+  width: 6px;
+}
+
+.paymentInfo::-webkit-scrollbar-thumb {
+  background-color: #2563EB;
+  border-radius: 10px;
+}
+
+/* =========================
+   EMPTY ORDERS
+========================= */
+
+.empty-orders {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
   color: white;
+
+  min-height: 70vh;
+
+  font-size: 24px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .OrdersContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .paymentInfo {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .OrderItems {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .OrderItems {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .PaymentSummary {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+  }
+
+  .OrdersContainer {
+    margin-right: 20px;
+  }
 }

@@ -1,108 +1,208 @@
 .userInfo {
   padding-top: 100px;
+
   margin-left: 25px;
-  color: black
+
+  color: white;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(135deg, #050816, #0B1F3A, #102A43);
+}
+.OrderItem{
+  margin-left: 18px;
 }
 
 .yourOrderInfo {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
-  background-color: #00000026;
+
+  background-color: rgba(15, 23, 42, 0.7);
+
   column-gap: 15px;
-  padding-bottom: 10px;
+
+  padding: 20px;
+
   margin-top: 100px;
+
+  border-radius: 14px;
 }
 
 .historyText {
   padding-left: 15px;
+
+  color: #00E5FF;
+
+  font-size: 24px;
+
+  font-weight: 600;
 }
 
 .products {
-  border: 2px solid white;
-  border-radius: 9px;
+  border: 1px solid #1D4ED8;
+
+  border-radius: 12px;
+
   color: white;
-  background-color: #425664;
+
+  background-color: #0F172A;
+
   margin-top: 5px;
+
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.15);
 }
 
-.productsInfo {
-  border: 2px solid white;
-  border-radius: 9px;
-  background-color: #425664;
+
+  .productsInfo {
+
+  border-radius: 12px;
+
   padding-left: 8px;
+
   padding-right: 8px;
+
+  margin: 12px;
+  transition: 0.3s;
+
+  overflow: hidden;
+
+  word-break: break-word;
 }
 
-.orderDetails {
-  color: white;
+.orderDetailsText {
+  color: #00E5FF;
+
   padding-top: 7px;
+
   padding-left: 5px;
+
   padding-right: 5px;
+
 }
 
 .empty-orders {
   font-family: italic;
+
   text-align: center;
+
   padding-top: 100px;
+
   padding-left: 85px;
+
+  color: white;
+
+  font-size: 22px;
+  margin-top: -150px;
+  margin-left: 50px;
 }
 
 .orderSummary {
-  border-bottom: 2px solid white;
-  background-color: #00000026;
-  padding-left: 5px;
-  border-radius: 5px;
+  border: 1px solid #1D4ED8;
+
+  background-color: #0F172A;
+
+  padding-left: 20px;
+
+  padding-right: 20px;
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.15);
 }
 
 .orderCalculation {
-  padding-left: 50px;
-  color: white;
+  padding-left: 20px;
 }
 
 .userInformations {
   color: white;
-  margin-top: 50px;
+
+  margin-top: 20px;
+
   margin-bottom: 10px;
-  border-bottom: 2px solid white;
-  background-color: #00000026;
-  padding-left: 5px;
-  border-radius: 5px;
-  padding-top: 1px;
-  padding-bottom: 7px;
+
+  border: 1px solid #1D4ED8;
+
+  background-color: #0F172A;
+
+  padding-left: 20px;
+
+  border-radius: 12px;
+
+  padding-top: 15px;
+
+  padding-bottom: 20px;
+
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.15);
 }
 
 .userInformationText {
   padding-left: 5px;
+
+  color: #00E5FF;
+
+  font-size: 22px;
+
+  font-weight: 600;
 }
 
 .userInformation {
-  padding-left: 50px;
+  padding-left: 20px;
+
   color: white;
+
+  font-size: 14px;
 }
 
 .logoutButton,
 .orderHistoryButton,
 .signInButton {
-  background-color: white;
-  color: black;
+  background:
+    linear-gradient(135deg, #2563EB, #1D4ED8);
+
+  color: white;
+
   border: none;
-  padding: 6px 10px;
-  border-radius: 5px;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
   cursor: pointer;
-  margin-bottom: 9px;
+
+  margin-bottom: 12px;
+
+  margin-top: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0px 0px 8px rgba(37, 99, 235, 0.2);
 }
 
-.logoutButton:hover {
-  background-color: #20384a;
-  color: white
-}
-
-.orderHistoryButton:hover {
- background-color: #20384a;
-  color: white
-}
-
+.logoutButton:hover,
+.orderHistoryButton:hover,
 .signInButton:hover {
-  background-color: #20384a;
-  color: white
+  background:
+    linear-gradient(135deg, #3B82F6, #2563EB);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0px 0px 5px rgba(59, 130, 246, 0.18);
 }

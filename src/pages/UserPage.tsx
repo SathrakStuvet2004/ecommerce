@@ -71,7 +71,7 @@ export default function UserPage() {
 
           <div className="orderSummary">
 
-            <h3 className="orderDetails">your order details:</h3>
+            <h3 className="orderDetailsText">Your Order Details:</h3>
 
             <div className="orderCalculation">
               <p>Your Total Orders: {YourOrderData?.length}</p>

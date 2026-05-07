@@ -1,112 +1,347 @@
+/* =========================
+   CART PAGE LAYOUT
+========================= */
+
 .CartContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: 3fr 1fr;
+
   gap: 20px;
+
+  padding: 90px 20px 20px 20px;
+
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #050816, #0B1F3A, #102A43);
 }
 
+/* =========================
+   LEFT SIDE
+========================= */
+
 .CartProperty {
-  display: grid;
-  grid-template-columns: repeat(1fr);
+  display: flex;
+  flex-direction: column;
 }
+
+/* =========================
+   CART TITLE
+========================= */
+
+.cartName-Text {
+
+  color: white;
+
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 110px;
+  display: flex;
+  
+}
+
+/* =========================
+   SCROLLABLE CART AREA
+========================= */
+
+.CartItemsContainer {
+  overflow-y: auto;
+
+  max-height: calc(100vh - 170px);
+
+  padding-right: 8px;
+}
+
+/* Scrollbar */
+.CartItemsContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.CartItemsContainer::-webkit-scrollbar-thumb {
+  background-color: #2563EB;
+  border-radius: 10px;
+}
+
+/* =========================
+   CART ITEMS GRID
+========================= */
 
 .CartItems {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  text-align: center;
-  background-color: #425664;
-  border-radius: 5px;
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-  margin-top: 5px;
+
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+
+  gap: 18px;
+
+  align-items: start;
+
+  margin-bottom: 18px;
 }
+
+/* =========================
+   SINGLE PRODUCT CARD
+========================= */
 
 .CartItem {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: #0F172A;
+
+  border: 1px solid #1D4ED8;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
   color: white;
+
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  overflow: hidden;
 }
 
+/* Hover */
+.CartItem:hover {
+  transform: translateY(-4px);
 
-.CartItem-delete-Button,
-.CartItem-buy-Button {
-  cursor: pointer;
-  border-radius: 5px;
-  border: solid;
-  border-color: black;
-  border-width: 1px;
-  margin-bottom: 5px;
-  margin-top: 15px;
-  font-family: 'italic';
-  font-size: medium;
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 5px;
-  margin-right: 10px;
-  border-color: antiquewhite;
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.4);
 }
 
-.CartItem-delete-Button:hover,
-.CartItem-buy-Button:hover {
-  background-color: #20384a;
-  color: white
+/* =========================
+   IMAGE
+========================= */
+
+.CartItem img {
+  width: 100%;
+
+  height: 160px;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 10px;
+
+  background-color: #1E293B;
+
+  padding: 10px;
+
+  box-sizing: border-box;
 }
 
-.cartName-Text {
-  margin-top: 100px;
-  font-family: italic;
-  color: #425664
-}
+/* =========================
+   PRODUCT INFO
+========================= */
 
 .cart-info {
+
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
+  gap: 8px;
+
+  font-size: 14px;
 }
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.ButtonGroup {
+  display: grid;
+
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+/* =========================
+   COMMON BUTTON STYLE
+========================= */
+
+.CartItem-delete-Button,
+.CartItem-buy-Button,
+.BuyNowButton {
+  flex: 1;
+
+  cursor: pointer;
+
+  border: none;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: white;
+
+  transition: all 0.3s ease;
+
+  background:
+    linear-gradient(135deg, #2563EB, #1D4ED8);
+
+  box-shadow:
+    0px 0px 10px rgba(37, 99, 135, 0.25);
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.CartItem-delete-Button:hover,
+.CartItem-buy-Button:hover,
+.BuyNowButton:hover {
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(135deg, #3B82F6, #2563EB);
+
+  box-shadow:
+    0px 0px 6px rgba(59, 130, 216, 0.25);
+}
+
+/* =========================
+   DELETE BUTTON VARIANT
+========================= */
+
+.CartItem-delete-Button {
+  background:
+    linear-gradient(135deg, #334155, #1E293B);
+}
+
+/* Delete Hover */
+.CartItem-delete-Button:hover {
+  background:
+    linear-gradient(135deg, #475569, #334155);
+}
+
+/* =========================
+   BUY BUTTON VARIANT
+========================= */
+
+.CartItem-buy-Button,
+.BuyNowButton {
+  background:
+    linear-gradient(135deg, #2563EB, #1D4ED8);
+}
+
+
+/* =========================
+   RIGHT SIDE DETAILS
+========================= */
+
+.CartDetails {
+  position: sticky;
+
+  top: 90px;
+
+  height: fit-content;
+}
+
+.CartDetails-info {
+  max-height: calc(100vh - 120px);
+
+  overflow-y: auto;
+
+  background-color: #0F172A;
+
+  border: 1px solid #1D4ED8;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  color: white;
+
+  box-shadow:
+    0px 0px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* Scrollbar */
+.CartDetails-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.CartDetails-info::-webkit-scrollbar-thumb {
+  background-color: #2563EB;
+
+  border-radius: 10px;
+}
+.CartDetails-Text {
+  color: #00E5FF;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+/* =========================
+   DETAILS TITLE
+========================= */
+
+.CartDetails-Text {
+  color: #00E5FF;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+  
+}
+
+/* =========================
+   EMPTY CART
+========================= */
 
 .empty-cart {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  font-family: italic;
-  color: white
-}
 
-.CartDetails-Text {
-  font-family: italic;
-  color: #425664
-}
-
-.CartDetails-info {
-  border: 2px solid white;
-  border-radius: 9px;
   color: white;
-  margin-left: 90px;
-  padding-left: 7px;
-  background-color: #425664;
+
+  min-height: 70vh;
+
+  font-size: 24px;
+
+  margin-top: -90px;
 }
 
-.BuyNowButton {
-  cursor: pointer;
-  border-radius: 5px;
-  border: solid;
-  border-color: black;
-  border-width: 1px;
-  margin-bottom: 9px;
-  font-family: 'italic';
-  font-size: medium;
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 5px;
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .CartContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .CartDetails-info {
+    position: static;
+  }
 }
 
-.BuyNowButton:hover {
-  background-color: #20384a;
-  color: white
+@media (max-width: 768px) {
+  .CartItems {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .cart-info {
+    grid-template-columns: 1fr;
+  }
+
+  .CartItems {
+    grid-template-columns: 1fr;
+  }
 }

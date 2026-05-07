@@ -45,7 +45,7 @@ export default function CartPage() {
 
               <div key={item.id} className="CartItem">
 
-                <div className="CartItem-image">
+                <div className="CartItem-image img">
                   <img src={item.img} alt={item.title} />
                 </div>
 
@@ -57,7 +57,7 @@ export default function CartPage() {
                   <p>Brand: {item.brand}</p>
                   <p>Rating: {item.rating}</p>
 
-                  <div className="Buttons"  >
+                  <div className="ButtonGroup"  >
                     <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
                       delete
                     </button>
