@@ -1,4 +1,5 @@
 //npx json-server --watch db.json
+//toast notifications for cart/login
 import './HomePage.css'
 import NavBar from "../components/NavBar";
 import { useProducts, useAddToCart } from "../hooks/hook";

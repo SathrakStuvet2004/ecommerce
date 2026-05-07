@@ -1,64 +1,132 @@
-.SignUpPage, .LogInPage {
+.SignUpPage,
+.LogInPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #425664;
+  min-height: 100vh;
+  padding: 0px;
+
+  background: linear-gradient(135deg, #050816, #0B1F3A, #102A43);
 }
 
-.SignUpText, .LogInText {
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: white;
-  font-family: italic;
+/* Heading */
+.SignUpText,
+.LogInText {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #19c3d6;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 10px rgba(0, 229, 255, 0.4);
 }
 
-.SignUpForm, .LogInForm {
+/* Form Container */
+.SignUpForm,
+.LogInForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  min-height: 150px;
+  gap: 18px;
+
+  background-color: #0F172A;
+  padding: 35px;
+  border-radius: 16px;
+
+  border: 1px solid #1D4ED8;
+
+  box-shadow:
+    0px 0px 20px rgba(37, 99, 135, 0.25),
+    0px 0px 40px rgba(0, 229, 155, 0.1);
+
+  min-width: 320px;
 }
 
-.EmailInput, .PasswordInput, .userNameInput {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  width: 250px;
+/* Inputs */
+.EmailInput,
+.PasswordInput,
+.userNameInput {
+  width: 260px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+  border: 1px solid #2563EB;
+
+  background-color: #1E293B;
+
+  color: #E2E8F0;
+
+  outline: none;
+
+  transition: 0.3s;
 }
 
-.SignUpButton, .LoginButton {
-  background-color: white;
-  color: black;
+/* Placeholder */
+.EmailInput::placeholder,
+.PasswordInput::placeholder,
+.userNameInput::placeholder {
+  color: #94A3B8;
+}
+
+/* Input Focus */
+.EmailInput:focus,
+.PasswordInput:focus,
+.userNameInput:focus {
+  border-color: #00E5FF;
+
+  box-shadow: 0px 0px 10px rgba(0, 229, 255, 0.5);
+}
+
+/* Buttons */
+.SignUpButton,
+.LoginButton {
+  width: 100%;
+
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+
+  color: white;
+
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
   cursor: pointer;
-}
 
-.SignUpButton:hover {
-  background-color:#20384a;
-  color: white
-}
-.LoginButton:hover {
-  background-color: #20384a;
-  color: white
-}
-
-.LoginText {
-  color: white;
-  font-family: italic;
-  margin-top: 15px;
-}
-
-.LoginLink {
-  color: white;
-  text-decoration: none;
+  font-size: 15px;
   font-weight: 500;
+
+  transition: all 0.3s ease;
 }
-.demo{
-  color: black
+
+/* Button Hover */
+.SignUpButton:hover,
+.LoginButton:hover {
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0px 0px 15px rgba(59, 130, 246, 0.7);
+}
+
+/* Bottom Text */
+.LoginText {
+  color: #CBD5E1;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* Link */
+.LoginLink {
+  color: #00E5FF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.LoginLink:hover {
+  color: #38BDF8;
+  text-shadow: 0px 0px 10px rgba(56, 189, 248, 0.7);
 }

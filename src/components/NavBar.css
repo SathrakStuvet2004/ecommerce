@@ -1,60 +1,134 @@
 .NavBar {
-  margin: 0;
+  position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
-  color: white;
+  box-sizing: border-box;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 12px 20px;
-  position: fixed;
+  padding: 14px 28px;
 
-  background-color: var(--navbar);
+  background: rgba(7, 17, 31, 0.9);
+
+  backdrop-filter: blur(10px);
+
   border-bottom: 1px solid var(--border);
-  box-shadow: 0px 0px 10px rgba(0, 229, 255, 0.2);
-  z-index: 100;
+
+  color: var(--text);
+
+  z-index: 1000;
 }
 
-.cartIcon {
+/* Left / Right Sections */
+.NavBarLeft,
+.NavBarRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icons */
+.homeIcon,
+.userIcon,
+.cartIcon,
+.OrdersIcon {
   position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
+
+  transition: 0.3s;
+
+  color: var(--text);
 }
 
+/* Icon Hover */
+.homeIcon:hover,
+.userIcon:hover,
+.cartIcon:hover,
+.OrdersIcon:hover {
+  transform: scale(1.08);
+}
+
+/* Cart Badge */
 .badge {
   position: absolute;
-  top: -8px;
-  right: -10px;
-  background: red;
+
+  top: -6px;
+  right: -6px;
+
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+
   color: white;
-  font-size: 12px;
-  padding: 2px 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  min-width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
+
+  box-shadow: 0px 0px 8px rgba(139, 68, 68, 0.7);
 }
 
+/* Search Bar */
 .searchBar {
-  border-radius: 9px;
-  width: 250px;
-  height: 30px;
-  border: solid;
-  border-width: 1px;
+  width: 260px;
+  height: 38px;
+
+  padding: 0px 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #2563EB;
+
+  background-color: #1E293B;
+
+  color: var(--text);
+
+  outline: none;
+
+  transition: 0.3s;
 }
 
-.homeIcon {
-  margin-left: 20px;
-  cursor: pointer;
+/* Placeholder */
+.searchBar::placeholder {
+  color: var(--secondary-text);
 }
 
-.userIcon {
-  margin-right: 20px;
-  cursor: pointer;
+/* Search Focus */
+.searchBar:focus {
+  border-color: var(--accent);
+
+  box-shadow: 0px 0px 12px rgba(0, 229, 255, 0.5);
 }
 
-.userIcon {
-  padding-right: 18px;
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .NavBar {
+    padding: 12px 15px;
+  }
+
+  .searchBar {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchBar {
+    display: none;
+  }
 }
