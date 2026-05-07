@@ -1,6 +1,36 @@
-.body {
-  background-color: #00000026;
-  margin: 0;
-  padding: 0;
-   
+body {
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+:root {
+
+  /* Main Background */
+  --background: linear-gradient(135deg, #050816, #0B1F3A, #102A43);
+
+  /* Navbar */
+  --navbar: #07111F;
+
+  /* Card / Panel */
+  --card: #0F172A;
+
+  /* Primary Button */
+  --button: #2563EB;
+
+  /* Button Hover */
+  --button-hover: #3B82F6;
+
+  /* Neon Accent */
+  --accent: #00E5FF;
+
+  /* Main Text */
+  --text: #E2E8F0;
+
+  /* Secondary Text */
+  --secondary-text: #94A3B8;
+
+  /* Border / Glow */
+  --border: #1D4ED8;
+
 }

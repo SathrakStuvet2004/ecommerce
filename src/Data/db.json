@@ -569,19 +569,7 @@
       "email": "sathrakstuvet51@gmail.com"
     }
   ],
-  "YourOrders": [
-    {
-      "id": "NC08fi_F4Fw",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
-    }
-  ],
+  "YourOrders": [],
   "users": [
     {
       "email": "sathrakstuvet51@gmail.com",
