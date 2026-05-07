@@ -2,23 +2,23 @@
   margin: 0;
   top: 0;
   left: 0;
-  width: 100%;                /* full width */
-  background-color: #425664;    /* dark gray */
+  width: 100%;               
+  background-color: #425664;    
   color: white;
 
-  display: flex;              /* flexible layout */
+  display: flex;              
   justify-content: space-between;
   align-items: center;
 
-  padding: 12px 20px;         /* inner spacing */
+  padding: 12px 20px;        
   position: fixed;
 }
 
 .cartIcon {
   position: relative;
   display: inline-block;
-  text-decoration: none;  /* remove underline */
-  color: white;         /* keep normal color */
+  text-decoration: none; 
+  color: white;         
   cursor: pointer;
 }
 

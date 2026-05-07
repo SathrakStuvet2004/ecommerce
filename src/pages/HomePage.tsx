@@ -111,7 +111,7 @@ export default function HomePage() {
         {data?.map((product: any) =>
           <div className="product" key={product.id} >
             <div className="productImage">
-              <img src={product.img} alt={product.title} />
+              <img src={product.img} alt={product.title} className='img'/>
             </div>
 
             <div className="productInfo">
