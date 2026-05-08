@@ -63,9 +63,9 @@ export default function NavBar() {
               gap: "6px",
             }}
           >
-            <UserCog size={20} />
+            <UserCog size={30} />
+            <p>Admin</p>
           </Link>
-          <p>Admin</p>
         </div>
       )}
     </div>

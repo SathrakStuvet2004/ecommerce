@@ -36,7 +36,8 @@
 .homeIcon,
 .userIcon,
 .cartIcon,
-.OrdersIcon {
+.OrdersIcon,
+.adminIcon {
   position: relative;
 
   display: flex;
@@ -54,7 +55,8 @@
 .homeIcon:hover,
 .userIcon:hover,
 .cartIcon:hover,
-.OrdersIcon:hover {
+.OrdersIcon:hover,
+.adminIcon:hover {
   transform: scale(1.08);
 }
 

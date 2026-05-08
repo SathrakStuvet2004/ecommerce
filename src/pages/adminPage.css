@@ -1,0 +1,131 @@
+.adminPageTitle {
+  margin-top: 120px;
+  margin-left: 10px;
+  color: white;
+}
+
+.adminPage {
+  margin-left: 25px;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #050816, #0B1F3A, #102A43);
+}
+
+.addProducts {
+  margin-left: 35px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.formText {
+  color: aliceblue;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.productForm {
+  margin-left: 15px;
+}
+
+.productInfo {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.productInfo button {
+  margin-top: 20px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.productInfo button:hover {
+  background-color: #1d4ed8;
+}
+
+.adminInfo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.adminDetails,
+.websiteInfo {
+  background-color: rgba(255, 255, 255, 0.05);
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.adminInfoText, .websiteInfoText{
+   color: #00E5FF;
+}
+.logOutButton {
+  margin-top: 15px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: crimson;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.logOutButton:hover {
+  background-color: darkred;
+}
