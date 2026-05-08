@@ -526,6 +526,13 @@
   "YourOrders": [],
   "users": [
     {
+      "email": "admin@gmail.com",
+      "password": "admin1234",
+      "name": "admin",
+      "id": "admin",
+      "isAdmin": true
+    },
+    {
       "email": "sathrakstuvet51@gmail.com",
       "password": "123456789",
       "name": "sathrak",
@@ -604,5 +611,6 @@
       "id": "QUCONoU_Fs8"
     }
   ],
+  "admin": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

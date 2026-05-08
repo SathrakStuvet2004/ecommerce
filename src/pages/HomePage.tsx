@@ -101,7 +101,6 @@ export default function HomePage() {
 
   function navLogin() {
     navigate("/login")
-    toast.info("LogIn For Add To Cart")
   }
 
   return (

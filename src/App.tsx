@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux'
 import UserPage from './pages/UserPage'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AdminPage from './pages/AdminPage'
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route path='/Cart' element={<CartPage />} />
         <Route path='/Orders' element={<OrderPage />} />
         <Route path='/User' element={<UserPage />} />
+        <Route path='/admin' element={<AdminPage />}/>
       </Routes>
     </>
   )

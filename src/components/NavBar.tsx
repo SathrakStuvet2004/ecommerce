@@ -3,6 +3,7 @@ import { faHouse, faCartShopping, faUser, faBox } from "@fortawesome/free-solid-
 import './NavBar.css'
 import { Link, } from "react-router-dom";
 import { useCart } from "../hooks/hook";
+import { UserCog } from "lucide-react";
 
 export default function NavBar() {
 
@@ -11,6 +12,8 @@ export default function NavBar() {
   const { data: cartItems } = useCart();
 
   const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
+
+  const isAdmin = currentUser.isAdmin;
 
   return (
     <div className="NavBar">
@@ -48,6 +51,23 @@ export default function NavBar() {
         </Link>
       </div>
 
+      {isAdmin && (
+        <div className="adminIcon">
+          <Link
+            to="/admin"
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+            }}
+          >
+            <UserCog size={20} />
+          </Link>
+          <p>Admin</p>
+        </div>
+      )}
     </div>
   );
 }
