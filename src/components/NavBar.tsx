@@ -11,14 +11,14 @@ export default function NavBar() {
   const { data: cartItems } = useCart();
 
   const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
-  
+
   return (
     <div className="NavBar">
 
       <div className="homeIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
           <FontAwesomeIcon icon={faHouse} />
-           <p>Home</p>
+          <p>Home</p>
         </Link>
       </div>
 
@@ -36,15 +36,15 @@ export default function NavBar() {
 
       <div className="OrdersIcon">
         <Link style={{ color: "inherit", textDecoration: "none" }} to="/Orders">
-        <FontAwesomeIcon icon={faBox} />
-        <p>Orders</p>
+          <FontAwesomeIcon icon={faBox} />
+          <p>Orders</p>
         </Link>
       </div>
 
       <div className="userIcon">
-        <Link style={{ color: "inherit", textDecoration: "none" }}  to="/User">
-        <FontAwesomeIcon icon={faUser} />
-        <p>{currentUser.name}</p>
+        <Link style={{ color: "inherit", textDecoration: "none" }} to="/User">
+          <FontAwesomeIcon icon={faUser} />
+          <p>{currentUser.name}</p>
         </Link>
       </div>
 

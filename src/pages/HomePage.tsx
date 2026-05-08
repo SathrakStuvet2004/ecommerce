@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import { useProducts, useAddToCart } from "../hooks/hook";
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 
 // type Product = {
@@ -100,6 +101,7 @@ export default function HomePage() {
 
   function navLogin() {
     navigate("/login")
+    toast.info("LogIn For Add To Cart")
   }
 
   return (
@@ -112,7 +114,7 @@ export default function HomePage() {
         {data?.map((product: any) =>
           <div className="product" key={product.id} >
             <div className="productImage">
-              <img src={product.img} alt={product.title} className='img'/>
+              <img src={product.img} alt={product.title} className='img' />
             </div>
 
             <div className="productInfo">
@@ -128,7 +130,12 @@ export default function HomePage() {
             </div>
             {
               isLoggedin ? (
-                <button className="cartButton" onClick={() => addToCart({ ...product, email: currentUser.email })} >Add to cart</button>
+                <button className="cartButton" onClick={() => {
+                  addToCart({ ...product, email: currentUser.email }),
+                    toast.success("Product Added In The Cart")
+                }} >
+                  Add to cart
+                </button>
               ) : (
                 <button className='cartButton' onClick={navLogin}>Log In for Add to Cart</button>
               )

@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router';
 import './SignUpPage.css'
 import { useDispatch } from 'react-redux';
 import { checkUser } from '../UserSlice';
+import { toast } from "react-toastify";
+
 
 export default function LogInPage() {
 
@@ -20,15 +22,15 @@ export default function LogInPage() {
     const currentUser = user.find((data: any) => data.email === email);
 
     if (!currentUser) {
-      alert("please Enter valid email");
+      toast.error("please Enter valid email");
       return;
     }
     if (currentUser.password !== password) {
-      alert("Invalid password");
+      toast.error("Invalid password");
       return;
     }
     if (currentUser.name !== name) {
-      alert("Invalid user name")
+      toast.error("Invalid user name")
       return;
     }
     dispatch(checkUser(true))
@@ -39,7 +41,7 @@ export default function LogInPage() {
     setPassword("");
     setName("")
     navigate("/");
-
+    toast.success("Login successful 👋");
   }
 
   return (

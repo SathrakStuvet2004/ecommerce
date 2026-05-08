@@ -3,6 +3,7 @@ import { useDeleteCartItem } from "../hooks/hook";
 import NavBar from "../components/NavBar";
 import './CartPage.css'
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 export default function CartPage() {
 
@@ -58,13 +59,17 @@ export default function CartPage() {
                   <p>Rating: {item.rating}</p>
 
                   <div className="ButtonGroup"  >
-                    <button className="CartItem-delete-Button" onClick={() => deleteCartItem(item.id)}>
+                    <button className="CartItem-delete-Button" onClick={() => {
+                      deleteCartItem(item.id),
+                      toast.success("Order Deleted")
+                    }}>
                       delete
                     </button>
 
                     <button className="CartItem-buy-Button" onClick={() => {
                       addOrder({ ...item, });
-                      deleteCartItem(item.id)
+                      deleteCartItem(item.id);
+                      toast.success("Order Placed")
                     }}>
                       place your order
                     </button>
@@ -96,6 +101,7 @@ export default function CartPage() {
               <button className="BuyNowButton" onClick={() => {
                 cartData.forEach((item: any) => addOrder(item));
                 cartData.forEach((item: any) => deleteCartItem(item.id));
+                toast.success("All Itemes Are Placed In Orders")
               }}>
                 place your orders
               </button>

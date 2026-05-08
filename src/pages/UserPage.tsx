@@ -4,6 +4,7 @@ import { useGetYourOrders, useDeleteYourOrderItem } from "../hooks/hook"
 import './UserPage.css'
 import { useNavigate } from "react-router";
 import { checkUser } from "../UserSlice";
+import { toast } from "react-toastify";
 
 export default function UserPage() {
   const { data: YourOrders } = useGetYourOrders()
@@ -20,10 +21,12 @@ export default function UserPage() {
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn)
 
   function clearOrders() {
+    toast.success("Order History was Cleard")
     YourOrderData?.forEach((orders: any) => deleteYourOrderItem(orders.id))
   }
 
   function logout() {
+    toast.info("Logout SuccessFully")
     localStorage.clear();
     dispatch(checkUser(false));
     navigate("/login")

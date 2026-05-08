@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './SignUpPage.css'
 import { useAddUser, useGetUser } from '../hooks/hook';
 import { useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 
 
@@ -21,14 +22,14 @@ export default function SignUpPage() {
     e.preventDefault();
 
     if (!email || !password || !name) {
-      alert("Please fill in all fields");
+      toast.warning("Please fill in all fields");
       return;
     }
 
     const isUserExist = user.some((e: any) => e.email === email)
 
     if (isUserExist) {
-      alert("User already Exist")
+      toast.error("User already Exist")
     }
     else {
       const newUser = {

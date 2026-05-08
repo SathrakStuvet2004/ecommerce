@@ -11,6 +11,8 @@ import { checkUser } from './UserSlice'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import UserPage from './pages/UserPage'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
@@ -26,14 +28,29 @@ function App() {
   }, [currentUser, dispatch]);
 
   return (
-    <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/signup' element={<SignUpPage />} />
-      <Route path='/Login' element={<LogInPage />} />
-      <Route path='/Cart' element={<CartPage />} />
-      <Route path='/Orders' element={<OrderPage />} />
-      <Route path='/User' element={<UserPage />} />
-    </Routes>
+    <>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={true}
+        theme="dark"
+        toastStyle={{
+          background: "#0F172A",
+          color: "#fff",
+          border: "1px solid #1D4ED8",
+          borderRadius: "10px",
+          boxShadow: "0px 0px 10px rgba(37, 99, 235, 0.25)"
+        }}
+      />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/signup' element={<SignUpPage />} />
+        <Route path='/Login' element={<LogInPage />} />
+        <Route path='/Cart' element={<CartPage />} />
+        <Route path='/Orders' element={<OrderPage />} />
+        <Route path='/User' element={<UserPage />} />
+      </Routes>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import { useDeleteOrderItem, useAddYourOrder } from "../hooks/hook";
 import NavBar from "../components/NavBar";
 
 import './OrderPage.css'
+import { toast } from "react-toastify";
 
 export default function OrderPage() {
 
@@ -39,12 +40,17 @@ export default function OrderPage() {
 
                   <div className="ButtonGroup">
                     <button className="orderItem-delete-Button"
-                      onClick={() => deleteOrderItem(item.id)}>
+                      onClick={() => {
+                        deleteOrderItem(item.id);
+                        toast.success("Order Removed")
+                      }}>
                       Remove
                     </button>
-                    <button className="orderItem-BuyNow-Button" onClick={() => {
+                    <button className="orderItem-BuyNow-Button" onClick={() => 
+                    {
                       addYourOrder({ ...item, });
-                      deleteOrderItem(item.id)
+                      deleteOrderItem(item.id);
+                      toast.success("Purchesd Successfully")
                     }}>buy now</button>
 
                   </div>
