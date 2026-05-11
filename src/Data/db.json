@@ -523,42 +523,7 @@
   ],
   "cart": [
     {
-      "id": "zINLFPlIiNI",
-      "img": "https://picsum.photos/id/103/300/300",
-      "title": "Men's T-Shirt",
-      "price": 299,
-      "category": "Fashion",
-      "brand": "H&M",
-      "rating": 4.1,
-      "stock": 200,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "qaSSsYzRtfg",
-      "img": "https://picsum.photos/id/102/300/300",
-      "title": "Bluetooth Headphones",
-      "price": 1499,
-      "category": "Electronics",
-      "brand": "Boat",
-      "rating": 4.3,
-      "stock": 80,
-      "email": "sathrakstuvet51@gmail.com"
-    }
-  ],
-  "Orders": [
-    {
-      "id": "SiMHsnhgXWs",
-      "img": "https://picsum.photos/id/104/300/300",
-      "title": "Women's Kurti",
-      "price": 799,
-      "category": "Fashion",
-      "brand": "Biba",
-      "rating": 4.4,
-      "stock": 150,
-      "email": "sathrakstuvet51@gmail.com"
-    },
-    {
-      "id": "veoseDhtk9w",
+      "id": "IuHLwppFPQQ",
       "img": "https://picsum.photos/id/101/300/300",
       "title": "Wireless Mouse",
       "price": 499,
@@ -566,10 +531,68 @@
       "brand": "Logitech",
       "rating": 4.5,
       "stock": 120,
-      "email": "sathrakstuvet51@gmail.com"
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": "QDkTAsHRkhg",
+      "img": "https://picsum.photos/id/103/300/300",
+      "title": "Men's T-Shirt",
+      "price": 299,
+      "category": "Fashion",
+      "brand": "H&M",
+      "rating": 4.1,
+      "stock": 200,
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": "zd9TcSo4ugA",
+      "img": "https://picsum.photos/id/108/300/300",
+      "title": "Backpack",
+      "price": 899,
+      "category": "Accessories",
+      "brand": "Skybags",
+      "rating": 4.2,
+      "stock": 110,
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": "6jjDXjr_ARE",
+      "img": "https://picsum.photos/id/109/300/300",
+      "title": "Wrist Watch",
+      "price": 2499,
+      "category": "Accessories",
+      "brand": "Fossil",
+      "rating": 4.6,
+      "stock": 70,
+      "email": "admin@gmail.com"
     }
   ],
-  "YourOrders": [],
+  "Orders": [
+    {
+      "id": "lOL-TdN3adQ",
+      "img": "https://picsum.photos/id/106/300/300",
+      "title": "Laptop",
+      "price": 55999,
+      "category": "Electronics",
+      "brand": "HP",
+      "rating": 4.7,
+      "stock": 40,
+      "email": "admin@gmail.com"
+    }
+  ],
+  "YourOrders": [
+    {
+      "id": "1FuJ85iO84s",
+      "img": "https://picsum.photos/id/111/300/300",
+      "title": "LED Monitor",
+      "price": 8999,
+      "category": "Electronics",
+      "brand": "Dell",
+      "rating": 4.5,
+      "stock": 50,
+      "email": "admin@gmail.com"
+    }
+  ],
   "users": [
     {
       "email": "admin@gmail.com",
