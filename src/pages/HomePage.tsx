@@ -2,7 +2,7 @@
 //toast notifications for cart/login
 import './HomePage.css'
 import NavBar from "../components/NavBar";
-import { useProducts, useAddToCart } from "../hooks/hook";
+import { useProducts, useAddToCart, useDeleteHomeItem } from "../hooks/hook";
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
@@ -93,9 +93,13 @@ export default function HomePage() {
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
+  const Isadmin = currentUser.name === "sathrak" && currentUser.email === "admin@gmail.com"
+
   const { data } = useProducts();
 
   const { mutate: addToCart } = useAddToCart();
+
+  const { mutate: removeItem } = useDeleteHomeItem();
 
   const navigate = useNavigate()
 
@@ -129,7 +133,7 @@ export default function HomePage() {
             </div>
             {
               isLoggedin ? (
-                
+
                 <button className="cartButton" onClick={() => {
                   addToCart({ ...product, email: currentUser.email }),
                     toast.success("Product Added In The Cart")
@@ -139,6 +143,15 @@ export default function HomePage() {
               ) : (
                 <button className='cartButton' onClick={navLogin}>Log In for Add to Cart</button>
               )
+            }
+            {Isadmin &&
+              <button className='deleteButton'
+                onClick={() => {
+                  removeItem(product.id),
+                  toast.success("Product Deleted Successfully")
+                }}>
+                  delete
+                </button>
             }
           </div>
         )}

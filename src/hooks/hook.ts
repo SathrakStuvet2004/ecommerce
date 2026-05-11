@@ -78,6 +78,23 @@ export const useAddProduct = () => {
 
   });
 };
+
+//remove product from home page
+export const useDeleteHomeItem = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (id: number) =>
+      fetcher(`/products/${id}`, {
+        method: "DELETE",
+      }),
+
+    onSuccess: () => {
+      // refresh home page after delete
+      queryClient.invalidateQueries({ queryKey: ["products"] });
+    },
+  });
+};
 //fetch cart items for cart page
 export const useCart = () => {
   return useQuery({
@@ -91,7 +108,7 @@ export const useCart = () => {
 //send new product to cart
 export const useAddToCart = () => {
   const queryClient = useQueryClient();
-  
+
   return useMutation({
     mutationFn: (newProduct: any) =>
       fetcher("/cart", {
@@ -221,14 +238,14 @@ export const useDeleteYourOrderItem = () => {
   });
 };
 //fetch data from mock api
-export const getFromMockApi=async ()=>{
-  const apiEndpoint= API
- try{
-  const data= await fetch(apiEndpoint).then((response) => response.json())
-  console.log(data, "mockapi")
-  return data;
- }
- catch(err){
-  console.error
- }
+export const getFromMockApi = async () => {
+  const apiEndpoint = API
+  try {
+    const data = await fetch(apiEndpoint).then((response) => response.json())
+    console.log(data, "mockapi")
+    return data;
+  }
+  catch (err) {
+    console.error
+  }
 }

@@ -61,7 +61,7 @@ export default function CartPage() {
                   <div className="ButtonGroup"  >
                     <button className="CartItem-delete-Button" onClick={() => {
                       deleteCartItem(item.id),
-                      toast.success("Order Deleted")
+                        toast.success("Order Deleted")
                     }}>
                       delete
                     </button>
