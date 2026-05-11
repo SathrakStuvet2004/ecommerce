@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar"
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';  
+import TextField from '@mui/material/TextField';
 import "./adminPage.css"
 import { useState } from "react";
 import { useAddProduct, useGetUser, useProducts } from "../hooks/hook";
@@ -26,7 +26,7 @@ export default function AdminPage() {
 
   const navigate = useNavigate();
 
-  function addProduct(e:any){
+  function addProduct(e: any) {
     e.preventDefault();
 
     const newProduct = {
@@ -49,7 +49,7 @@ export default function AdminPage() {
     setStock("");
   }
 
-  function logout(){
+  function logout() {
     localStorage.clear();
     navigate("/login");
     toast.success("Logout Successfully")
@@ -67,11 +67,11 @@ export default function AdminPage() {
         <div className="addProducts">
           <div>
             <p className="formText">
-              Fill The Information For Add Products     
+              Fill The Information For Add Products
             </p>
           </div>
           <form className="productForm" onSubmit={addProduct} >
-           <Box sx={{ width: "100%" }}>
+            <Box sx={{ width: "100%" }}>
               <div className="AdminproductInfo">
                 <TextField
                   required
@@ -79,7 +79,8 @@ export default function AdminPage() {
                   label="ProductTitle"
                   variant="standard"
                   value={title}
-                  type="string"
+                  type="text"
+                  autoComplete="off"
                   onChange={(e) => setTitle(e.target.value)}
                 />
                 <TextField
@@ -88,7 +89,8 @@ export default function AdminPage() {
                   label="Product Image Link"
                   variant="standard"
                   value={img}
-                  onChange={(e)=>setImg(e.target.value)}
+                  autoComplete="off"
+                  onChange={(e) => setImg(e.target.value)}
                 />
                 <TextField
                   required
@@ -97,7 +99,8 @@ export default function AdminPage() {
                   variant="standard"
                   value={price}
                   type="number"
-                  onChange={(e)=>setPrice(e.target.value)}
+                  autoComplete="off"
+                  onChange={(e) => setPrice(e.target.value)}
                 />
                 <TextField
                   required
@@ -105,7 +108,8 @@ export default function AdminPage() {
                   label="Product Category"
                   variant="standard"
                   value={category}
-                  onChange={(e)=>setCategory(e.target.value)}
+                  autoComplete="off"
+                  onChange={(e) => setCategory(e.target.value)}
                 />
                 <TextField
                   required
@@ -113,7 +117,8 @@ export default function AdminPage() {
                   label="Product Brand"
                   variant="standard"
                   value={brand}
-                  onChange={(e)=>setBrand(e.target.value)}
+                  autoComplete="off"
+                  onChange={(e) => setBrand(e.target.value)}
                 />
                 <TextField
                   required
@@ -121,15 +126,23 @@ export default function AdminPage() {
                   label="Product Rating"
                   variant="standard"
                   value={rating}
-                  onChange={(e)=>setRating(e.target.value)}
+                  type="number"
+                  autoComplete="off"
+                  onChange={(e) => setRating(e.target.value)}
                 />
                 <TextField
                   required
-                  id="standard-required"
                   label="Enter a Stock Count"
                   variant="standard"
                   value={stock}
-                  onChange={(e)=>setStock(e.target.value)}
+                  type="number"
+                  autoComplete="off"
+                  onChange={(e) => setStock(e.target.value)}
+                  slotProps={{
+                    htmlInput: {
+                      min: 0,
+                    },
+                  }}
                 />
                 <div>
                   <button type="submit">

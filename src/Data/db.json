@@ -521,24 +521,14 @@
       "stock": 70
     },
     {
-      "img": "asdfghjkl;",
-      "title": "qwertyuio",
-      "price": "1",
-      "category": "asdfghjkl",
-      "brand": "qwertyuio",
-      "rating": "asdfghjkl;",
-      "stock": "123456",
-      "id": "sNn_B5-Ga78"
-    },
-    {
-      "img": "asdfghjkl",
-      "title": "123456789",
-      "price": "12345678",
-      "category": "asdfghjkl/",
-      "brand": "qwertyuiop",
-      "rating": "zxcvbnm,./",
-      "stock": "1234567890",
-      "id": "XntTywVIogw"
+      "img": "asdfghjkl;'",
+      "title": "1234567890",
+      "price": "1234567890",
+      "category": "asdfghjkl;'",
+      "brand": "qwertyuiop[]",
+      "rating": "sdfghjkl;'",
+      "stock": "asdfghjkl;'",
+      "id": "hfSnkL0fazI"
     }
   ],
   "cart": [],
