@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 
 
-// type Product = {
+// type Product = { 
 //   id: number;
 //   title: string;
 // };

@@ -1,0 +1,83 @@
+/* NotFoundPage.css */
+
+.notfound-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+
+  padding: 20px;
+}
+
+.notfound-card {
+  width: 100%;
+  max-width: 500px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 24px;
+
+  padding: 50px 35px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: 800;
+
+  color: #38bdf8;
+
+  margin-bottom: 10px;
+
+  line-height: 1;
+}
+
+.title {
+  font-size: 32px;
+  color: white;
+
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #cbd5e1;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  margin-bottom: 35px;
+}
+
+.home-btn {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
