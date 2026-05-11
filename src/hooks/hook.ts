@@ -57,6 +57,27 @@ export const useProducts = () => {
     refetchOnWindowFocus: false
   });
 };
+
+//post products in aadmin page
+export const useAddProduct = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (newUser: any) =>
+      fetcher("/products", {
+        method: "POST",
+        body: JSON.stringify(newUser),
+      }),
+
+    onSuccess: (newItem) => {
+      queryClient.setQueryData(["products"], (oldData: any = []) => [
+        ...oldData,
+        newItem
+      ]);
+    }
+
+  });
+};
 //fetch cart items for cart page
 export const useCart = () => {
   return useQuery({
