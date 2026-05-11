@@ -49,15 +49,18 @@
   margin-left: 15px;
 }
 
-.productInfo {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 15px;
+.AdminproductInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
 }
 
-.productInfo button {
+.productInfo .MuiTextField-root {
+  width: 100% !important;
+}
+
+.AdminproductInfo button {
   margin-top: 20px;
 
   padding: 10px 20px;
@@ -77,7 +80,7 @@
   transition: 0.3s;
 }
 
-.productInfo button:hover {
+.AdminproductInfo button:hover {
   background-color: #1d4ed8;
 }
 
@@ -131,4 +134,23 @@
 
 .logOutButton:hover {
   background-color: darkred;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .productInfo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .productInfo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.productInfo button {
+  padding: 10px 20px;
+  cursor: pointer;
 }

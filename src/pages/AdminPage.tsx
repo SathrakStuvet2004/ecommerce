@@ -71,16 +71,15 @@ export default function AdminPage() {
             </p>
           </div>
           <form className="productForm" onSubmit={addProduct} >
-            <Box
-              sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
-            >
-              <div className="productInfo">
+           <Box sx={{ width: "100%" }}>
+              <div className="AdminproductInfo">
                 <TextField
                   required
                   id="standard-required"
                   label="ProductTitle"
                   variant="standard"
                   value={title}
+                  type="string"
                   onChange={(e) => setTitle(e.target.value)}
                 />
                 <TextField

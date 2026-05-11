@@ -117,18 +117,19 @@ export default function HomePage() {
             </div>
 
             <div className="productInfo">
-              <div className="aaa">Name:  {product.title}</div>
-              <div className="aaa">Brand:  {product.brand}</div>
-              <div className="aaa">Category:  {product.category}</div>
+              <div className="ProductName aaa">Name:  {product.title}</div>
+              <div className="ProductBrand aaa">Brand:  {product.brand}</div>
+              <div className="ProductCategory aaa">Category:  {product.category}</div>
 
               <div className="price">
-                <div className="aaa">price:  {product.price}</div>
-                <div className="aaa">Rating:  {product.rating}</div>
-                <div className="aaa">Stock:  {product.stock}</div>
+                <div className="ProductPrice aaa">price:  {product.price}</div>
+                <div className="ProductRating aaa">Rating:  {product.rating}</div>
+                <div className="ProductStock aaa">Stock:  {product.stock}</div>
               </div>
             </div>
             {
               isLoggedin ? (
+                
                 <button className="cartButton" onClick={() => {
                   addToCart({ ...product, email: currentUser.email }),
                     toast.success("Product Added In The Cart")
