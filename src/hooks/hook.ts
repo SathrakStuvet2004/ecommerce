@@ -249,3 +249,32 @@ export const getFromMockApi = async () => {
     console.error
   }
 }
+//put data to the home page
+export const useUpdateHomeData = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({
+      id,
+      updatedData,
+    }: {
+      id: string;
+      updatedData: any;
+    }) =>
+      fetcher(`/products/${id}`, {
+        method: "PUT",
+
+        body: JSON.stringify(updatedData),
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }),
+
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["products"],
+      });
+    },
+  });
+};

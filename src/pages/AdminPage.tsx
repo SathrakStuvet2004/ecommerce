@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useAddProduct, useGetUser, useProducts, } from "../hooks/hook";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
-import { AdminProducts } from "./adminProducts";
+import { AdminProducts } from "./AdminProducts";
 
 export default function AdminPage() {
   const [title, setTitle] = useState("");
