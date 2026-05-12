@@ -1,12 +1,20 @@
+/* =========================
+   ADMIN PAGE TITLE
+========================= */
+
 .adminPageTitle {
   margin-top: 120px;
+
   margin-left: 20px;
 
-  color: white;
+  color: #F8FAFC;
 
-  font-size: 28px;
+  font-size: 32px;
 
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0px 0px 8px #00F5FF;
 }
 
 /* =========================
@@ -14,11 +22,9 @@
 ========================= */
 
 .adminPage {
-  margin-left: 25px;
-
   display: grid;
 
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 360px;
 
   gap: 25px;
 
@@ -26,16 +32,32 @@
 
   min-height: 100vh;
 
-  background: linear-gradient(
-    135deg,
-    #041C32,
-    #064663,
-    #0B6E4F
-  );
+  align-items: start;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 0, 128, 0.12),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 255, 255, 0.12),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #070B14,
+      #0D1323,
+      #111827,
+      #1A103D
+    );
 }
 
 /* =========================
-   PRODUCTS GRID
+   LEFT SIDE PRODUCTS
 ========================= */
 
 .adminProducts {
@@ -43,35 +65,57 @@
 
   display: grid;
 
-  grid-template-columns:
-    repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 30px;
+  gap: 25px;
 
   align-items: start;
 }
 
 /* =========================
-   ADD PRODUCTS SECTION
+   RIGHT SIDE PANEL
+========================= */
+
+.adminRightSide {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+
+  position: sticky;
+
+  top: 100px;
+}
+
+/* =========================
+   FORM PANEL
 ========================= */
 
 .addProducts {
-  background: rgba(255, 255, 255, 0.05);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 20, 35, 0.95),
+      rgba(10, 10, 25, 0.95)
+    );
 
-  padding: 25px;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+
+  padding: 28px;
 
   border-radius: 20px;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
   box-shadow:
-    0 0 15px rgba(0, 0, 0, 0.4);
-
-  height: fit-content;
+    0px 0px 25px rgba(0, 255, 255, 0.08);
 }
 
 .formText {
-  color: white;
+  color: #F8FAFC;
 
   margin-bottom: 25px;
 
@@ -80,6 +124,9 @@
   font-weight: 700;
 
   text-align: center;
+
+  text-shadow:
+    0px 0px 8px rgba(0, 255, 255, 0.6);
 }
 
 .productForm {
@@ -100,7 +147,9 @@
   width: 100%;
 }
 
-/* remove number arrows */
+/* =========================
+   REMOVE NUMBER ARROWS
+========================= */
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -116,31 +165,31 @@ input[type="number"] {
 }
 
 /* =========================
-   MUI INPUT CUSTOM STYLE
+   MUI INPUT STYLE
 ========================= */
 
 .MuiInputBase-input {
-  color: white !important;
+  color: #F8FAFC !important;
 }
 
 .MuiInputLabel-root {
-  color: #b6d4ff !important;
+  color: #94A3B8 !important;
 }
 
 .MuiInputLabel-root.Mui-focused {
-  color: #00e5ff !important;
+  color: #00F5FF !important;
 }
 
 .MuiInput-underline:before {
-  border-bottom: 1px solid #6a5cff !important;
+  border-bottom: 1px solid #9333EA !important;
 }
 
 .MuiInput-underline:after {
-  border-bottom: 2px solid #00e5ff !important;
+  border-bottom: 2px solid #00F5FF !important;
 }
 
 /* =========================
-   BUTTONS
+   ADD PRODUCT BUTTON
 ========================= */
 
 .AdminproductInfo button {
@@ -152,11 +201,12 @@ input[type="number"] {
 
   border-radius: 14px;
 
-  background: linear-gradient(
-    135deg,
-    #00e5ff,
-    #6a5cff
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #00F5FF,
+      #9333EA
+    );
 
   color: white;
 
@@ -169,19 +219,19 @@ input[type="number"] {
   transition: 0.4s ease;
 
   box-shadow:
-    0 0 12px rgba(0, 229, 255, 0.25);
+    0px 0px 18px rgba(0, 245, 255, 0.3);
 }
 
 .AdminproductInfo button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
   box-shadow:
-    0 0 20px rgba(0, 229, 255, 0.5),
-    0 0 40px rgba(106, 92, 255, 0.35);
+    0px 0px 25px rgba(0, 245, 255, 0.5),
+    0px 0px 40px rgba(147, 51, 234, 0.35);
 }
 
 /* =========================
-   ADMIN INFO
+   ADMIN INFO SECTION
 ========================= */
 
 .adminInfo {
@@ -189,35 +239,49 @@ input[type="number"] {
 
   flex-direction: column;
 
-  gap: 25px;
+  gap: 20px;
 }
 
 .adminDetails,
 .websiteInfo {
-  background: rgba(255, 255, 255, 0.05);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 20, 35, 0.95),
+      rgba(10, 10, 25, 0.95)
+    );
+
+  border: 1px solid rgba(0, 255, 255, 0.12);
 
   padding: 24px;
 
   border-radius: 20px;
 
-  color: white;
+  color: #F8FAFC;
 
   backdrop-filter: blur(10px);
 
   box-shadow:
-    0 0 15px rgba(0, 0, 0, 0.35);
+    0px 0px 20px rgba(0, 255, 255, 0.08);
 }
 
 .adminInfoText,
 .websiteInfoText {
-  color: #00E5FF;
+  color: #00F5FF;
 
   margin-bottom: 20px;
+
+  text-shadow:
+    0px 0px 8px rgba(0, 245, 255, 0.5);
 }
 
 .adminName {
   margin-bottom: 10px;
 }
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
 
 .logOutButton {
   margin-top: 20px;
@@ -230,11 +294,12 @@ input[type="number"] {
 
   border-radius: 14px;
 
-  background: linear-gradient(
-    135deg,
-    crimson,
-    darkred
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #FF006E,
+      #C1121F
+    );
 
   color: white;
 
@@ -243,26 +308,29 @@ input[type="number"] {
   cursor: pointer;
 
   transition: 0.3s ease;
+
+  box-shadow:
+    0px 0px 16px rgba(255, 0, 110, 0.25);
 }
 
 .logOutButton:hover {
   transform: translateY(-3px);
 
   box-shadow:
-    0 0 20px rgba(220, 20, 60, 0.5);
+    0px 0px 25px rgba(255, 0, 110, 0.45);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .adminPage {
     grid-template-columns: 1fr;
   }
 
-  .adminInfo {
-    width: 100%;
+  .adminRightSide {
+    position: static;
   }
 }
 
@@ -272,7 +340,6 @@ input[type="number"] {
   }
 
   .adminPage {
-    margin-left: 0;
     padding: 15px;
   }
 

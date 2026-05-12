@@ -1,12 +1,21 @@
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import "./adminPage.css"
-import { useState } from "react";
-import { useAddProduct, useGetUser, useProducts } from "../hooks/hook";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router";
-import { AdminProducts } from "./adminProducts";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
+import "./adminPage.css";
+
+import { useState } from "react";
+
+import {
+  useAddProduct,
+  useGetUser,
+  useProducts,
+} from "../hooks/hook";
+
+import { toast } from "react-toastify";
+
+import { useNavigate } from "react-router";
+
+import { AdminProducts } from "./adminProducts";
 
 export default function AdminPage() {
   const [title, setTitle] = useState("");
@@ -17,7 +26,9 @@ export default function AdminPage() {
   const [rating, setRating] = useState("");
   const [stock, setStock] = useState("");
 
-  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const currentUser = JSON.parse(
+    localStorage.getItem("currentUser") || "{}"
+  );
 
   const { mutate: addPostProduct } = useAddProduct();
 
@@ -30,12 +41,19 @@ export default function AdminPage() {
   function addProduct(e: any) {
     e.preventDefault();
 
-    const oldProduct = data?.find((item: any) => item.title === title && item.price === Number(price) && item.category === category && item.brand === brand)
+    const oldProduct = data?.find(
+      (item: any) =>
+        item.title === title &&
+        item.price === Number(price) &&
+        item.category === category &&
+        item.brand === brand
+    );
 
     if (oldProduct) {
-      toast.warning("This product is Already in our Store")
-    }
-    else {
+      toast.warning(
+        "This product is Already in our Store"
+      );
+    } else {
       const newProduct = {
         img,
         title,
@@ -43,10 +61,15 @@ export default function AdminPage() {
         category,
         brand,
         rating,
-        stock
-      }
+        stock,
+      };
+
       addPostProduct(newProduct);
-      toast.success("Product Added Successfully")
+
+      toast.success(
+        "Product Added Successfully"
+      );
+
       setImg("");
       setTitle("");
       setPrice("");
@@ -59,8 +82,10 @@ export default function AdminPage() {
 
   function logout() {
     localStorage.clear();
+
     navigate("/login");
-    toast.success("Logout Successfully")
+
+    toast.success("Logout Successfully");
   }
 
   return (
@@ -73,126 +98,215 @@ export default function AdminPage() {
 
       <div className="adminPage">
 
-        {<div className="adminProducts">
-          {data?.map((product: any) => <AdminProducts product={product} />)}
-        </div>}
+        {/* =========================
+            LEFT SIDE PRODUCTS
+        ========================= */}
 
-        <div className="addProducts">
-          <div>
-            <p className="formText">
-              Fill The Information For Add Products
-            </p>
-          </div>
-          <form className="productForm" onSubmit={addProduct} >
-            <Box sx={{ width: "100%" }}>
-              <div className="AdminproductInfo">
-                <TextField
-                  required
-                  id="standard-required"
-                  label="ProductTitle"
-                  variant="standard"
-                  value={title}
-                  type="text"
-                  autoComplete="off"
-                  onChange={(e) => setTitle(e.target.value)}
-                />
-                <TextField
-                  required
-                  id="standard-required"
-                  label="Product Image Link"
-                  variant="standard"
-                  value={img}
-                  autoComplete="off"
-                  onChange={(e) => setImg(e.target.value)}
-                />
-                <TextField
-                  required
-                  id="standard-required"
-                  label="Product Price"
-                  variant="standard"
-                  value={price}
-                  type="number"
-                  autoComplete="off"
-                  onChange={(e) => setPrice(e.target.value)}
-                />
-                <TextField
-                  required
-                  id="standard-required"
-                  label="Product Category"
-                  variant="standard"
-                  value={category}
-                  autoComplete="off"
-                  onChange={(e) => setCategory(e.target.value)}
-                />
-                <TextField
-                  required
-                  id="standard-required"
-                  label="Product Brand"
-                  variant="standard"
-                  value={brand}
-                  autoComplete="off"
-                  onChange={(e) => setBrand(e.target.value)}
-                />
-                <TextField
-                  required
-                  id="standard-required"
-                  label="Product Rating"
-                  variant="standard"
-                  value={rating}
-                  type="number"
-                  autoComplete="off"
-                  onChange={(e) => setRating(e.target.value)}
-                />
-                <TextField
-                  required
-                  label="Enter a Stock Count"
-                  variant="standard"
-                  value={stock}
-                  type="number"
-                  autoComplete="off"
-                  onChange={(e) => setStock(e.target.value)}
-                  slotProps={{
-                    htmlInput: {
-                      min: 0,
-                    },
-                  }}
-                />
-                <div>
-                  <button type="submit">
-                    Add product
-                  </button>
+        <div className="adminProducts">
+          {data?.map((product: any) => (
+            <AdminProducts
+              key={product.id}
+              product={product}
+            />
+          ))}
+        </div>
+
+        {/* =========================
+            RIGHT SIDE PANEL
+        ========================= */}
+
+        <div className="adminRightSide">
+
+          {/* =========================
+              ADD PRODUCT FORM
+          ========================= */}
+
+          <div className="addProducts">
+
+            <div>
+              <p className="formText">
+                Fill The Information
+                For Add Products
+              </p>
+            </div>
+
+            <form
+              className="productForm"
+              onSubmit={addProduct}
+            >
+              <Box sx={{ width: "100%" }}>
+
+                <div className="AdminproductInfo">
+
+                  <TextField
+                    required
+                    label="Product Title"
+                    variant="standard"
+                    value={title}
+                    type="text"
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setTitle(e.target.value)
+                    }
+                  />
+
+                  <TextField
+                    required
+                    label="Product Image Link"
+                    variant="standard"
+                    value={img}
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setImg(e.target.value)
+                    }
+                  />
+
+                  <TextField
+                    required
+                    label="Product Price"
+                    variant="standard"
+                    value={price}
+                    type="number"
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setPrice(e.target.value)
+                    }
+                  />
+
+                  <TextField
+                    required
+                    label="Product Category"
+                    variant="standard"
+                    value={category}
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setCategory(e.target.value)
+                    }
+                  />
+
+                  <TextField
+                    required
+                    label="Product Brand"
+                    variant="standard"
+                    value={brand}
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setBrand(e.target.value)
+                    }
+                  />
+
+                  <TextField
+                    required
+                    label="Product Rating"
+                    variant="standard"
+                    value={rating}
+                    type="number"
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setRating(e.target.value)
+                    }
+                  />
+
+                  <TextField
+                    required
+                    label="Stock Count"
+                    variant="standard"
+                    value={stock}
+                    type="number"
+                    autoComplete="off"
+                    onChange={(e) =>
+                      setStock(e.target.value)
+                    }
+                    slotProps={{
+                      htmlInput: {
+                        min: 0,
+                      },
+                    }}
+                  />
+
+                  <div>
+                    <button type="submit">
+                      Add Product
+                    </button>
+                  </div>
+
                 </div>
+
+              </Box>
+            </form>
+
+          </div>
+
+          {/* =========================
+              ADMIN INFO
+          ========================= */}
+
+          <div className="adminInfo">
+
+            <div className="adminDetails">
+
+              <h2 className="adminInfoText">
+                Admin Information
+              </h2>
+
+              <div>
+
+                <p className="adminName">
+                  Admin Name :
+                  {" "}
+                  {currentUser.name}
+                </p>
+
+                <p>
+                  Admin Email :
+                  {" "}
+                  {currentUser.email}
+                </p>
+
               </div>
-            </Box>
-          </form>
-        </div>
-        <div className="adminInfo">
-          <div className="adminDetails">
-            <h2 className="adminInfoText">Admin Information</h2>
-            <div>
-              <p className="adminName">
-                Admin Name :  {currentUser.name}
-              </p>
-              <p>
-                Admin Email : {currentUser.email}
-              </p>
+
+              <button
+                className="logOutButton"
+                onClick={logout}
+              >
+                Logout
+              </button>
+
             </div>
 
-            <button className="logOutButton" onClick={logout}>
-              Logout
-            </button>
+            {/* =========================
+                WEBSITE INFO
+            ========================= */}
+
+            <div className="websiteInfo">
+
+              <h2 className="websiteInfoText">
+                Website Details
+              </h2>
+
+              <div>
+
+                <p>
+                  Total Products :
+                  {" "}
+                  {data?.length}
+                </p>
+
+                <p>
+                  Total Users :
+                  {" "}
+                  {user?.length}
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
-          <div className="websiteInfo">
-            <h2 className="websiteInfoText">website details:</h2>
-            <div>
-              <p>Total Products : {data?.length} </p>
-              <p>Total Users : {user?.length} </p>
-            </div>
-          </div>
+
         </div>
+
       </div>
-
     </>
   );
 }

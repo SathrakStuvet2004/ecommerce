@@ -8,7 +8,7 @@ import OrderPage from "./pages/OrderPage";
 import SignUpPage from "./pages/SignUpPage";
 import LogInPage from "./pages/LogInPage";
 import UserPage from "./pages/UserPage";
-import AdminPage from "./pages/adminPage";
+import AdminPage from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import NavBar from "./components/NavBar";
 import { ToastContainer } from "react-toastify";

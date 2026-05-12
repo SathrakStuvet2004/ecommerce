@@ -1,63 +1,65 @@
-.adminProduct {
-  position: relative;
+/* =========================
+   PRODUCT CARD
+========================= */
 
-  z-index: 1;
+.adminProduct {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 18, 35, 0.95),
+      rgba(10, 10, 20, 0.98)
+    );
+
+  border: 1px solid rgba(0, 255, 255, 0.18);
+
+  border-radius: 18px;
+
+  padding: 14px;
+
+  color: white;
+
+  transition: 0.35s ease;
 
   display: flex;
+
   flex-direction: column;
+
+  gap: 12px;
 
   overflow: hidden;
 
-  border-radius: 24px;
-
-  padding: 2px;
-
-  background: linear-gradient(135deg,
-      #00e5ff,
-      #6a5cff,
-      #00e5ff);
-
-  transition: 0.4s ease;
-
   box-shadow:
-    0 0 12px rgba(0, 229, 255, 0.25),
-    0 0 30px rgba(106, 92, 255, 0.15);
-
-  min-height: 650px;
-
+    0px 0px 15px rgba(0, 255, 255, 0.08);
 }
 
 /* =========================
-   INNER CARD
+   RIGHT SIDE PANEL
 ========================= */
 
-.adminProduct::before {
-  content: "";
+.adminRightSide {
+  display: flex;
 
-  position: absolute;
+  flex-direction: column;
 
-  inset: 2px;
+  gap: 25px;
 
-  border-radius: 22px;
+  width: 100%;
 
-  background: linear-gradient(145deg,
-      #09111f,
-      #111c2d);
-
-  z-index: -1;
+  align-self: start;
 }
 
 /* =========================
-   HOVER
+   CARD HOVER
 ========================= */
 
 .adminProduct:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-8px);
+
+  border-color: #00F5FF;
 
   box-shadow:
-    0 0 20px rgba(0, 229, 255, 0.45),
-    0 0 50px rgba(106, 92, 255, 0.35),
-    0 0 80px rgba(0, 0, 0, 0.9);
+    0px 0px 20px rgba(0, 245, 255, 0.25),
+    0px 0px 40px rgba(147, 51, 234, 0.18);
 }
 
 /* =========================
@@ -67,11 +69,24 @@
 .productImage {
   width: 100%;
 
-  height: 240px;
+  height: 230px;
 
   overflow: hidden;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1E1B4B
+    );
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .img {
@@ -79,9 +94,11 @@
 
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 
-  transition: transform 0.4s ease;
+  display: block;
+
+  transition: 0.35s ease;
 }
 
 .adminProduct:hover .img {
@@ -94,14 +111,14 @@
 
 .adminProductInfo,
 .price {
-  display: flex;
+  display: grid;
 
-  flex-direction: column;
-
-  gap: 12px;
-
-  padding: 18px 22px;
+  gap: 10px;
 }
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
 
 .adminProductName,
 .adminProductBrand,
@@ -109,21 +126,24 @@
 .adminProductPrice,
 .adminProductRating,
 .adminProductStock {
-  color: #e6f1ff;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.02)
+    );
 
-  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 12px;
+
+  padding: 12px;
+
+  color: #E2E8F0;
+
+  font-size: 14px;
 
   font-weight: 500;
-
-  letter-spacing: 0.5px;
-
-  padding: 12px 14px;
-
-  border-radius: 14px;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
 
   transition: 0.3s ease;
 }
@@ -138,13 +158,18 @@
 .adminProductPrice:hover,
 .adminProductRating:hover,
 .adminProductStock:hover {
-  background: rgba(0, 229, 255, 0.12);
+  border-color: #00F5FF;
 
-  border: 1px solid rgba(0, 229, 255, 0.35);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 245, 255, 0.08),
+      rgba(147, 51, 234, 0.08)
+    );
+
+  color: #00F5FF;
 
   transform: translateX(4px);
-
-  color: #00e5ff;
 }
 
 /* =========================
@@ -153,6 +178,4 @@
 
 .price {
   margin-top: auto;
-
-  padding-top: 0;
 }
