@@ -1,6 +1,5 @@
 import { useOrders } from "../hooks/hook";
 import { useDeleteOrderItem, useAddYourOrder } from "../hooks/hook";
-import NavBar from "../components/NavBar";
 
 import './OrderPage.css'
 import { toast } from "react-toastify";
@@ -18,7 +17,6 @@ export default function OrderPage() {
   return (
     <>
       <title>Orders</title>
-      <NavBar />
 
       <h1 className="OrdersName-Text">Orders</h1>
 

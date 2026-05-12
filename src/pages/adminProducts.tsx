@@ -1,3 +1,5 @@
+import "./adminProducts.css";
+
 type Product = {
   id: string;
   img: string;
@@ -16,12 +18,18 @@ type AdminProductsProps = {
 export const AdminProducts = ({ product }: AdminProductsProps) => {
   return (
     <div className="adminProduct">
-      <div className="productImage" key={product.id}>
-        <img src={product.img} alt={product.title} className="img" />
+
+      <div className="productImage">
+        <img
+          src={product.img}
+          alt={product.title}
+          className="img"
+        />
       </div>
 
       <div className="adminProductInfo">
-        <div className="adminProductName ">
+
+        <div className="adminProductName">
           Name: {product.title}
         </div>
 
@@ -32,21 +40,25 @@ export const AdminProducts = ({ product }: AdminProductsProps) => {
         <div className="adminProductCategory">
           Category: {product.category}
         </div>
+
       </div>
 
       <div className="price">
+
         <div className="adminProductPrice">
-          Price: {product.price}
+          Price: ₹{product.price}
         </div>
 
-        <div className="adminProductRating ">
+        <div className="adminProductRating">
           Rating: {product.rating}
         </div>
 
         <div className="adminProductStock">
           Stock: {product.stock}
         </div>
+
       </div>
+
     </div>
   );
 };

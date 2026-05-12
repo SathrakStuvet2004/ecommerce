@@ -1,0 +1,158 @@
+.adminProduct {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  padding: 2px;
+
+  background: linear-gradient(135deg,
+      #00e5ff,
+      #6a5cff,
+      #00e5ff);
+
+  transition: 0.4s ease;
+
+  box-shadow:
+    0 0 12px rgba(0, 229, 255, 0.25),
+    0 0 30px rgba(106, 92, 255, 0.15);
+
+  min-height: 650px;
+
+}
+
+/* =========================
+   INNER CARD
+========================= */
+
+.adminProduct::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 2px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(145deg,
+      #09111f,
+      #111c2d);
+
+  z-index: -1;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.adminProduct:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 0 20px rgba(0, 229, 255, 0.45),
+    0 0 50px rgba(106, 92, 255, 0.35),
+    0 0 80px rgba(0, 0, 0, 0.9);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.productImage {
+  width: 100%;
+
+  height: 240px;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.adminProduct:hover .img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.adminProductInfo,
+.price {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  padding: 18px 22px;
+}
+
+.adminProductName,
+.adminProductBrand,
+.adminProductCategory,
+.adminProductPrice,
+.adminProductRating,
+.adminProductStock {
+  color: #e6f1ff;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  padding: 12px 14px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s ease;
+}
+
+/* =========================
+   ITEM HOVER
+========================= */
+
+.adminProductName:hover,
+.adminProductBrand:hover,
+.adminProductCategory:hover,
+.adminProductPrice:hover,
+.adminProductRating:hover,
+.adminProductStock:hover {
+  background: rgba(0, 229, 255, 0.12);
+
+  border: 1px solid rgba(0, 229, 255, 0.35);
+
+  transform: translateX(4px);
+
+  color: #00e5ff;
+}
+
+/* =========================
+   PRICE SECTION
+========================= */
+
+.price {
+  margin-top: auto;
+
+  padding-top: 0;
+}

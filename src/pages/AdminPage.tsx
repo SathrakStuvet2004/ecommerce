@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar"
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import "./adminPage.css"
@@ -67,7 +66,7 @@ export default function AdminPage() {
   return (
     <>
       <title>admin</title>
-      <NavBar />
+
       <div className="adminPageTitle">
         <h2>Admin Page</h2>
       </div>

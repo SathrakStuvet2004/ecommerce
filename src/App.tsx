@@ -8,7 +8,7 @@ import OrderPage from "./pages/OrderPage";
 import SignUpPage from "./pages/SignUpPage";
 import LogInPage from "./pages/LogInPage";
 import UserPage from "./pages/UserPage";
-import AdminPage from "./pages/AdminPage";
+import AdminPage from "./pages/adminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import NavBar from "./components/NavBar";
 import { ToastContainer } from "react-toastify";
@@ -61,7 +61,7 @@ export default function App() {
         }}
       />
 
-      {location.pathname !== "/login" && <NavBar />}
+      {location.pathname !== "/login" && location.pathname !=="/signup" && <NavBar />}
 
       <Routes>
         <Route path="/" element={<HomePage />} />

@@ -1,189 +1,282 @@
 .adminPageTitle {
   margin-top: 120px;
-  margin-left: 10px;
+  margin-left: 20px;
+
   color: white;
+
+  font-size: 28px;
+
+  letter-spacing: 1px;
 }
+
+/* =========================
+   MAIN PAGE LAYOUT
+========================= */
 
 .adminPage {
   margin-left: 25px;
 
   display: grid;
-  grid-template-columns: 3fr 1fr;
 
-  gap: 20px;
+  grid-template-columns: 1fr 350px;
+
+  gap: 25px;
 
   padding: 20px;
 
   min-height: 100vh;
 
-background: linear-gradient(135deg, #041C32, #064663, #0B6E4F); 
+  background: linear-gradient(
+    135deg,
+    #041C32,
+    #064663,
+    #0B6E4F
+  );
 }
 
-.addProducts {
-  margin-left: 35px;
+/* =========================
+   PRODUCTS GRID
+========================= */
 
-  background-color: rgba(255, 255, 255, 0.05);
+.adminProducts {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+
+  align-items: start;
+}
+
+/* =========================
+   ADD PRODUCTS SECTION
+========================= */
+
+.addProducts {
+  background: rgba(255, 255, 255, 0.05);
 
   padding: 25px;
 
-  border-radius: 12px;
+  border-radius: 20px;
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.4);
+
+  height: fit-content;
 }
 
 .formText {
-  color: aliceblue;
+  color: white;
 
-  margin-top: 10px;
+  margin-bottom: 25px;
 
-  margin-bottom: 20px;
+  font-size: 22px;
 
-  font-size: 20px;
+  font-weight: 700;
 
-  font-weight: 600;
+  text-align: center;
 }
 
 .productForm {
-  margin-left: 15px;
+  width: 100%;
 }
+
+/* =========================
+   FORM GRID
+========================= */
 
 .AdminproductInfo {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+
+  grid-template-columns: 1fr;
+
+  gap: 22px;
+
   width: 100%;
-
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type="number"] {
-    input[type="number"] {
-      appearance: textfield;
-      -moz-appearance: textfield;
-    }
-  }
 }
 
-.productInfo .MuiTextField-root {
-  width: 100% !important;
+/* remove number arrows */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
 }
+
+input[type="number"] {
+  appearance: textfield;
+
+  -moz-appearance: textfield;
+}
+
+/* =========================
+   MUI INPUT CUSTOM STYLE
+========================= */
+
+.MuiInputBase-input {
+  color: white !important;
+}
+
+.MuiInputLabel-root {
+  color: #b6d4ff !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #00e5ff !important;
+}
+
+.MuiInput-underline:before {
+  border-bottom: 1px solid #6a5cff !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 2px solid #00e5ff !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
 
 .AdminproductInfo button {
-  margin-top: 20px;
+  width: 100%;
 
-  padding: 10px 20px;
+  padding: 14px;
 
   border: none;
 
-  border-radius: 8px;
+  border-radius: 14px;
 
-  background-color: #2563eb;
+  background: linear-gradient(
+    135deg,
+    #00e5ff,
+    #6a5cff
+  );
 
   color: white;
 
+  font-size: 16px;
+
+  font-weight: 700;
+
   cursor: pointer;
 
-  font-weight: 600;
+  transition: 0.4s ease;
 
-  transition: 0.3s;
+  box-shadow:
+    0 0 12px rgba(0, 229, 255, 0.25);
 }
 
 .AdminproductInfo button:hover {
-  background-color: #1d4ed8;
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 20px rgba(0, 229, 255, 0.5),
+    0 0 40px rgba(106, 92, 255, 0.35);
 }
+
+/* =========================
+   ADMIN INFO
+========================= */
 
 .adminInfo {
   display: flex;
 
   flex-direction: column;
 
-  gap: 20px;
+  gap: 25px;
 }
 
 .adminDetails,
 .websiteInfo {
-  background-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
 
-  padding: 20px;
+  padding: 24px;
 
-  border-radius: 12px;
+  border-radius: 20px;
 
   color: white;
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.35);
 }
 
 .adminInfoText,
 .websiteInfoText {
   color: #00E5FF;
+
+  margin-bottom: 20px;
+}
+
+.adminName {
+  margin-bottom: 10px;
 }
 
 .logOutButton {
-  margin-top: 15px;
+  margin-top: 20px;
 
-  padding: 10px 18px;
+  width: 100%;
+
+  padding: 14px;
 
   border: none;
 
-  border-radius: 8px;
+  border-radius: 14px;
 
-  background-color: crimson;
+  background: linear-gradient(
+    135deg,
+    crimson,
+    darkred
+  );
 
   color: white;
 
+  font-weight: 700;
+
   cursor: pointer;
 
-  font-weight: 600;
-
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .logOutButton:hover {
-  background-color: darkred;
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 20px rgba(220, 20, 60, 0.5);
 }
 
-.properLogin {
-  color: #00E5FF;
+/* =========================
+   RESPONSIVE
+========================= */
 
-  margin-left: 250px;
-  margin-top: 150px;
-
-  margin-bottom: 20px;
-
-  font-size: 20px;
-
-  font-weight: 600;
-}
-
-.illigalEntry{
-   margin-left: 250px;
-   font-size: 20px;
-margin-top: 100px;
-  font-weight: 600;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .productInfo {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .productInfo {
+@media (max-width: 1200px) {
+  .adminPage {
     grid-template-columns: 1fr;
   }
+
+  .adminInfo {
+    width: 100%;
+  }
 }
 
-.productInfo button {
-  padding: 10px 20px;
-  cursor: pointer;
+@media (max-width: 700px) {
+  .adminProducts {
+    grid-template-columns: 1fr;
+  }
+
+  .adminPage {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .adminPageTitle {
+    margin-left: 15px;
+  }
 }

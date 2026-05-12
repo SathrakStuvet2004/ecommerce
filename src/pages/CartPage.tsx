@@ -1,6 +1,5 @@
 import { useAddOrder, useCart } from "../hooks/hook";
 import { useDeleteCartItem } from "../hooks/hook";
-import NavBar from "../components/NavBar";
 import './CartPage.css'
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -34,7 +33,6 @@ export default function CartPage() {
   return (
     <>
       <title>Cart</title>
-      <NavBar />
 
       <h1 className="cartName-Text">Cart Items</h1>
 

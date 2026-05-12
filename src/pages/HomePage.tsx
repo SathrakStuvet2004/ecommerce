@@ -1,7 +1,6 @@
 //npx json-server --watch db.json
 //toast notifications for cart/login
 import './HomePage.css'
-import NavBar from "../components/NavBar";
 import { useProducts, useAddToCart, useDeleteHomeItem } from "../hooks/hook";
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
@@ -109,7 +108,6 @@ export default function HomePage() {
 
   return (
     <>
-      <NavBar />
       <title>Home</title>
 
       <div className="productsList" >

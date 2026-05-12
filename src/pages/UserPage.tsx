@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import NavBar from "../components/NavBar"
 import { useGetYourOrders, useDeleteYourOrderItem } from "../hooks/hook"
 import './UserPage.css'
 import { useNavigate } from "react-router";
@@ -39,7 +38,7 @@ export default function UserPage() {
   return (
     <div className="userPage">
       <title>User</title>
-      <NavBar />
+      
       <div className="yourOrderInfo">
 
         <div className="products">
