@@ -1,20 +1,10 @@
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-
 import "./adminPage.css";
-
 import { useState } from "react";
-
-import {
-  useAddProduct,
-  useGetUser,
-  useProducts,
-} from "../hooks/hook";
-
+import { useAddProduct, useGetUser, useProducts, } from "../hooks/hook";
 import { toast } from "react-toastify";
-
 import { useNavigate } from "react-router";
-
 import { AdminProducts } from "./adminProducts";
 
 export default function AdminPage() {
@@ -98,10 +88,6 @@ export default function AdminPage() {
 
       <div className="adminPage">
 
-        {/* =========================
-            LEFT SIDE PRODUCTS
-        ========================= */}
-
         <div className="adminProducts">
           {data?.map((product: any) => (
             <AdminProducts
@@ -111,15 +97,7 @@ export default function AdminPage() {
           ))}
         </div>
 
-        {/* =========================
-            RIGHT SIDE PANEL
-        ========================= */}
-
         <div className="adminRightSide">
-
-          {/* =========================
-              ADD PRODUCT FORM
-          ========================= */}
 
           <div className="addProducts">
 
@@ -237,10 +215,6 @@ export default function AdminPage() {
 
           </div>
 
-          {/* =========================
-              ADMIN INFO
-          ========================= */}
-
           <div className="adminInfo">
 
             <div className="adminDetails">
@@ -273,10 +247,6 @@ export default function AdminPage() {
               </button>
 
             </div>
-
-            {/* =========================
-                WEBSITE INFO
-            ========================= */}
 
             <div className="websiteInfo">
 

@@ -226,8 +226,8 @@ input[type="number"] {
   transform: translateY(-4px);
 
   box-shadow:
-    0px 0px 25px rgba(0, 245, 255, 0.5),
-    0px 0px 40px rgba(147, 51, 234, 0.35);
+     0px 0px 15px rgba(0, 115, 115, 0.5),
+    0px 0px 20px rgba(107, 51, 104, 0.35);
 }
 
 /* =========================

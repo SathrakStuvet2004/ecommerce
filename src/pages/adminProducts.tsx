@@ -58,7 +58,9 @@ export const AdminProducts = ({ product }: AdminProductsProps) => {
         </div>
 
       </div>
-
+      <button className="adminProductEditButton">
+        Edit
+      </button>
     </div>
   );
 };
