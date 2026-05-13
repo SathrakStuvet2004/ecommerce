@@ -67,7 +67,9 @@ export default function AddProducts() {
       <title>products</title>
       <div className="AdminproductInfo">
 
-        <h3 className="FormTitle"> Fill The Form For Add Product</h3>
+        <h2 className="formTitle">
+          Fill The Form For Add Product
+        </h2>
         <form
           className="productForm"
           onSubmit={addProduct}
