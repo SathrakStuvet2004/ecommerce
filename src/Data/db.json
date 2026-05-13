@@ -521,14 +521,24 @@
       "stock": 70
     },
     {
-      "img": "qwertyuiop",
-      "title": "qwertyuio",
+      "img": "blob:http://localhost:5173/58265cbd-0575-4227-9e26-8c24b2956c77",
+      "title": "asdfghjkl",
       "brand": "qwertyuiop[]",
       "category": "qwertyuiop[",
       "price": 1234,
       "rating": 12365,
       "stock": 123309,
       "id": "tNzJcBLRs1g"
+    },
+    {
+      "img": "blob:http://localhost:5173/0ed71609-af5b-4967-891f-b77afc3e48d6",
+      "title": "qwertyuiop",
+      "brand": "qwertyuiop",
+      "category": "asdfghjkl",
+      "price": 12345,
+      "rating": 123456,
+      "stock": 1234,
+      "id": "O3ybkze4R-U"
     }
   ],
   "cart": [
