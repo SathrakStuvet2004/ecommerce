@@ -18,6 +18,7 @@ import { checkUser } from "./UserSlice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import UserAuth from "./auth/UserAuth";
+import AddProducts from "./pages/AddProducts";
 
 export default function App() {
   const location = useLocation();
@@ -84,6 +85,7 @@ export default function App() {
             </UserAuth>
           }
         />
+        <Route path="admin/products" element={<AddProducts />} /> 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

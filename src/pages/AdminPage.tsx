@@ -1,26 +1,16 @@
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+
 import "./adminPage.css";
-import { useState } from "react";
-import { useAddProduct, useGetUser, useProducts, } from "../hooks/hook";
+
+import { useGetUser, useProducts, } from "../hooks/hook";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 import { AdminProducts } from "./AdminProducts";
 
 export default function AdminPage() {
-  const [title, setTitle] = useState("");
-  const [img, setImg] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [brand, setBrand] = useState("");
-  const [rating, setRating] = useState("");
-  const [stock, setStock] = useState("");
 
   const currentUser = JSON.parse(
     localStorage.getItem("currentUser") || "{}"
   );
-
-  const { mutate: addPostProduct } = useAddProduct();
 
   const { data } = useProducts();
 
@@ -28,47 +18,6 @@ export default function AdminPage() {
 
   const navigate = useNavigate();
 
-  function addProduct(e: any) {
-    e.preventDefault();
-
-    const oldProduct = data?.find(
-      (item: any) =>
-        item.title === title &&
-        item.price === Number(price) &&
-        item.category === category &&
-        item.brand === brand
-    );
-
-    if (oldProduct) {
-      toast.warning(
-        "This product is Already in our Store"
-      );
-    } else {
-      const newProduct = {
-        img,
-        title,
-        price,
-        category,
-        brand,
-        rating,
-        stock,
-      };
-
-      addPostProduct(newProduct);
-
-      toast.success(
-        "Product Added Successfully"
-      );
-
-      setImg("");
-      setTitle("");
-      setPrice("");
-      setCategory("");
-      setBrand("");
-      setRating("");
-      setStock("");
-    }
-  }
 
   function logout() {
     localStorage.clear();
@@ -76,6 +25,10 @@ export default function AdminPage() {
     navigate("/login");
 
     toast.success("Logout Successfully");
+  }
+
+  function addProduct(){
+    navigate("products")
   }
 
   return (
@@ -103,116 +56,13 @@ export default function AdminPage() {
 
             <div>
               <p className="formText">
-                Fill The Information
-                For Add Products
+                Click the Button For Add Products
               </p>
+              <button className="addProductAdminPageButton"
+              onClick={addProduct}>
+                Add Product
+              </button>
             </div>
-
-            <form
-              className="productForm"
-              onSubmit={addProduct}
-            >
-              <Box sx={{ width: "100%" }}>
-
-                <div className="AdminproductInfo">
-
-                  <TextField
-                    required
-                    label="Product Title"
-                    variant="standard"
-                    value={title}
-                    type="text"
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setTitle(e.target.value)
-                    }
-                  />
-
-                  <TextField
-                    required
-                    label="Product Image Link"
-                    variant="standard"
-                    value={img}
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setImg(e.target.value)
-                    }
-                  />
-
-                  <TextField
-                    required
-                    label="Product Price"
-                    variant="standard"
-                    value={price}
-                    type="number"
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setPrice(e.target.value)
-                    }
-                  />
-
-                  <TextField
-                    required
-                    label="Product Category"
-                    variant="standard"
-                    value={category}
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setCategory(e.target.value)
-                    }
-                  />
-
-                  <TextField
-                    required
-                    label="Product Brand"
-                    variant="standard"
-                    value={brand}
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setBrand(e.target.value)
-                    }
-                  />
-
-                  <TextField
-                    required
-                    label="Product Rating"
-                    variant="standard"
-                    value={rating}
-                    type="number"
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setRating(e.target.value)
-                    }
-                  />
-
-                  <TextField
-                    required
-                    label="Stock Count"
-                    variant="standard"
-                    value={stock}
-                    type="number"
-                    autoComplete="off"
-                    onChange={(e) =>
-                      setStock(e.target.value)
-                    }
-                    slotProps={{
-                      htmlInput: {
-                        min: 0,
-                      },
-                    }}
-                  />
-
-                  <div>
-                    <button type="submit">
-                      Add Product
-                    </button>
-                  </div>
-
-                </div>
-
-              </Box>
-            </form>
-
           </div>
 
           <div className="adminInfo">

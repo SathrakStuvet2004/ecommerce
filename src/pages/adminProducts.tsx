@@ -40,7 +40,7 @@ export const AdminProducts = ({ product }: AdminProductsProps) => {
 
   function edit() {
     setIsEdit(true);
-    
+
     setImg(product.img);
     setTitle(product.title);
     setBrand(product.brand);

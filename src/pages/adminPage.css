@@ -35,25 +35,19 @@
   align-items: start;
 
   background:
-    radial-gradient(
-      circle at top left,
+    radial-gradient(circle at top left,
       rgba(255, 0, 128, 0.12),
-      transparent 25%
-    ),
+      transparent 25%),
 
-    radial-gradient(
-      circle at bottom right,
+    radial-gradient(circle at bottom right,
       rgba(0, 255, 255, 0.12),
-      transparent 25%
-    ),
+      transparent 25%),
 
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       #070B14,
       #0D1323,
       #111827,
-      #1A103D
-    );
+      #1A103D);
 }
 
 /* =========================
@@ -95,11 +89,9 @@
 
 .addProducts {
   background:
-    linear-gradient(
-      145deg,
+    linear-gradient(145deg,
       rgba(20, 20, 35, 0.95),
-      rgba(10, 10, 25, 0.95)
-    );
+      rgba(10, 10, 25, 0.95));
 
   border: 1px solid rgba(0, 255, 255, 0.15);
 
@@ -128,23 +120,7 @@
     0px 0px 8px rgba(0, 255, 255, 0.6);
 }
 
-.productForm {
-  width: 100%;
-}
 
-/* =========================
-   FORM GRID
-========================= */
-
-.AdminproductInfo {
-  display: grid;
-
-  grid-template-columns: 1fr;
-
-  gap: 22px;
-
-  width: 100%;
-}
 
 /* =========================
    REMOVE NUMBER ARROWS
@@ -188,48 +164,6 @@ input[type="number"] {
 }
 
 /* =========================
-   ADD PRODUCT BUTTON
-========================= */
-
-.AdminproductInfo button {
-  width: 100%;
-
-  padding: 14px;
-
-  border: none;
-
-  border-radius: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #00F5FF,
-      #9333EA
-    );
-
-  color: white;
-
-  font-size: 16px;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: 0.4s ease;
-
-  box-shadow:
-    0px 0px 18px rgba(0, 245, 255, 0.3);
-}
-
-.AdminproductInfo button:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-     0px 0px 15px rgba(0, 115, 115, 0.5),
-    0px 0px 20px rgba(107, 51, 104, 0.35);
-}
-
-/* =========================
    ADMIN INFO SECTION
 ========================= */
 
@@ -244,11 +178,9 @@ input[type="number"] {
 .adminDetails,
 .websiteInfo {
   background:
-    linear-gradient(
-      145deg,
+    linear-gradient(145deg,
       rgba(20, 20, 35, 0.95),
-      rgba(10, 10, 25, 0.95)
-    );
+      rgba(10, 10, 25, 0.95));
 
   border: 1px solid rgba(0, 255, 255, 0.12);
 
@@ -294,11 +226,9 @@ input[type="number"] {
   border-radius: 14px;
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       #FF006E,
-      #C1121F
-    );
+      #C1121F);
 
   color: white;
 
@@ -317,6 +247,43 @@ input[type="number"] {
 
   box-shadow:
     0px 0px 25px rgba(255, 0, 110, 0.45);
+}
+
+.addProductAdminPageButton {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(135deg,
+      #00F5FF,
+      #9333EA);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+
+  box-shadow:
+    0px 0px 18px rgba(0, 245, 255, 0.3);
+}
+
+.addProductAdminPageButton:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0px 0px 15px rgba(0, 115, 115, 0.5),
+    0px 0px 20px rgba(107, 51, 104, 0.35);
 }
 
 /* =========================
