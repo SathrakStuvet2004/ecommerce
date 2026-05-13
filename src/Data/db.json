@@ -11,14 +11,14 @@
       "stock": 120
     },
     {
-      "id": "2",
       "img": "https://picsum.photos/id/102/300/300",
       "title": "Bluetooth Headphones",
-      "price": 1499,
+      "brand": "Boat headphone",
       "category": "Electronics",
-      "brand": "Boat",
+      "price": 1499,
       "rating": 4.3,
-      "stock": 80
+      "stock": 80,
+      "id": "2"
     },
     {
       "id": "3",
@@ -521,23 +521,14 @@
       "stock": 70
     },
     {
-      "title": "qwertyuiop",
-      "brand": "qwertyuio",
-      "category": "qwertyuio",
-      "price": "12345",
-      "rating": "2345",
-      "stock": "12234567",
-      "id": "-kwp2fN2nN8"
-    },
-    {
-      "img": "qwertyuio",
+      "img": "qwertyuiop",
       "title": "qwertyuio",
-      "price": "1234566",
-      "category": "sdfghjk",
-      "brand": "asdfghjkl",
-      "rating": "1234567",
-      "stock": "12345678",
-      "id": "0ij0fHK0pQw"
+      "brand": "qwertyuiop[]",
+      "category": "qwertyuiop[",
+      "price": 1234,
+      "rating": 12365,
+      "stock": 123309,
+      "id": "tNzJcBLRs1g"
     }
   ],
   "cart": [
