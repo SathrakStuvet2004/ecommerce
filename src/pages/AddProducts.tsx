@@ -3,23 +3,9 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import Button from "@mui/material/Button";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { styled } from "@mui/material/styles";
 
 import "./AddProducts.css"
 
-const VisuallyHiddenInput = styled("input")({
-  clip: "rect(0 0 0 0)",
-  clipPath: "inset(50%)",
-  height: 1,
-  overflow: "hidden",
-  position: "absolute",
-  bottom: 0,
-  left: 0,
-  whiteSpace: "nowrap",
-  width: 1,
-});
 
 export default function AddProducts() {
 
@@ -34,22 +20,6 @@ export default function AddProducts() {
   const { mutate: addPostProduct } = useAddProduct();
 
   const { data } = useProducts();
-
-  function handleImageUpload(e: any) {
-    const file = e.target.files?.[0];
-
-  if (!file) return;
-
-  const reader = new FileReader();
-
-  reader.readAsDataURL(file);
-
-  reader.onloadend = () => {
-    const base64Image = reader.result as string;
-
-    setImg(base64Image);
-  };
-  }
 
   function addProduct(e: any) {
     e.preventDefault();
@@ -117,15 +87,15 @@ export default function AddProducts() {
                 setTitle(e.target.value)
               }
             />
+
             <TextField
               required
-              label="Stock Count"
+              label="Product Image Link"
               variant="standard"
-              value={stock}
-              type="number"
+              value={img}
               autoComplete="off"
               onChange={(e) =>
-                setStock(e.target.value)
+                setImg(e.target.value)
               }
             />
 
@@ -175,29 +145,22 @@ export default function AddProducts() {
               }
             />
 
-            <div className="imageUploadContainer">
-              <Button
-                component="label"
-                role={undefined}
-                variant="contained"
-                tabIndex={-1}
-                startIcon={<CloudUploadIcon />}
-              >
-                Upload Your Image
-                <VisuallyHiddenInput
-                  type="file"
-                  onChange={handleImageUpload}
-                  required
-                />
-              </Button>
-              {img && (
-                <img
-                  src={img}
-                  alt="preview"
-                  className="previewImage"
-                />
-              )}
-            </div>
+            <TextField
+              required
+              label="Stock Count"
+              variant="standard"
+              value={stock}
+              type="number"
+              autoComplete="off"
+              onChange={(e) =>
+                setStock(e.target.value)
+              }
+              slotProps={{
+                htmlInput: {
+                  min: 0,
+                },
+              }}
+            />
 
             <div>
               <button type="submit">

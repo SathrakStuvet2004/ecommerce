@@ -4,21 +4,6 @@ import TextField from "@mui/material/TextField";
 import { useUpdateHomeData } from "../hooks/hook";
 import "./adminProducts.css";
 import { toast } from "react-toastify";
-import Button from "@mui/material/Button";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { styled } from "@mui/material/styles";
-
-const VisuallyHiddenInput = styled("input")({
-  clip: "rect(0 0 0 0)",
-  clipPath: "inset(50%)",
-  height: 1,
-  overflow: "hidden",
-  position: "absolute",
-  bottom: 0,
-  left: 0,
-  whiteSpace: "nowrap",
-  width: 1,
-});
 
 type Product = {
   id: string;
@@ -65,16 +50,6 @@ export const AdminProducts = ({ product }: AdminProductsProps) => {
     setStock(product.stock.toString());
   }
 
-  function handleImageUpload(e: any) {
-    const file = e.target.files?.[0];
-
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-
-      setImg(imageUrl);
-    }
-  }
-
   function modifyHomeProduct(e: any) {
     e.preventDefault();
 
@@ -112,40 +87,22 @@ export const AdminProducts = ({ product }: AdminProductsProps) => {
       <div className="adminProduct">
         <Box sx={{ width: "100%" }}>
           <div className="productImage">
-
             {isEdit ? (
-              <div className="imageUploadContainer">
-
-                <Button
-                  component="label"
-                  variant="contained"
-                  startIcon={<CloudUploadIcon />}
-                  className="adminuploadButton"
-                >
-                  Upload Your Image
-
-                  <VisuallyHiddenInput
-                    type="file"
-                    onChange={handleImageUpload}
-                  />
-                </Button>
-
-                {img && (
-                  <img
-                    src={img}
-                    alt="preview"
-                    className="previewImage"
-                  />
-                )}
-
-              </div>
-            ) : (
-              <img
-                src={product.img}
-                alt={product.title}
-                className="img"
-              />
-            )}
+              <form>
+                <TextField
+                  label="image Link"
+                  variant="standard"
+                  value={img}
+                  type="text"
+                  autoComplete="off"
+                  onChange={(e) => setImg(e.target.value)}
+                />
+              </form>
+            ) : (<img
+              src={product.img}
+              alt={product.title}
+              className="img"
+            />)}
 
           </div>
 
