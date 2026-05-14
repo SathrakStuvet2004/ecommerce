@@ -90,6 +90,9 @@ export default function HomePage() {
   // const getData=getFromMockApi()
   // console.log(getData, "mockapi data in home page")
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
+
+  const serch = useSelector((state:any)=>state.user.serchText)
+
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
   const Isadmin = currentUser.name === "sathrak" && currentUser.email === "admin@gmail.com"

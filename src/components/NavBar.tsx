@@ -4,8 +4,33 @@ import './NavBar.css'
 import { Link, } from "react-router-dom";
 import { useCart } from "../hooks/hook";
 import { UserCog } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { serch } from "../UserSlice";
 
 export default function NavBar() {
+
+  const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+
+      setDebouncedSearch(search);
+
+    }, 600)
+    return () => clearTimeout(timer);
+
+  }, [search]);
+
+  useEffect(() => {
+
+    if (debouncedSearch) {
+      
+      dispatch(serch(debouncedSearch));
+    }
+  }, [debouncedSearch]);
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
@@ -14,6 +39,8 @@ export default function NavBar() {
   const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
 
   const isAdmin = currentUser.isAdmin;
+
+  const dispatch = useDispatch();
 
   return (
     <div className="NavBar">
@@ -26,7 +53,11 @@ export default function NavBar() {
       </div>
 
       <div>
-        <input type="text" placeholder="SEARCH" className="searchBar" />
+        <input type="text" placeholder="SEARCH"
+          className="searchBar"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
 
       <div className="cartIcon">
