@@ -54,7 +54,8 @@ export const useProducts = () => {
     queryFn: () => fetcher("/products"),
     staleTime: 1000 * 60 * 5,
     refetchOnMount: false,
-    refetchOnWindowFocus: false
+    refetchOnWindowFocus: false,
+    gcTime : 1000*60*5,
   });
 };
 
@@ -65,7 +66,7 @@ export const useAddProduct = () => {
   return useMutation({
     mutationFn: (newUser: any) =>
       fetcher("/products", {
-        method: "POST",
+        method: "POST",     
         body: JSON.stringify(newUser),
       }),
 

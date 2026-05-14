@@ -20,16 +20,17 @@ export default function NavBar() {
       setDebouncedSearch(search);
 
     }, 600)
+    
     return () => clearTimeout(timer);
 
   }, [search]);
 
   useEffect(() => {
 
-    if (debouncedSearch) {
-      
-      dispatch(serch(debouncedSearch));
-    }
+   
+
+    dispatch(serch(debouncedSearch));
+    
   }, [debouncedSearch]);
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");

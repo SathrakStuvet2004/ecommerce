@@ -109,13 +109,15 @@ export default function HomePage() {
     navigate("/login")
   }
 
+  const productsDetails = !!serch ? data.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase()) ) : data
+
   return (
     <>
       <title>Home</title>
 
       <div className="productsList" >
 
-        {data?.map((product: any) =>
+        {productsDetails?.map((product: any) =>
           <div className="product" key={product.id} >
             <div className="productImage">
               <img src={product.img} alt={product.title} className='img' />
