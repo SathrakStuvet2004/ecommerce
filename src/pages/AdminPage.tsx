@@ -17,12 +17,11 @@ export default function AdminPage() {
 
   const serch = useSelector((state: any) => state.user.serchText)
 
-  const productsDetails = !!serch ? data.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : data
+  const productsDetails = !!serch ? data?.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : data
 
   const { data: user = [] } = useGetUser();
 
   const navigate = useNavigate();
-
 
   function logout() {
     localStorage.clear();

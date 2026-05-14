@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faCartShopping, faUser, faBox } from "@fortawesome/free-solid-svg-icons";
 import './NavBar.css'
-import { Link, } from "react-router-dom";
+import { Link, useLocation, } from "react-router-dom";
 import { useCart } from "../hooks/hook";
 import { UserCog } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -12,6 +12,8 @@ export default function NavBar() {
 
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
+
+  const location = useLocation()
 
   useEffect(() => {
 
@@ -30,6 +32,12 @@ export default function NavBar() {
     dispatch(serch(debouncedSearch));
     
   }, [debouncedSearch]);
+
+  useEffect(()=>{
+    
+    setSearch("")
+
+  },[location.pathname])
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 

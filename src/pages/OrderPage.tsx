@@ -19,7 +19,7 @@ export default function OrderPage() {
 
   const serch = useSelector((state: any) => state.user.serchText)
 
-  const productsDetails = !!serch ? OrderData.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : OrderData
+  const productsDetails = !!serch ? OrderData?.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : OrderData
 
   return (
     <>

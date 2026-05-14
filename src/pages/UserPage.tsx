@@ -16,7 +16,7 @@ export default function UserPage() {
 
   const serch = useSelector((state: any) => state.user.serchText)
 
-  const productsDetails = !!serch ? YourOrderData.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : YourOrderData
+  const productsDetails = !!serch ? YourOrderData?.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : YourOrderData
 
   const navigate = useNavigate();
 
