@@ -5,6 +5,8 @@ import { useProducts, useAddToCart, useDeleteHomeItem } from "../hooks/hook";
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 
 // type Product = { 
@@ -129,9 +131,38 @@ export default function HomePage() {
               <div className="ProductCategory aaa">Category:  {product.category}</div>
 
               <div className="price">
-                <div className="ProductPrice aaa">price:  {product.price}</div>
-                <div className="ProductRating aaa">Rating:  {product.rating}</div>
-                <div className="ProductStock aaa">Stock:  {product.stock}</div>
+
+                <div className="ProductPrice aaa">
+                  Price: {product.price}
+                </div>
+
+                <div className="ProductRating aaa">
+
+                  <span>Rating:</span>
+                  <Stack spacing={1}>
+                    <Rating name="half-rating" defaultValue={2} precision={0.5}
+                      sx={{
+                        color: "#0077ff",
+
+                        "& .MuiRating-iconFilled": {
+                          filter: "drop-shadow(0 0 1px #00f0ff) drop-shadow(0 0 02px #3700ff)"
+                        },
+
+                        "& .MuiRating-iconHover": {
+                          color: "#00f0ff"
+                        },
+
+                        "& .MuiRating-iconEmpty": {
+                          color: "#1e3a5f"
+                        }
+                      }} />
+                  </Stack>
+                </div>
+
+                <div className="ProductStock aaa">
+                  Stock: {product.stock}
+                </div>
+
               </div>
             </div>
             {
