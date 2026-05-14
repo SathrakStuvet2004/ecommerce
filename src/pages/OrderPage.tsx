@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { useOrders } from "../hooks/hook";
 import { useDeleteOrderItem, useAddYourOrder } from "../hooks/hook";
 
@@ -7,12 +8,18 @@ import { toast } from "react-toastify";
 export default function OrderPage() {
 
   const { data: orders } = useOrders();
+
   const { mutate: deleteOrderItem } = useDeleteOrderItem();
+
   const { mutate: addYourOrder } = useAddYourOrder();
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
   const OrderData = orders?.filter((order: any) => order.email === currentUser.email)
+
+  const serch = useSelector((state: any) => state.user.serchText)
+
+  const productsDetails = !!serch ? OrderData.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : OrderData
 
   return (
     <>
@@ -24,7 +31,7 @@ export default function OrderPage() {
 
         <div className="OrderItems">
           {OrderData && OrderData.length > 0 ? (
-            OrderData.map((item: any) => (
+            productsDetails.map((item: any) => (
 
               <div key={item.id} className="OrderItem">
 
@@ -44,8 +51,7 @@ export default function OrderPage() {
                       }}>
                       Remove
                     </button>
-                    <button className="orderItem-BuyNow-Button" onClick={() => 
-                    {
+                    <button className="orderItem-BuyNow-Button" onClick={() => {
                       addYourOrder({ ...item, });
                       deleteOrderItem(item.id);
                       toast.success("Purchesd Successfully")

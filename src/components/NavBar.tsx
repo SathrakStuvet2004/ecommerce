@@ -27,8 +27,6 @@ export default function NavBar() {
 
   useEffect(() => {
 
-   
-
     dispatch(serch(debouncedSearch));
     
   }, [debouncedSearch]);

@@ -19,17 +19,18 @@ export default function CartPage() {
 
   const { data: cartItems } = useCart();
 
+  const serch = useSelector((state: any) => state.user.serchText)
+
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
   const cartData = cartItems?.filter((cart: any) => cart.email === currentUser.email)
 
+  const productsDetails = !!serch ? cartData.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : cartData
+
   const { mutate: deleteCartItem } = useDeleteCartItem();
 
   const { mutate: addOrder } = useAddOrder();
-
-  const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
-  console.log(isLoggedin)
-
+ 
   return (
     <>
       <title>Cart</title>
@@ -40,7 +41,7 @@ export default function CartPage() {
 
         <div className="CartItems">
           {cartData && cartData.length > 0 ? (
-            cartData.map((item: any) => (
+            productsDetails.map((item: any) => (
 
               <div key={item.id} className="CartItem">
 

@@ -5,6 +5,7 @@ import { useGetUser, useProducts, } from "../hooks/hook";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 import { AdminProducts } from "./AdminProducts";
+import { useSelector } from "react-redux";
 
 export default function AdminPage() {
 
@@ -13,6 +14,10 @@ export default function AdminPage() {
   );
 
   const { data } = useProducts();
+
+  const serch = useSelector((state: any) => state.user.serchText)
+
+  const productsDetails = !!serch ? data.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : data
 
   const { data: user = [] } = useGetUser();
 
@@ -27,7 +32,7 @@ export default function AdminPage() {
     toast.success("Logout Successfully");
   }
 
-  function addProduct(){
+  function addProduct() {
     navigate("products")
   }
 
@@ -42,7 +47,7 @@ export default function AdminPage() {
       <div className="adminPage">
 
         <div className="adminProducts">
-          {data?.map((product: any) => (
+          {productsDetails?.map((product: any) => (
             <AdminProducts
               key={product.id}
               product={product}
@@ -59,7 +64,7 @@ export default function AdminPage() {
                 Click the Button For Add Products
               </p>
               <button className="addProductAdminPageButton"
-              onClick={addProduct}>
+                onClick={addProduct}>
                 Add Product
               </button>
             </div>

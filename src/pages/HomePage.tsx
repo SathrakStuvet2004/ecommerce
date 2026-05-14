@@ -91,7 +91,7 @@ export default function HomePage() {
   // console.log(getData, "mockapi data in home page")
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
 
-  const serch = useSelector((state:any)=>state.user.serchText)
+  const serch = useSelector((state: any) => state.user.serchText)
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
@@ -109,7 +109,7 @@ export default function HomePage() {
     navigate("/login")
   }
 
-  const productsDetails = !!serch ? data.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase()) ) : data
+  const productsDetails = !!serch ? data.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : data
 
   return (
     <>
@@ -151,10 +151,10 @@ export default function HomePage() {
               <button className='deleteButton'
                 onClick={() => {
                   removeItem(product.id),
-                  toast.success("Product Deleted Successfully")
+                    toast.success("Product Deleted Successfully")
                 }}>
-                  delete
-                </button>
+                delete
+              </button>
             }
           </div>
         )}

@@ -7,11 +7,16 @@ import { toast } from "react-toastify";
 
 export default function UserPage() {
   const { data: YourOrders } = useGetYourOrders()
+
   const { mutate: deleteYourOrderItem } = useDeleteYourOrderItem();
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
 
   const YourOrderData = YourOrders?.filter((order: any) => order.email === currentUser.email)
+
+  const serch = useSelector((state: any) => state.user.serchText)
+
+  const productsDetails = !!serch ? YourOrderData.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : YourOrderData
 
   const navigate = useNavigate();
 
@@ -31,14 +36,14 @@ export default function UserPage() {
     navigate("/login")
   }
 
-  function signin(){
+  function signin() {
     navigate("/login")
   }
 
   return (
     <div className="userPage">
       <title>User</title>
-      
+
       <div className="yourOrderInfo">
 
         <div className="products">
@@ -49,7 +54,7 @@ export default function UserPage() {
 
             {YourOrderData && YourOrderData.length > 0 ? (
 
-              YourOrderData.map((item: any) => (
+              productsDetails.map((item: any) => (
 
                 <div key={item.id} className="OrderItem">
 
