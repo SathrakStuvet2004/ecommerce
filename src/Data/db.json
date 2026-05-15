@@ -565,6 +565,17 @@
       "rating": 4.6,
       "stock": 70,
       "email": "admin@gmail.com"
+    },
+    {
+      "img": "https://picsum.photos/id/102/300/300",
+      "title": "Bluetooth Headphones",
+      "brand": "Boat headphone",
+      "category": "Electronics",
+      "price": 1499,
+      "rating": 4.3,
+      "stock": 80,
+      "id": "i95L_l_xjP0",
+      "email": "sathrakstuvet51@gmail.com"
     }
   ],
   "Orders": [

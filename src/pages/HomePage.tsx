@@ -91,6 +91,7 @@ export default function HomePage() {
 
   // const getData=getFromMockApi()
   // console.log(getData, "mockapi data in home page")
+
   const isLoggedin = useSelector((state: any) => state.user.isLogedIn);
 
   const serch = useSelector((state: any) => state.user.serchText)
@@ -111,6 +112,10 @@ export default function HomePage() {
     navigate("/login")
   }
 
+  function handleProductClick(id: string) {
+    navigate(`products/${id}`)
+  }
+
   const productsDetails = !!serch ? data.filter((product: any) => product?.title?.toLowerCase().includes(serch.toLowerCase())) : data
 
   return (
@@ -120,7 +125,11 @@ export default function HomePage() {
       <div className="productsList" >
 
         {productsDetails?.map((product: any) =>
-          <div className="product" key={product.id} >
+          <div
+            onClick={() => handleProductClick(product.id)}
+            className="product"
+            key={product.id} >
+
             <div className="productImage">
               <img src={product.img} alt={product.title} className='img' />
             </div>
@@ -162,7 +171,6 @@ export default function HomePage() {
                 <div className="ProductStock aaa">
                   Stock: {product.stock}
                 </div>
-
               </div>
             </div>
             {

@@ -48,10 +48,10 @@ export const useGetUser = () => {
 };
 
 //fetch products for home page
-export const useProducts = () => {
+export const useProducts = (id?: string | undefined) => {
   return useQuery({
-    queryKey: ["products"],
-    queryFn: () => fetcher("/products"),
+    queryKey: ["products", id],
+    queryFn: () => fetcher(id ? `/products/${id}` : "/products"),
     staleTime: 1000 * 60 * 5,
     refetchOnMount: false,
     refetchOnWindowFocus: false,

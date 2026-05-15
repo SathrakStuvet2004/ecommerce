@@ -8,7 +8,7 @@ import OrderPage from "./pages/OrderPage";
 import SignUpPage from "./pages/SignUpPage";
 import LogInPage from "./pages/LogInPage";
 import UserPage from "./pages/UserPage";
-import AdminPage from "./pages/adminPage";
+import AdminPage from "./pages/AdminPage";  
 import NotFoundPage from "./pages/NotFoundPage";
 import NavBar from "./components/NavBar";
 import { ToastContainer } from "react-toastify";
@@ -19,6 +19,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import UserAuth from "./auth/UserAuth";
 import AddProducts from "./pages/AddProducts";
+import ProductInfoPage from "./pages/ProductInfoPage";
 
 export default function App() {
   const location = useLocation();
@@ -86,7 +87,11 @@ export default function App() {
           }
         />
         <Route path="admin/products" element={<AddProducts />} /> 
+
+        <Route path="products/:productId" element={<ProductInfoPage/>} />
+
         <Route path="*" element={<NotFoundPage />} />
+        
       </Routes>
     </>
   );
