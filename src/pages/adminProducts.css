@@ -112,8 +112,6 @@
 .price {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
-
   gap: 12px;
 }
 
@@ -264,7 +262,36 @@
     0px 0px 15px rgba(0, 145, 115, 0.45),
     0px 0px 25px rgba(117, 51, 214, 0.3);
 }
+.adminProductRating{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
+  min-width: 170px;
+
+  padding: 10px 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.04);
+
+  overflow: visible;
+}
+
+.adminProductRating span{
+  font-size: 18px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  color: white;
+}
+
+.adminProductRating .MuiRating-root{
+  overflow: visible;
+
+  font-size: 2rem;
+}
 /* =========================
    RESPONSIVE
 ========================= */

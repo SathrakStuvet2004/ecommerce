@@ -4,6 +4,8 @@ import TextField from "@mui/material/TextField";
 import { useUpdateHomeData } from "../hooks/hook";
 import "./adminProducts.css";
 import { toast } from "react-toastify";
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 type Product = {
   id: string;
@@ -176,7 +178,28 @@ export const AdminProducts = ({ product }: AdminProductsProps) => {
                   autoComplete="off"
                   onChange={(e) => setRating(e.target.value)}
                 />
-              </form>) : (<p>Rating: {product.rating}</p>)}
+              </form>) : (<>
+                <span>Rating:</span>
+                <Stack spacing={1}>
+                  <Rating name="half-rating" defaultValue={2} precision={0.5}
+                    sx={{
+                      color: "#0077ff",
+
+                      "& .MuiRating-iconFilled": {
+                        filter: "drop-shadow(0 0 1px #00f0ff) drop-shadow(0 0 02px #3700ff)"
+                      },
+
+                      "& .MuiRating-iconHover": {
+                        color: "#00f0ff"
+                      },
+
+                      "& .MuiRating-iconEmpty": {
+                        color: "#1e3a5f"
+                      }
+                    }}
+                  />
+                </Stack>
+              </>)}
             </div>
 
             <div className="adminProductStock">
